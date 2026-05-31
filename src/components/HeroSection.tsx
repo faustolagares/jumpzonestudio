@@ -2,6 +2,7 @@ import { Language } from '../types';
 import { translations } from '../translations';
 import { JumpButton } from './Buttons';
 import { Zap, Users, Flame, BarChart3, MapPin } from 'lucide-react';
+import { HERO_BACKGROUND_SRC } from '../lib/assets';
 
 interface HeroSectionProps {
   currentLang: Language;
@@ -15,7 +16,7 @@ export default function HeroSection({ currentLang, onBookClick, onClassesClick }
       id="hero-root"
       className="relative min-h-screen bg-[#050505] pt-24 sm:pt-28 pb-16 flex flex-col justify-center overflow-hidden"
       style={{
-        backgroundImage: `linear-gradient(to right, #050505 0%, #050505 30%, rgba(5,5,5,0.5) 50%, rgba(5,5,5,0.05) 68%, rgba(5,5,5,0.85) 90%, #050505 100%), url("https://imagedelivery.net/O1Es2ZMHV0HF7g71pX5Prg/1d011d00-e9e8-4d0f-7cd3-35886e138100/public")`,
+        backgroundImage: `linear-gradient(to right, #050505 0%, #050505 30%, rgba(5,5,5,0.5) 50%, rgba(5,5,5,0.05) 68%, rgba(5,5,5,0.85) 90%, #050505 100%), url("${HERO_BACKGROUND_SRC}")`,
         backgroundSize: 'cover',
         backgroundPosition: '45% center'
       }}

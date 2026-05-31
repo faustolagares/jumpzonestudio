@@ -17,6 +17,7 @@ const CTASection = lazy(() => import('./components/CTASection'));
 const Footer = lazy(() => import('./components/Footer'));
 const CheckoutModal = lazy(() => import('./components/CheckoutModal'));
 const ButtonsPage = lazy(() => import('./pages/ButtonsPage'));
+const BioPage = lazy(() => import('./pages/BioPage'));
 
 function MainSite() {
   const [currentLang, setCurrentLang] = useState<Language>('pt');
@@ -135,6 +136,7 @@ export default function App() {
       <Suspense fallback={<div className="min-h-screen bg-[#050505]" />}>
         <Routes>
           <Route path="/" element={<MainSite />} />
+          <Route path="/bio" element={<BioPage />} />
           <Route path="/buttons" element={<ButtonsPage />} />
         </Routes>
       </Suspense>
