@@ -3,9 +3,11 @@ export type Language = 'en' | 'es' | 'pt';
 export interface TranslationSet {
   navLogo: string;
   navClasses: string;
+  navSchedule: string;
   navPricing: string;
   navBeatSimulator: string;
   navAbout: string;
+  navContact: string;
   navBookNow: string;
   
   heroBadge: string;

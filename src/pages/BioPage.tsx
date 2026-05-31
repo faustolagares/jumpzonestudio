@@ -17,7 +17,7 @@ import { IconButton, JumpButton } from '../components/Buttons';
 import SeoManager from '../components/SeoManager';
 import { HERO_BACKGROUND_SRC, JUMP_ZONE_LOGO_SRC } from '../lib/assets';
 import { optimizedSrc, optimizedSrcSet } from '../lib/img';
-import { getBrowserLanguage, supportedLanguages } from '../lib/language';
+import { getInitialLanguage, saveLanguage, supportedLanguages } from '../lib/language';
 import { Language } from '../types';
 
 const INSTAGRAM_URL = 'https://www.instagram.com/jumpzonestudio';
@@ -87,8 +87,13 @@ const socialLinks = [
 ];
 
 export default function BioPage({ initialLanguage }: { initialLanguage?: Language }) {
-  const [currentLang, setCurrentLang] = useState<Language>(() => initialLanguage ?? getBrowserLanguage());
+  const [currentLang, setCurrentLang] = useState<Language>(() => getInitialLanguage(initialLanguage));
   const content = bioContent[currentLang];
+
+  const handleLanguageChange = (language: Language) => {
+    saveLanguage(language);
+    setCurrentLang(language);
+  };
 
   const openUrl = (url: string) => {
     window.location.href = url;
@@ -157,7 +162,7 @@ export default function BioPage({ initialLanguage }: { initialLanguage?: Languag
                 <button
                   key={lang.code}
                   type="button"
-                  onClick={() => setCurrentLang(lang.code)}
+                  onClick={() => handleLanguageChange(lang.code)}
                   className={`text-[9px] font-mono font-bold px-1.5 py-0.5 rounded-full transition-colors duration-150 ${
                     currentLang === lang.code
                       ? 'bg-energy-green text-deep-black'

@@ -6,7 +6,7 @@ import LazySection from './components/LazySection';
 import SeoManager from './components/SeoManager';
 import { Language, StudioClass, PricingItem } from './types';
 import { sampleClasses } from './translations';
-import { getBrowserLanguage, isLanguage } from './lib/language';
+import { getInitialLanguage, isLanguage, saveLanguage } from './lib/language';
 
 const MoreThanWorkout = lazy(() => import('./components/MoreThanWorkout'));
 const HowItWorks = lazy(() => import('./components/HowItWorks'));
@@ -22,7 +22,7 @@ const ButtonsPage = lazy(() => import('./pages/ButtonsPage'));
 const BioPage = lazy(() => import('./pages/BioPage'));
 
 function MainSite({ initialLanguage }: { initialLanguage?: Language }) {
-  const [currentLang, setCurrentLang] = useState<Language>(() => initialLanguage ?? getBrowserLanguage());
+  const [currentLang, setCurrentLang] = useState<Language>(() => getInitialLanguage(initialLanguage));
   const [selectedClass, setSelectedClass] = useState<StudioClass | null>(null);
   const [selectedTime, setSelectedTime] = useState<string | null>(null);
   const [selectedPlan, setSelectedPlan] = useState<PricingItem | null>(null);
@@ -51,6 +51,11 @@ function MainSite({ initialLanguage }: { initialLanguage?: Language }) {
     setIsCheckoutOpen(true);
   };
 
+  const handleLanguageChange = (language: Language) => {
+    saveLanguage(language);
+    setCurrentLang(language);
+  };
+
   const handleClassesLearnClick = () => {
     const el = document.getElementById('classes');
     if (el) {
@@ -65,7 +70,7 @@ function MainSite({ initialLanguage }: { initialLanguage?: Language }) {
       <SeoManager language={currentLang} page="home" />
       <Navbar
         currentLang={currentLang}
-        onLanguageChange={setCurrentLang}
+        onLanguageChange={handleLanguageChange}
         onBookClick={() => handleBookClass(sampleClasses[0], sampleClasses[0].timeSlots[0])}
       />
       <HeroSection

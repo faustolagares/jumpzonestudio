@@ -130,14 +130,14 @@ export default function Membership({ currentLang, onSelectPlan }: MembershipProp
 
   const getButtonText = (id: string) => {
     if (currentLang === 'pt') {
-      if (id === "price-starter") return "CHOOSE STARTER";
-      if (id === "price-unlimited") return "CHOOSE UNLIMITED";
-      return "CHOOSE ELITE";
+      if (id === "price-starter") return "ESCOLHER STARTER";
+      if (id === "price-unlimited") return "ESCOLHER ILIMITADO";
+      return "ESCOLHER ELITE";
     }
     if (currentLang === 'es') {
-      if (id === "price-starter") return "CHOOSE STARTER";
-      if (id === "price-unlimited") return "CHOOSE UNLIMITED";
-      return "CHOOSE ELITE";
+      if (id === "price-starter") return "ELEGIR STARTER";
+      if (id === "price-unlimited") return "ELEGIR ILIMITADO";
+      return "ELEGIR ELITE";
     }
     if (id === "price-starter") return "CHOOSE STARTER";
     if (id === "price-unlimited") return "CHOOSE UNLIMITED";

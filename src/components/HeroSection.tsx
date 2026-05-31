@@ -11,6 +11,28 @@ interface HeroSectionProps {
 }
 
 export default function HeroSection({ currentLang, onBookClick, onClassesClick }: HeroSectionProps) {
+  const t = translations[currentLang];
+  const featureItems = {
+    en: [
+      { icon: <Zap className="w-7 h-7 text-energy-green fill-current" />, title: 'HIGH ENERGY', desc: 'Cardio, strength & music-driven workouts.' },
+      { icon: <Users className="w-7 h-7 text-energy-green" />, title: 'STRONG COMMUNITY', desc: 'Real people. Real support. Real connections.' },
+      { icon: <Flame className="w-7 h-7 text-energy-green" />, title: 'BURN CALORIES', desc: 'Jump higher. Burn more. Feel unstoppable.' },
+      { icon: <BarChart3 className="w-7 h-7 text-energy-green" />, title: 'ALL LEVELS', desc: 'Beginner to advanced. You belong here.' },
+    ],
+    es: [
+      { icon: <Zap className="w-7 h-7 text-energy-green fill-current" />, title: 'ALTA ENERGÍA', desc: 'Cardio, fuerza y entrenamientos con música.' },
+      { icon: <Users className="w-7 h-7 text-energy-green" />, title: 'COMUNIDAD FUERTE', desc: 'Personas reales. Apoyo real. Conexiones reales.' },
+      { icon: <Flame className="w-7 h-7 text-energy-green" />, title: 'QUEMA CALORÍAS', desc: 'Salta más alto. Quema más. Siéntete imparable.' },
+      { icon: <BarChart3 className="w-7 h-7 text-energy-green" />, title: 'TODOS LOS NIVELES', desc: 'De principiante a avanzado. Este es tu lugar.' },
+    ],
+    pt: [
+      { icon: <Zap className="w-7 h-7 text-energy-green fill-current" />, title: 'ALTA ENERGIA', desc: 'Cardio, força e treinos guiados por música.' },
+      { icon: <Users className="w-7 h-7 text-energy-green" />, title: 'COMUNIDADE FORTE', desc: 'Pessoas reais. Apoio real. Conexões reais.' },
+      { icon: <Flame className="w-7 h-7 text-energy-green" />, title: 'QUEIME CALORIAS', desc: 'Pule mais alto. Queime mais. Sinta-se imparável.' },
+      { icon: <BarChart3 className="w-7 h-7 text-energy-green" />, title: 'TODOS OS NÍVEIS', desc: 'Do iniciante ao avançado. Seu lugar é aqui.' },
+    ],
+  };
+
   return (
     <section 
       id="hero-root"
@@ -44,17 +66,16 @@ export default function HeroSection({ currentLang, onBookClick, onClassesClick }
             {/* Promotional Badge / Newark Focus */}
             <div className="flex items-center justify-start">
               <span className="text-energy-green font-display font-medium text-lg sm:text-xl tracking-[0.25em] uppercase">
-                NEWARK, NJ
+                {t.heroBadge}
               </span>
             </div>
 
             {/* Impressive headers - ultra clean, italic, Teko displays */}
             <div className="space-y-1">
               <h1 className="text-7xl sm:text-7xl md:text-8xl xl:text-9xl font-display font-black leading-[0.85] tracking-tight text-white uppercase italic -skew-x-3">
-                WE DON'T
-                <span className="block text-white">JUST JUMP.</span>
+                {t.heroTitleFocus}
                 <span className="block text-energy-green font-black">
-                  WE LEVEL UP.
+                  {t.heroTitleNormal}
                 </span>
               </h1>
             </div>
@@ -64,9 +85,7 @@ export default function HeroSection({ currentLang, onBookClick, onClassesClick }
 
             {/* Brand slogan description */}
             <p className="text-base sm:text-lg text-white/70 max-w-xl leading-relaxed font-sans font-medium pt-2">
-              High-energy trampoline workouts.<br className="hidden sm:inline" />
-              Real results. Strong community.<br className="hidden sm:inline" />
-              Unforgettable experience.
+              {t.heroSubtitle}
             </p>
 
             {/* CTAs - authentic high-energy chamfered buttons */}
@@ -78,7 +97,7 @@ export default function HeroSection({ currentLang, onBookClick, onClassesClick }
                 iconType="arrow"
                 className="w-full sm:w-auto"
               >
-                {currentLang === 'pt' ? 'RESERVA JUMP' : currentLang === 'es' ? 'RESERVAR JUMP' : 'BOOK YOUR JUMP'}
+                {t.heroCtaBook}
               </JumpButton>
               <JumpButton 
                 onClick={onClassesClick}
@@ -87,7 +106,7 @@ export default function HeroSection({ currentLang, onBookClick, onClassesClick }
                 iconType="arrow"
                 className="w-full sm:w-auto"
               >
-                {currentLang === 'pt' ? 'VER MODALIDADES' : currentLang === 'es' ? 'VER CLASES' : 'VIEW CLASSES'}
+                {t.heroCtaLearn}
               </JumpButton>
             </div>
           </div>
@@ -117,49 +136,22 @@ export default function HeroSection({ currentLang, onBookClick, onClassesClick }
             <div className="relative z-10 p-6 lg:p-8">
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 divide-y sm:divide-y-0 sm:divide-x divide-white/[0.05]">
                 
-                {/* Item 1 - High Energy */}
-                <div className="flex items-start space-x-4 py-4 first:pt-0 sm:py-0 sm:pr-4 lg:px-4 lg:first:pl-0">
-                  <div className="p-2 text-energy-green shrink-0 mt-0.5">
-                    <Zap className="w-7 h-7 text-energy-green fill-current" />
+                {featureItems[currentLang].map((item, index) => (
+                  <div
+                    key={item.title}
+                    className={`flex items-start space-x-4 py-4 sm:py-0 sm:px-4 lg:px-4 ${
+                      index === 0 ? 'first:pt-0 sm:pr-4 lg:first:pl-0' : ''
+                    } ${index === featureItems[currentLang].length - 1 ? 'last:pb-0' : ''}`}
+                  >
+                    <div className="p-2 text-energy-green shrink-0 mt-0.5">
+                      {item.icon}
+                    </div>
+                    <div>
+                      <h4 className="font-display font-medium text-lg leading-tight tracking-wider text-white uppercase">{item.title}</h4>
+                      <p className="text-[11px] text-steel-gray mt-1 leading-snug font-sans">{item.desc}</p>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="font-display font-medium text-lg leading-tight tracking-wider text-white uppercase">HIGH ENERGY</h4>
-                    <p className="text-[11px] text-steel-gray mt-1 leading-snug font-sans">Cardio, strength &amp; music-driven workouts.</p>
-                  </div>
-                </div>
-
-                {/* Item 2 - Strong Community */}
-                <div className="flex items-start space-x-4 py-4 sm:py-0 sm:px-4 lg:px-4">
-                  <div className="p-2 text-energy-green shrink-0 mt-0.5">
-                    <Users className="w-7 h-7 text-energy-green" />
-                  </div>
-                  <div>
-                    <h4 className="font-display font-medium text-lg leading-tight tracking-wider text-white uppercase">STRONG COMMUNITY</h4>
-                    <p className="text-[11px] text-steel-gray mt-1 leading-snug font-sans">Real people. Real support. Real connections.</p>
-                  </div>
-                </div>
-
-                {/* Item 3 - Burn Calories */}
-                <div className="flex items-start space-x-4 py-4 sm:py-0 sm:px-4 lg:px-4">
-                  <div className="p-2 text-energy-green shrink-0 mt-0.5">
-                    <Flame className="w-7 h-7 text-energy-green" />
-                  </div>
-                  <div>
-                    <h4 className="font-display font-medium text-lg leading-tight tracking-wider text-white uppercase">BURN CALORIES</h4>
-                    <p className="text-[11px] text-steel-gray mt-1 leading-snug font-sans">Jump higher. Burn more. Feel unstoppable.</p>
-                  </div>
-                </div>
-
-                {/* Item 4 - All Levels */}
-                <div className="flex items-start space-x-4 py-4 last:pb-0 sm:py-0 sm:px-4 lg:px-4">
-                  <div className="p-2 text-energy-green shrink-0 mt-0.5">
-                    <BarChart3 className="w-7 h-7 text-energy-green" />
-                  </div>
-                  <div>
-                    <h4 className="font-display font-medium text-lg leading-tight tracking-wider text-white uppercase">ALL LEVELS</h4>
-                    <p className="text-[11px] text-steel-gray mt-1 leading-snug font-sans">Beginner to advanced. You belong here.</p>
-                  </div>
-                </div>
+                ))}
 
               </div>
             </div>
@@ -191,8 +183,8 @@ export default function HeroSection({ currentLang, onBookClick, onClassesClick }
                 <MapPin className="w-7 h-7 text-energy-green fill-current" />
               </div>
               <div>
-                <h4 className="font-display font-black text-xl leading-none tracking-wider text-energy-green uppercase italic">NEWARK, NJ</h4>
-                <p className="text-xs text-steel-gray mt-1 leading-snug font-sans">Be part of the movement in the heart of Newark.</p>
+                <h4 className="font-display font-black text-xl leading-none tracking-wider text-energy-green uppercase italic">{t.statsLocation}</h4>
+                <p className="text-xs text-steel-gray mt-1 leading-snug font-sans">{t.statsLocationSub}</p>
               </div>
             </div>
           </div>

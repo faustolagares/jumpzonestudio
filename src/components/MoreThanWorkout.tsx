@@ -36,7 +36,7 @@ export default function MoreThanWorkout({ currentLang }: MoreThanWorkoutProps) {
     },
     es: {
       line1: "MÁS QUE",
-      line2: "UN TRABAJO.",
+      line2: "UN ENTRENAMIENTO.",
       features: [
         {
           id: "music",

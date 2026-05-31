@@ -4,15 +4,17 @@ export const translations: Record<Language, TranslationSet> = {
   en: {
     navLogo: "JUMP ZONE",
     navClasses: "Classes",
+    navSchedule: "Schedule",
     navPricing: "Pricing",
     navBeatSimulator: "BPM Simulator",
     navAbout: "The Studio",
+    navContact: "Contact",
     navBookNow: "BOOK NOW",
     
-    heroBadge: "NEWARK'S PREMIER REBOUND FITNESS",
+    heroBadge: "JUMP ZONE STUDIO",
     heroTitleFocus: "WE DON'T JUST JUMP",
     heroTitleNormal: "WE LEVEL UP.",
-    heroSubtitle: "High-intensity rebound cardio choreography synchronized to live concert lighting and bone-rattling sound. Designed to melt stress, maximize energy, and protect your joints.",
+    heroSubtitle: "New fitness experience in Newark, NJ.",
     heroCtaBook: "BOOK YOUR JUMP",
     heroCtaLearn: "VIEW CLASSES",
     
@@ -98,15 +100,17 @@ export const translations: Record<Language, TranslationSet> = {
   es: {
     navLogo: "JUMP ZONE",
     navClasses: "Clases",
+    navSchedule: "Horarios",
     navPricing: "Precios",
     navBeatSimulator: "Simulador BPM",
     navAbout: "El Estudio",
+    navContact: "Contacto",
     navBookNow: "RESERVA YA",
     
-    heroBadge: "FITNESS REBOTANTE PREMIUM EN NEWARK",
+    heroBadge: "JUMP ZONE STUDIO",
     heroTitleFocus: "NO SOLO SALTAMOS",
     heroTitleNormal: "SUBIMOS DE NIVEL.",
-    heroSubtitle: "Cardio de rebote de alta intensidad coreografiado y sincronizado con luces de concierto en vivo y sonido estremecedor. Diseñado para disolver el estrés, maximizar energía y proteger articulaciones.",
+    heroSubtitle: "Nueva experiencia fitness en Newark, NJ.",
     heroCtaBook: "RESERVA TU SALTO",
     heroCtaLearn: "VER CLASES",
     
@@ -192,15 +196,17 @@ export const translations: Record<Language, TranslationSet> = {
   pt: {
     navLogo: "JUMP ZONE",
     navClasses: "Aulas",
+    navSchedule: "Horários",
     navPricing: "Preços",
     navBeatSimulator: "Simulador BPM",
     navAbout: "O Estúdio",
+    navContact: "Contato",
     navBookNow: "RESERVAR JÁ",
     
-    heroBadge: "FITNESS REBOUND CONCEITO PREMIUM EM NEWARK",
+    heroBadge: "JUMP ZONE STUDIO",
     heroTitleFocus: "NÓS NÃO APENAS PULAMOS",
     heroTitleNormal: "NÓS SUBIMOS DE NÍVEL.",
-    heroSubtitle: "Cardio de rebote de alta intensidade coreografado e sincronizado com iluminação de show e som ensurdecedor. Projetado para detonar o estresse, dar energia e proteger as articulações.",
+    heroSubtitle: "Nova experiência fitness em Newark, NJ.",
     heroCtaBook: "GARANTA SEU SALTO",
     heroCtaLearn: "VER AULAS",
     

@@ -5,12 +5,14 @@ interface LazySectionProps {
   children: ReactNode;
   minHeight?: number;
   rootMargin?: string;
+  mobileRootMargin?: string;
 }
 
 export default function LazySection({
   children,
   minHeight = 320,
   rootMargin = '900px 0px',
+  mobileRootMargin = '200px 0px',
 }: LazySectionProps) {
   const ref = useRef<HTMLDivElement | null>(null);
   const [shouldRender, setShouldRender] = useState(false);
@@ -25,6 +27,10 @@ export default function LazySection({
       return;
     }
 
+    const effectiveRootMargin = window.matchMedia('(max-width: 767px)').matches
+      ? mobileRootMargin
+      : rootMargin;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -32,7 +38,7 @@ export default function LazySection({
           observer.disconnect();
         }
       },
-      { rootMargin }
+      { rootMargin: effectiveRootMargin }
     );
 
     const node = ref.current;
@@ -41,7 +47,7 @@ export default function LazySection({
     }
 
     return () => observer.disconnect();
-  }, [rootMargin, shouldRender]);
+  }, [mobileRootMargin, rootMargin, shouldRender]);
 
   return (
     <div ref={ref} style={!shouldRender ? { minHeight } : undefined}>

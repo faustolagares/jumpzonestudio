@@ -5,6 +5,7 @@ import { translations } from '../translations';
 import { HeaderButton, IconButton, JumpButton, NavLinkButton } from './Buttons';
 import { JUMP_ZONE_LOGO_SRC } from '../lib/assets';
 import { optimizedSrc, optimizedSrcSet } from '../lib/img';
+import { supportedLanguages } from '../lib/language';
 
 interface NavbarProps {
   currentLang: Language;
@@ -45,17 +46,11 @@ export default function Navbar({ currentLang, onLanguageChange, onBookClick }: N
   };
 
   const navItems = [
-    { label: 'CLASSES', id: 'classes' },
-    { label: 'SCHEDULE', id: 'classes' },
-    { label: 'PRICING', id: 'pricing' },
-    { label: 'ABOUT', id: 'studio' },
-    { label: 'CONTACT', id: 'footer' }
-  ];
-
-  const languages: { code: Language; label: string }[] = [
-    { code: 'en', label: 'EN' },
-    { code: 'es', label: 'ES' },
-    { code: 'pt', label: 'PT' }
+    { label: t.navClasses.toUpperCase(), id: 'classes' },
+    { label: t.navSchedule.toUpperCase(), id: 'classes' },
+    { label: t.navPricing.toUpperCase(), id: 'pricing' },
+    { label: t.navAbout.toUpperCase(), id: 'studio' },
+    { label: t.navContact.toUpperCase(), id: 'footer' }
   ];
 
   return (
@@ -118,7 +113,7 @@ export default function Navbar({ currentLang, onLanguageChange, onBookClick }: N
                 <Globe className="w-3.5 h-3.5" />
               </div>
               <div className="flex space-x-0.5">
-                {languages.map((lang) => (
+                {supportedLanguages.map((lang) => (
                   <button
                     key={lang.code}
                     onClick={() => onLanguageChange(lang.code)}
@@ -138,7 +133,7 @@ export default function Navbar({ currentLang, onLanguageChange, onBookClick }: N
             <HeaderButton
               onClick={onBookClick}
             >
-              {currentLang === 'pt' ? 'RESERVA JUMP' : currentLang === 'es' ? 'RESERVAR JUMP' : 'BOOK YOUR JUMP'}
+              {t.navBookNow}
             </HeaderButton>
           </div>
 
@@ -149,7 +144,7 @@ export default function Navbar({ currentLang, onLanguageChange, onBookClick }: N
                 <Globe className="w-3.5 h-3.5" />
               </div>
               <div className="flex space-x-0.5">
-                {languages.map((lang) => (
+                {supportedLanguages.map((lang) => (
                   <button
                     key={lang.code}
                     onClick={() => onLanguageChange(lang.code)}

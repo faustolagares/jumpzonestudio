@@ -66,7 +66,7 @@ export default function Benefits({ currentLang }: BenefitsProps) {
     },
     es: {
       sectionLabel: "/// BENEFICIOS ///",
-      titlePre: "MÁS QUE UN TRABAJO.",
+      titlePre: "MÁS QUE UN ENTRENAMIENTO.",
       titleHighlight: " BENEFICIOS REALES.",
       subtitle: "Muévete mejor. Siéntete más fuerte. Vive más brillante.",
       footerHeader: "UN SALTO. BENEFICIOS INCONTABLES.",
