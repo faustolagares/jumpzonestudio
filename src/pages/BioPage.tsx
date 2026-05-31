@@ -2,29 +2,79 @@ import {
   CalendarDays,
   Clock3,
   Facebook,
+  Globe,
   Instagram,
   MapPin,
+  MessageCircle,
   Music2,
   Phone,
   Users,
   Youtube,
 } from 'lucide-react';
-import type { CSSProperties } from 'react';
+import type { CSSProperties, ReactNode } from 'react';
 import { IconButton, JumpButton } from '../components/Buttons';
 import { HERO_BACKGROUND_SRC, JUMP_ZONE_LOGO_SRC } from '../lib/assets';
 import { optimizedSrc, optimizedSrcSet } from '../lib/img';
+import { Language } from '../types';
 
 const INSTAGRAM_URL = 'https://www.instagram.com/jumpzonestudio';
+const WEBSITE_URL = '/';
+const WHATSAPP_URL = 'https://wa.me/19735555867';
+const PHONE_URL = 'tel:+19735555867';
+const DIRECTIONS_URL = 'https://www.google.com/maps/search/?api=1&query=122%20Mulberry%20St%2C%20Newark%2C%20NJ%2007102';
 
-const bioLinks = [
-  { label: 'BOOK YOUR JUMP', variant: 'primary' as const, icon: <CalendarDays className="w-4 h-4" /> },
-  { label: 'VIEW SCHEDULE', variant: 'secondary' as const, icon: <Clock3 className="w-4 h-4" /> },
-  { label: 'MEMBERSHIPS', variant: 'secondary' as const, icon: <Users className="w-4 h-4" /> },
-  { label: 'INSTAGRAM', variant: 'secondary' as const, icon: <Instagram className="w-4 h-4" /> },
-  { label: 'TIKTOK', variant: 'secondary' as const, icon: <Music2 className="w-4 h-4" /> },
-  { label: 'CALL NOW', variant: 'secondary' as const, icon: <Phone className="w-4 h-4" /> },
-  { label: 'GET DIRECTIONS', variant: 'secondary' as const, icon: <MapPin className="w-4 h-4" /> },
-];
+type BioLink = {
+  label: string;
+  url: string;
+  variant: 'primary' | 'secondary';
+  icon: ReactNode;
+};
+
+const bioContent: Record<Language, {
+  subtitle: string;
+  footer: string;
+  links: BioLink[];
+}> = {
+  en: {
+    subtitle: 'High-energy trampoline fitness in Newark, NJ.',
+    footer: 'Move. Connect. Level up.',
+    links: [
+      { label: 'BOOK YOUR JUMP', url: INSTAGRAM_URL, variant: 'primary', icon: <CalendarDays className="w-4 h-4" /> },
+      { label: 'VIEW SCHEDULE', url: INSTAGRAM_URL, variant: 'secondary', icon: <Clock3 className="w-4 h-4" /> },
+      { label: 'MEMBERSHIPS', url: INSTAGRAM_URL, variant: 'secondary', icon: <Users className="w-4 h-4" /> },
+      { label: 'WEBSITE', url: WEBSITE_URL, variant: 'secondary', icon: <Globe className="w-4 h-4" /> },
+      { label: 'WHATSAPP', url: WHATSAPP_URL, variant: 'secondary', icon: <MessageCircle className="w-4 h-4" /> },
+      { label: 'CALL NOW', url: PHONE_URL, variant: 'secondary', icon: <Phone className="w-4 h-4" /> },
+      { label: 'GET DIRECTIONS', url: DIRECTIONS_URL, variant: 'secondary', icon: <MapPin className="w-4 h-4" /> },
+    ],
+  },
+  es: {
+    subtitle: 'Fitness de trampolín de alta energía en Newark, NJ.',
+    footer: 'Muévete. Conecta. Sube de nivel.',
+    links: [
+      { label: 'RESERVA TU JUMP', url: INSTAGRAM_URL, variant: 'primary', icon: <CalendarDays className="w-4 h-4" /> },
+      { label: 'VER HORARIOS', url: INSTAGRAM_URL, variant: 'secondary', icon: <Clock3 className="w-4 h-4" /> },
+      { label: 'MEMBRESÍAS', url: INSTAGRAM_URL, variant: 'secondary', icon: <Users className="w-4 h-4" /> },
+      { label: 'WEBSITE', url: WEBSITE_URL, variant: 'secondary', icon: <Globe className="w-4 h-4" /> },
+      { label: 'WHATSAPP', url: WHATSAPP_URL, variant: 'secondary', icon: <MessageCircle className="w-4 h-4" /> },
+      { label: 'LLAMAR AHORA', url: PHONE_URL, variant: 'secondary', icon: <Phone className="w-4 h-4" /> },
+      { label: 'CÓMO LLEGAR', url: DIRECTIONS_URL, variant: 'secondary', icon: <MapPin className="w-4 h-4" /> },
+    ],
+  },
+  pt: {
+    subtitle: 'Treino de trampolim de alta energia em Newark, NJ.',
+    footer: 'Mova. Conecte. Suba de nível.',
+    links: [
+      { label: 'RESERVAR JUMP', url: INSTAGRAM_URL, variant: 'primary', icon: <CalendarDays className="w-4 h-4" /> },
+      { label: 'VER HORÁRIOS', url: INSTAGRAM_URL, variant: 'secondary', icon: <Clock3 className="w-4 h-4" /> },
+      { label: 'PLANOS', url: INSTAGRAM_URL, variant: 'secondary', icon: <Users className="w-4 h-4" /> },
+      { label: 'WEBSITE', url: WEBSITE_URL, variant: 'secondary', icon: <Globe className="w-4 h-4" /> },
+      { label: 'WHATSAPP', url: WHATSAPP_URL, variant: 'secondary', icon: <MessageCircle className="w-4 h-4" /> },
+      { label: 'LIGAR AGORA', url: PHONE_URL, variant: 'secondary', icon: <Phone className="w-4 h-4" /> },
+      { label: 'COMO CHEGAR', url: DIRECTIONS_URL, variant: 'secondary', icon: <MapPin className="w-4 h-4" /> },
+    ],
+  },
+};
 
 const socialLinks = [
   { label: 'Instagram', icon: <Instagram className="w-5 h-5" /> },
@@ -33,9 +83,26 @@ const socialLinks = [
   { label: 'YouTube', icon: <Youtube className="w-5 h-5" /> },
 ];
 
+function getBrowserLanguage(): Language {
+  const language = navigator.language.toLowerCase();
+
+  if (language.startsWith('pt')) {
+    return 'pt';
+  }
+
+  if (language.startsWith('es')) {
+    return 'es';
+  }
+
+  return 'en';
+}
+
 export default function BioPage() {
-  const openInstagram = () => {
-    window.location.href = INSTAGRAM_URL;
+  const currentLang = getBrowserLanguage();
+  const content = bioContent[currentLang];
+
+  const openUrl = (url: string) => {
+    window.location.href = url;
   };
 
   return (
@@ -118,7 +185,7 @@ export default function BioPage() {
               </p>
             </div>
             <p className="mt-3 text-sm font-medium leading-relaxed text-steel-gray">
-              High-energy trampoline fitness in Newark, NJ.
+              {content.subtitle}
             </p>
           </div>
 
@@ -131,8 +198,8 @@ export default function BioPage() {
               >
                 <IconButton
                   icon={item.icon}
-                  variant={item.label === 'Instagram' ? 'green' : 'dark'}
-                  onClick={openInstagram}
+                  variant="dark"
+                  onClick={() => openUrl(INSTAGRAM_URL)}
                   aria-label={item.label}
                 />
               </div>
@@ -140,7 +207,7 @@ export default function BioPage() {
           </div>
 
           <div className="flex flex-col gap-3">
-            {bioLinks.map((item, index) => (
+            {content.links.map((item, index) => (
               <div
                 key={item.label}
                 className="bio-rise-in"
@@ -150,8 +217,8 @@ export default function BioPage() {
                   variant={item.variant}
                   fullWidth
                   iconType="arrow"
-                  onClick={openInstagram}
-                  aria-label={`${item.label} - opens Instagram`}
+                  onClick={() => openUrl(item.url)}
+                  aria-label={item.label}
                 >
                   <span className="inline-flex items-center justify-center gap-3">
                     {item.icon}
@@ -166,7 +233,7 @@ export default function BioPage() {
             style={{ '--bio-delay': '720ms' } as CSSProperties}
             className="bio-rise-in mx-auto mt-8 max-w-[18rem] text-center font-mono text-[10px] leading-relaxed tracking-[0.16em] text-white/35 uppercase"
           >
-            Move. Connect. Level up.
+            {content.footer}
           </p>
         </section>
       </div>
