@@ -3,7 +3,7 @@ import { Menu, X, Globe } from 'lucide-react';
 import { Language, TranslationSet } from '../types';
 import { translations } from '../translations';
 import { motion, AnimatePresence } from 'motion/react';
-import { IconButton, JumpButton, NavLinkButton } from './Buttons';
+import { HeaderButton, IconButton, JumpButton, NavLinkButton } from './Buttons';
 
 interface NavbarProps {
   currentLang: Language;
@@ -133,15 +133,11 @@ export default function Navbar({ currentLang, onLanguageChange, onBookClick }: N
             </div>
 
             {/* CTA action */}
-            <JumpButton
+            <HeaderButton
               onClick={onBookClick}
-              variant="primary"
-              showIcon={true}
-              iconType="arrow"
-              className="!min-w-[176px]"
             >
               {currentLang === 'pt' ? 'RESERVA JUMP' : currentLang === 'es' ? 'RESERVAR JUMP' : 'BOOK YOUR JUMP'}
-            </JumpButton>
+            </HeaderButton>
           </div>
 
           {/* Mobile: language switcher + hamburger */}

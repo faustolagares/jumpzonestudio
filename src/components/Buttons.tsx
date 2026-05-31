@@ -314,4 +314,22 @@ export const NavLinkButton: React.FC<React.ButtonHTMLAttributes<HTMLButtonElemen
   </button>
 );
 
+// ─── 11. HeaderButton ────────────────────────────────────────────────────────
+// Compact primary action for the fixed navbar. Shorter than the default CTA.
+
+export const HeaderButton: React.FC<React.ButtonHTMLAttributes<HTMLButtonElement>> = ({ children, className = "", ...props }) => (
+  <button
+    style={{ clipPath: CLIP_APEX }}
+    className={`group relative inline-flex items-center justify-center min-w-[150px] px-5 py-2.5 cursor-pointer select-none
+      bg-energy-green hover:bg-[#b5ff1a] active:bg-[#92df00]
+      transition-[background-color,transform] duration-150 active:scale-[0.97]
+      disabled:cursor-not-allowed disabled:opacity-50 ${className}`}
+    {...props}
+  >
+    <span className={`${LABEL_BASE} text-deep-black`}>
+      {children}
+    </span>
+  </button>
+);
+
 export { JumpButton as default };

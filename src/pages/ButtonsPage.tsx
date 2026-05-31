@@ -13,6 +13,7 @@ import {
   IconButton,
   LightPrimaryButton,
   LightSecondaryButton,
+  HeaderButton,
   CLIP_APEX,
   CLIP_MICRO,
 } from '../components/Buttons';
@@ -173,8 +174,8 @@ export default function ButtonsPage() {
             <BtnCard label="Arrow icon" desc="Navigation / forward actions">
               <JumpButton variant="primary" iconType="arrow">FIND A CLASS</JumpButton>
             </BtnCard>
-            <BtnCard label="No slashes" desc="Compact — navbar context">
-              <JumpButton variant="primary" showSlashes={false} showIcon={false}>RESERVAR</JumpButton>
+            <BtnCard label="HeaderButton" desc="Compact navbar CTA">
+              <HeaderButton>RESERVAR</HeaderButton>
             </BtnCard>
             <BtnCard label="No icon">
               <JumpButton variant="primary" showIcon={false}>JOIN NOW</JumpButton>
