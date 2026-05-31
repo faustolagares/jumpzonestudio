@@ -86,9 +86,9 @@ export default function MoreThanWorkout({ currentLang }: MoreThanWorkoutProps) {
   const t = content[currentLang] || content.en;
 
   const imagesMap: Record<string, string> = {
-    music: "/src/assets/images/jump_dance_beat_1780015235229.png",
-    community: "/src/assets/images/more_than_workout_1780014659695.png",
-    energy: "/src/assets/images/jump_hiit_power_1780015204717.png"
+    music: "/images/jump_dance_beat_1780015235229.png",
+    community: "/images/more_than_workout_1780014659695.png",
+    energy: "/images/jump_hiit_power_1780015204717.png"
   };
 
   const containerVariants = {
@@ -147,7 +147,7 @@ export default function MoreThanWorkout({ currentLang }: MoreThanWorkoutProps) {
           className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 w-full max-w-6xl mx-auto"
         >
           {t.features.map((feat) => {
-            const imageUrl = imagesMap[feat.id] || "/src/assets/images/more_than_workout_1780014659695.png";
+            const imageUrl = imagesMap[feat.id] || "/images/more_than_workout_1780014659695.png";
             return (
               <motion.div 
                 key={feat.id}

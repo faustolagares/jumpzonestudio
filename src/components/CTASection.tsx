@@ -82,8 +82,8 @@ export default function CTASection({ currentLang }: CTASectionProps) {
 
               {/* Big Title Display */}
               <h2 className="text-4xl sm:text-5xl md:text-6xl font-display font-black leading-[0.95] tracking-tight text-black uppercase italic -skew-x-6">
-                {t.titlePre}{' '}
-                <span className="text-black font-black">
+                {t.titlePre}
+                <span className="text-black font-black block">
                   {t.titleHighlight}
                 </span>
               </h2>

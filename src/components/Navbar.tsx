@@ -81,7 +81,7 @@ export default function Navbar({ currentLang, onLanguageChange, onBookClick }: N
             }`}
           >
             <img 
-              src="/src/assets/images/jump_zone_logo_1780012118773.png" 
+              src="/images/jump_zone_logo_1780012118773.png" 
               alt="JUMP ZONE STUDIO Logo" 
               className={`transition-all duration-300 w-auto object-contain absolute left-0 origin-left max-w-none ${
                 isScrolled 
@@ -193,7 +193,7 @@ export default function Navbar({ currentLang, onLanguageChange, onBookClick }: N
                 className="cursor-pointer select-none relative h-14 w-36"
               >
                 <img
-                  src="/src/assets/images/jump_zone_logo_1780012118773.png"
+                  src="/images/jump_zone_logo_1780012118773.png"
                   alt="JUMP ZONE STUDIO Logo"
                   className="h-20 w-auto object-contain absolute left-0 top-[60%] -translate-y-1/2"
                   referrerPolicy="no-referrer"

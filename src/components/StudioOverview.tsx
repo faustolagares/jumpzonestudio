@@ -27,7 +27,7 @@ export default function StudioOverview({ currentLang }: StudioOverviewProps) {
       }
     },
     {
-      url: "/src/assets/images/more_than_workout_1780014659695.png",
+      url: "/images/more_than_workout_1780014659695.png",
       title: {
         en: "Rebound Cardio Deck",
         es: "Pista de Cardio Rebound",
@@ -40,7 +40,7 @@ export default function StudioOverview({ currentLang }: StudioOverviewProps) {
       }
     },
     {
-      url: "/src/assets/images/jump_fit_cardio_1780015183504.png",
+      url: "/images/jump_fit_cardio_1780015183504.png",
       title: {
         en: "High-Energy Live Performance",
         es: "Rendimiento en Vivo de Alta Energía",
@@ -53,7 +53,7 @@ export default function StudioOverview({ currentLang }: StudioOverviewProps) {
       }
     },
     {
-      url: "/src/assets/images/jump_dance_beat_1780015235229.png",
+      url: "/images/jump_dance_beat_1780015235229.png",
       title: {
         en: "Sound & Deep Bass Integration",
         es: "Sinfonía de Graves Extremos",

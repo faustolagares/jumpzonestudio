@@ -46,7 +46,7 @@ export default function Footer({ currentLang }: FooterProps) {
               className="cursor-pointer select-none relative h-20 w-52 sm:w-60 group block -ml-3"
             >
               <img 
-                src="/src/assets/images/jump_zone_logo_1780012118773.png" 
+                src="/images/jump_zone_logo_1780012118773.png" 
                 alt="JUMP ZONE STUDIO Logo" 
                 className="h-24 sm:h-28 w-auto object-contain absolute left-0 top-1/2 -translate-y-1/2 transition-transform duration-200 ease-out group-hover:scale-[1.03]"
                 referrerPolicy="no-referrer"

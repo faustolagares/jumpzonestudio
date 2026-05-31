@@ -71,7 +71,7 @@ export default function HowItWorks({ currentLang }: HowItWorksProps) {
     {
       id: "fit",
       title: "JUMP FIT",
-      img: "/src/assets/images/jump_fit_cardio_1780015183504.png",
+      img: "/images/jump_fit_cardio_1780015183504.png",
       badge: "CARDIO",
       icon: <Activity className="w-5 h-5" />,
       accent: {
@@ -88,7 +88,7 @@ export default function HowItWorks({ currentLang }: HowItWorksProps) {
     {
       id: "hiit",
       title: "JUMP HIIT",
-      img: "/src/assets/images/jump_hiit_power_1780015204717.png",
+      img: "/images/jump_hiit_power_1780015204717.png",
       badge: "HIIT",
       icon: <Flame className="w-5 h-5" />,
       accent: {
@@ -105,7 +105,7 @@ export default function HowItWorks({ currentLang }: HowItWorksProps) {
     {
       id: "strong",
       title: "JUMP STRONG",
-      img: "/src/assets/images/jump_strong_tone_1780015221543.png",
+      img: "/images/jump_strong_tone_1780015221543.png",
       badge: "STRENGTH",
       icon: <Dumbbell className="w-5 h-5" />,
       accent: {
@@ -122,7 +122,7 @@ export default function HowItWorks({ currentLang }: HowItWorksProps) {
     {
       id: "dance",
       title: "JUMP DANCE",
-      img: "/src/assets/images/jump_dance_beat_1780015235229.png",
+      img: "/images/jump_dance_beat_1780015235229.png",
       badge: "DANCE",
       icon: <Activity className="w-5 h-5" />,
       accent: {
@@ -139,7 +139,7 @@ export default function HowItWorks({ currentLang }: HowItWorksProps) {
     {
       id: "core",
       title: "JUMP CORE",
-      img: "/src/assets/images/jump_core_balance_1780015249569.png",
+      img: "/images/jump_core_balance_1780015249569.png",
       badge: "CORE",
       icon: <Users className="w-5 h-5" />,
       accent: {
