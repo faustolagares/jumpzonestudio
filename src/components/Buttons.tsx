@@ -30,7 +30,8 @@ export const CLIP_APEX = "polygon(10px 0%, 100% 0%, 100% calc(100% - 10px), calc
 /** Compact shape — 6px chamfer on all 4 corners */
 export const CLIP_MICRO = "polygon(6px 0%, calc(100% - 6px) 0%, 100% 6px, 100% calc(100% - 6px), calc(100% - 6px) 100%, 6px 100%, 0% calc(100% - 6px), 0% 6px)";
 
-const LABEL_BASE = "font-sans font-black italic uppercase text-xs tracking-wider leading-none whitespace-nowrap";
+const BUTTON_LABEL = "font-sans font-black italic uppercase text-[13px] sm:text-sm tracking-wider leading-none whitespace-nowrap";
+const HEADER_LABEL = "font-sans font-black italic uppercase text-xs tracking-wider leading-none whitespace-nowrap";
 
 // ─── 1. JumpButton (primary + secondary) ─────────────────────────────────────
 
@@ -72,7 +73,7 @@ export const JumpButton: React.FC<JumpButtonProps> = ({
               <span>/</span><span>/</span>
             </div>
           )}
-          <span className={`flex-1 text-center ${LABEL_BASE}`}>{children}</span>
+          <span className={`flex-1 text-center ${BUTTON_LABEL}`}>{children}</span>
           {showIcon && (
             <div className="flex items-center shrink-0 pl-3">
               {iconType === "chevron"
@@ -98,7 +99,7 @@ export const JumpButton: React.FC<JumpButtonProps> = ({
             <span>/</span><span>/</span>
           </div>
         )}
-        <span className={`flex-1 text-center ${LABEL_BASE} text-white`}>{children}</span>
+        <span className={`flex-1 text-center ${BUTTON_LABEL} text-white`}>{children}</span>
         {showIcon && (
           <div className="flex items-center text-white/40 group-hover:text-white transition-colors duration-150 shrink-0 pl-3">
             {iconType === "chevron"
@@ -121,7 +122,7 @@ export const GhostButton: React.FC<GhostButtonProps> = ({ children, icon, classN
   <button
     style={{ clipPath: CLIP_APEX }}
     className={`group relative inline-flex items-center justify-center gap-2 px-7 py-4 cursor-pointer select-none
-      ${LABEL_BASE} text-steel-gray hover:text-white
+      ${BUTTON_LABEL} text-steel-gray hover:text-white
       transition-[color,transform] duration-150 active:scale-[0.97]
       disabled:cursor-not-allowed disabled:opacity-40 ${className}`}
     {...props}
@@ -162,7 +163,7 @@ export const DangerButton: React.FC<DangerButtonProps> = ({ children, icon, clas
   <button
     style={{ clipPath: CLIP_APEX }}
     className={`group inline-flex items-center gap-2 px-7 py-4 cursor-pointer select-none
-      ${LABEL_BASE} text-white
+      ${BUTTON_LABEL} text-white
       bg-red-600/90 hover:bg-red-500 active:bg-red-700
       transition-[background-color,transform] duration-150 active:scale-[0.97]
       disabled:cursor-not-allowed disabled:opacity-40 ${className}`}
@@ -183,7 +184,7 @@ export const SuccessButton: React.FC<SuccessButtonProps> = ({ children, icon, cl
   <button
     style={{ clipPath: CLIP_APEX }}
     className={`group inline-flex items-center gap-2 px-7 py-4 cursor-pointer select-none
-      ${LABEL_BASE} text-deep-black
+      ${BUTTON_LABEL} text-deep-black
       bg-emerald-400 hover:bg-emerald-300 active:bg-emerald-500
       transition-[background-color,transform] duration-150 active:scale-[0.97]
       disabled:cursor-not-allowed disabled:opacity-40 ${className}`}
@@ -205,7 +206,7 @@ export const LoadingButton: React.FC<LoadingButtonProps> = ({ children, loading 
     disabled={loading}
     style={{ clipPath: CLIP_APEX }}
     className={`group inline-flex items-center justify-center gap-2 px-7 py-4 select-none min-w-[160px]
-      ${LABEL_BASE} text-deep-black
+      ${BUTTON_LABEL} text-deep-black
       bg-energy-green hover:bg-[#b5ff1a] active:bg-[#92df00]
       transition-[background-color,transform] duration-150 active:scale-[0.97]
       ${loading ? "cursor-wait" : "cursor-pointer"}
@@ -273,7 +274,7 @@ export const LightPrimaryButton: React.FC<React.ButtonHTMLAttributes<HTMLButtonE
       <div className="flex space-x-[3px] text-energy-green/35 group-hover:text-white/35 transition-colors duration-150 font-extrabold italic tracking-tighter text-sm select-none shrink-0 pr-3">
         <span>/</span><span>/</span>
       </div>
-      <span className={`flex-1 text-center ${LABEL_BASE}`}>{children}</span>
+      <span className={`flex-1 text-center ${BUTTON_LABEL}`}>{children}</span>
       <div className="flex items-center shrink-0 pl-3">
         <ArrowRight className="w-4 h-4 stroke-[2.5px]" />
       </div>
@@ -287,7 +288,7 @@ export const LightSecondaryButton: React.FC<React.ButtonHTMLAttributes<HTMLButto
   <button
     style={{ clipPath: CLIP_APEX }}
     className={`group relative inline-flex items-center justify-center px-7 py-4 cursor-pointer select-none
-      ${LABEL_BASE} text-deep-black
+      ${BUTTON_LABEL} text-deep-black
       transition-transform duration-150 active:scale-[0.97]
       disabled:cursor-not-allowed disabled:opacity-40 ${className}`}
     {...props}
@@ -326,7 +327,7 @@ export const HeaderButton: React.FC<React.ButtonHTMLAttributes<HTMLButtonElement
       disabled:cursor-not-allowed disabled:opacity-50 ${className}`}
     {...props}
   >
-    <span className={`${LABEL_BASE} text-deep-black`}>
+    <span className={`${HEADER_LABEL} text-deep-black`}>
       {children}
     </span>
   </button>
