@@ -175,7 +175,7 @@ export default function HowItWorks({ currentLang }: HowItWorksProps) {
       <div className="absolute top-0 left-1/4 w-[300px] h-[300px] rounded-full bg-energy-green/5 blur-[120px] pointer-events-none" />
       <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] rounded-full bg-energy-green/5 blur-[150px] pointer-events-none" />
 
-      <div className="max-w-[1400px] mx-auto w-full relative z-10">
+      <div className="max-w-[1600px] mx-auto w-full relative z-10">
         
         {/* Upper heading block */}
         <div className="text-center mb-16 sm:mb-20">

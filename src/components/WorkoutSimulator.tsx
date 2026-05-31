@@ -111,7 +111,7 @@ export default function WorkoutSimulator({ currentLang }: WorkoutSimulatorProps)
         <div className="absolute bottom-0 left-1/3 -translate-y-1/2 w-[400px] h-[400px] rounded-full bg-energy-green/[0.04] blur-[130px]" />
       </div>
 
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
         <div className="text-center space-y-3 mb-12">

@@ -48,7 +48,7 @@ export default function CTASection({ currentLang }: CTASectionProps) {
       <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[350px] h-[350px] bg-energy-green/[0.05] rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-[350px] h-[350px] bg-energy-green/[0.03] rounded-full blur-[120px] pointer-events-none" />
 
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         {/* Large Asymmetrical Box Container with Energy Green Background */}
         <div 
           className="relative w-full max-w-5xl mx-auto p-[1px] bg-white/10"

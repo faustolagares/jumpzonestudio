@@ -27,7 +27,7 @@ export default function FAQ({ currentLang }: FAQProps) {
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-energy-green/[0.025] rounded-full blur-[140px] pointer-events-none" />
       <div className="absolute bottom-10 right-10 w-[250px] h-[250px] rounded-full bg-energy-green/[0.015] blur-[110px] pointer-events-none" />
 
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         
         {/* CENTERED HEADER BLOCK */}
         <div className="max-w-3xl mb-16 text-center mx-auto">

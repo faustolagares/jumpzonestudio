@@ -112,7 +112,7 @@ export default function MoreThanWorkout({ currentLang }: MoreThanWorkoutProps) {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-energy-green/[0.02] blur-[150px] pointer-events-none z-0" />
 
       {/* Main Grid & Content Container */}
-      <div className="relative z-10 max-w-[1400px] mx-auto w-full flex flex-col items-center text-center space-y-16 sm:space-y-20">
+      <div className="relative z-10 max-w-[1600px] mx-auto w-full flex flex-col items-center text-center space-y-16 sm:space-y-20">
         
         {/* Dynamic header title block */}
         <div className="space-y-4 select-none">

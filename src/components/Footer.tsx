@@ -32,7 +32,7 @@ export default function Footer({ currentLang }: FooterProps) {
       <div className="absolute bottom-0 right-1/4 w-[450px] h-[450px] bg-energy-green/[0.02] rounded-full blur-[140px] pointer-events-none" />
       <div className="absolute top-0 left-10 w-[300px] h-[300px] bg-energy-green/[0.015] rounded-full blur-[100px] pointer-events-none" />
 
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
         
         {/* Core footer container */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-y-16 gap-x-8 lg:gap-x-12 pb-20 border-b border-white/[0.05]">

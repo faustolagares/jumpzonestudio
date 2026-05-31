@@ -167,7 +167,7 @@ export default function ButtonShowcase({ currentLang }: ButtonShowcaseProps) {
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(168,255,0,0.02),transparent_40%)] pointer-events-none" />
       <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-96 h-96 bg-energy-green/[0.025] rounded-full blur-[120px] pointer-events-none" />
       
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Title Block on Dark Canvas */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-12 border-b border-white/[0.04] pb-8">

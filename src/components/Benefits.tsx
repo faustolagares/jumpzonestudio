@@ -188,7 +188,7 @@ export default function Benefits({ currentLang }: BenefitsProps) {
       {/* Background decoration */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-energy-green/[0.03] blur-[160px] pointer-events-none" />
 
-      <div className="max-w-[1400px] mx-auto w-full relative z-10">
+      <div className="max-w-[1600px] mx-auto w-full relative z-10">
         
         {/* Upper Heading Block */}
         <div className="text-center mb-16 sm:mb-20">

@@ -153,7 +153,7 @@ export default function Membership({ currentLang, onSelectPlan }: MembershipProp
       <div className="absolute top-1/4 left-1/4 w-[450px] h-[450px] bg-energy-green/[0.03] rounded-full blur-[150px] pointer-events-none" />
       <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-energy-green/[0.02] rounded-full blur-[130px] pointer-events-none" />
 
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         
         {/* CENTERED HEADER BLOCK */}
         <div className="max-w-3xl mb-20 text-center mx-auto">

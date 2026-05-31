@@ -32,7 +32,7 @@ export default function StoreCards({ currentLang, onSelectPlan }: StoreCardsProp
         <div className="absolute top-1/4 right-0 w-[300px] h-[300px] rounded-full bg-energy-green/5 blur-[120px]" />
       </div>
 
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
         <div className="text-center space-y-3 mb-12">

@@ -171,7 +171,7 @@ export default function ClassSchedule({ currentLang, onBookClass }: ClassSchedul
       <div className="absolute top-1/4 right-0 w-[400px] h-[400px] bg-energy-green/5 rounded-full blur-[140px] pointer-events-none" />
       <div className="absolute bottom-1/4 left-1/12 w-[350px] h-[350px] bg-energy-green/5 rounded-full blur-[120px] pointer-events-none" />
 
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
         
         {/* Main Grid Wrapper */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-start mb-16">
