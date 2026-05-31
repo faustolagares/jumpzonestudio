@@ -1,20 +1,16 @@
-// Builds a Vercel Image Optimization URL for locally-hosted images so the
-// browser receives a resized WebP/AVIF instead of the original multi-MB PNG.
+// Local /images/*.png assets have pre-generated, resized WebP siblings
+// (see public/images/*.webp) that are ~95% smaller. We rewrite the src to the
+// WebP version so browsers download a few dozen KB instead of multi-MB PNGs.
 //
-// - External URLs (e.g. Cloudflare Images) are returned untouched.
-// - In dev (`vite`), the optimizer endpoint does not exist, so we pass through.
-const IS_PROD =
-  typeof import.meta !== 'undefined' &&
-  (import.meta as { env?: { PROD?: boolean } }).env?.PROD === true;
-
-export function optimizedSrc(src: string, width: number, quality = 75): string {
-  if (!src.startsWith('/images/')) return src;
-  if (!IS_PROD) return src;
-  return `/_vercel/image?url=${encodeURIComponent(src)}&w=${width}&q=${quality}`;
+// External URLs (e.g. Cloudflare Images) are returned untouched.
+export function optimizedSrc(src: string, _width?: number): string {
+  if (src.startsWith('/images/') && src.endsWith('.png')) {
+    return src.replace(/\.png$/, '.webp');
+  }
+  return src;
 }
 
-// Returns a `srcSet` string at 1x/2x for crisp rendering on retina screens.
-export function optimizedSrcSet(src: string, width: number, quality = 75): string | undefined {
-  if (!src.startsWith('/images/') || !IS_PROD) return undefined;
-  return `${optimizedSrc(src, width, quality)} 1x, ${optimizedSrc(src, width * 2, quality)} 2x`;
+// srcSet is unnecessary now that each image is a single right-sized WebP.
+export function optimizedSrcSet(_src?: string, _width?: number): string | undefined {
+  return undefined;
 }
