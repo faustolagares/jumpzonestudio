@@ -3,7 +3,7 @@ import { Check, ShieldAlert, Sparkles, AlertTriangle } from 'lucide-react';
 import { Language, PricingItem } from '../types';
 import { samplePricing, translations } from '../translations';
 import { motion } from 'motion/react';
-import { JumpButton } from './JumpButton';
+import { JumpButton } from './Buttons';
 
 interface StoreCardsProps {
   currentLang: Language;

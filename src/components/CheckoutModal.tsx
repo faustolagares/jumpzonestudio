@@ -3,8 +3,7 @@ import { X, CheckCircle, Ticket, Zap, MapPin, Calendar, Clock, Lock } from 'luci
 import { Language, StudioClass, PricingItem } from '../types';
 import { translations } from '../translations';
 import { motion, AnimatePresence } from 'motion/react';
-import { JumpButton } from './JumpButton';
-import { IconButton } from './Buttons';
+import { IconButton, JumpButton } from './Buttons';
 
 interface CheckoutModalProps {
   currentLang: Language;
@@ -268,8 +267,7 @@ export default function CheckoutModal({
                       onClick={onClose}
                       variant="secondary"
                       showIcon={false}
-                      showSlashes={false}
-                      className="w-full sm:w-auto !py-2.5 !px-5"
+                      className="w-full sm:w-auto"
                     >
                       {t.checkoutCancel}
                     </JumpButton>
@@ -278,7 +276,7 @@ export default function CheckoutModal({
                       disabled={selectedClass && !selectedSeat}
                       variant="primary"
                       iconType="chevron"
-                      className="w-full sm:w-auto !py-2.5 !px-6"
+                      className="w-full sm:w-auto"
                     >
                       {t.checkoutConfirmBtn}
                     </JumpButton>

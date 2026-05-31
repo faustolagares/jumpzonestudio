@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Calendar, Clock, Users, ArrowRight, Timer, Sparkles, Flame } from 'lucide-react';
 import { Language, StudioClass } from '../types';
 import { sampleClasses } from '../translations';
-import { JumpButton } from './JumpButton';
+import { JumpButton } from './Buttons';
 
 interface ClassScheduleProps {
   currentLang: Language;
@@ -257,10 +257,9 @@ export default function ClassSchedule({ currentLang, onBookClass }: ClassSchedul
               <JumpButton 
                 onClick={scrollIntoSpecificArea}
                 variant="primary"
-                showSlashes={false}
                 showIcon={true}
                 iconType="arrow"
-                className="w-full sm:w-[260px] h-14"
+                className="w-full sm:w-[280px]"
               >
                 {t.viewScheduleBtn}
               </JumpButton>

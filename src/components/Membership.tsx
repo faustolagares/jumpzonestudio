@@ -1,7 +1,7 @@
 import React from 'react';
 import { Check, User, Users, Star, AlertTriangle } from 'lucide-react';
 import { Language, PricingItem } from '../types';
-import { JumpButton } from './JumpButton';
+import { JumpButton } from './Buttons';
 
 interface MembershipProps {
   currentLang: Language;
@@ -272,7 +272,6 @@ export default function Membership({ currentLang, onSelectPlan }: MembershipProp
                     <JumpButton
                       variant={isPopular ? "primary" : "secondary"}
                       fullWidth
-                      showSlashes={false}
                       onClick={() => onSelectPlan(plan)}
                     >
                       {getButtonText(plan.id)}

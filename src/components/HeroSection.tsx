@@ -1,7 +1,7 @@
 import { Language } from '../types';
 import { translations } from '../translations';
 import { motion } from 'motion/react';
-import { JumpButton } from './JumpButton';
+import { JumpButton } from './Buttons';
 import { Zap, Users, Flame, BarChart3, MapPin } from 'lucide-react';
 
 interface HeroSectionProps {
@@ -89,20 +89,18 @@ export default function HeroSection({ currentLang, onBookClick, onClassesClick }
               <JumpButton 
                 onClick={onBookClick}
                 variant="primary"
-                showSlashes={false}
                 showIcon={true}
                 iconType="arrow"
-                className="w-full sm:w-auto h-14"
+                className="w-full sm:w-auto"
               >
                 {currentLang === 'pt' ? 'RESERVA JUMP' : currentLang === 'es' ? 'RESERVAR JUMP' : 'BOOK YOUR JUMP'}
               </JumpButton>
               <JumpButton 
                 onClick={onClassesClick}
                 variant="secondary"
-                showSlashes={false}
                 showIcon={true}
                 iconType="arrow"
-                className="w-full sm:w-auto h-14"
+                className="w-full sm:w-auto"
               >
                 {currentLang === 'pt' ? 'VER MODALIDADES' : currentLang === 'es' ? 'VER CLASES' : 'VIEW CLASSES'}
               </JumpButton>

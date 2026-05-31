@@ -3,7 +3,7 @@ import { Activity, Flame, Timer, Music, Play, Sparkles, ListChecks } from 'lucid
 import { Language, ChoreographyMove } from '../types';
 import { sampleChoreographies, translations } from '../translations';
 import { motion, AnimatePresence } from 'motion/react';
-import { JumpButton } from './JumpButton';
+import { JumpButton } from './Buttons';
 
 interface WorkoutSimulatorProps {
   currentLang: Language;

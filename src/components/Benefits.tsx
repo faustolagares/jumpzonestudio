@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { Language } from '../types';
-import { JumpButton } from './JumpButton';
+import { JumpButton } from './Buttons';
 import { Flame, Heart, Zap, Smile, Users, Compass, ChevronRight } from 'lucide-react';
 
 const containerVariants = {
@@ -305,10 +305,9 @@ export default function Benefits({ currentLang }: BenefitsProps) {
               <JumpButton 
                 onClick={handleScrollToClasses}
                 variant="primary"
-                showSlashes={false}
                 showIcon={true}
                 iconType="arrow"
-                className="w-full sm:w-[240px] h-12"
+                className="w-full sm:w-[260px]"
               >
                 {t.footerBtn}
               </JumpButton>

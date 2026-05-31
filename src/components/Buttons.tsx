@@ -263,15 +263,21 @@ export const IconButton: React.FC<IconButtonProps> = ({ icon, variant = "dark", 
 export const LightPrimaryButton: React.FC<React.ButtonHTMLAttributes<HTMLButtonElement>> = ({ children, className = "", ...props }) => (
   <button
     style={{ clipPath: CLIP_APEX }}
-    className={`group inline-flex items-center gap-3 px-7 py-4 cursor-pointer select-none
-      ${LABEL_BASE} text-white
+    className={`group relative inline-flex items-center justify-center py-4 cursor-pointer select-none
       bg-deep-black hover:bg-[#111] active:bg-black
       transition-[background-color,transform] duration-150 active:scale-[0.97]
       disabled:cursor-not-allowed disabled:opacity-40 ${className}`}
     {...props}
   >
-    {children}
-    <ArrowRight className="w-4 h-4 stroke-[2.5px] shrink-0" />
+    <div className="relative w-full flex items-center justify-between z-10 px-7 text-energy-green group-hover:text-white transition-colors duration-150">
+      <div className="flex space-x-[3px] text-energy-green/35 group-hover:text-white/35 transition-colors duration-150 font-extrabold italic tracking-tighter text-sm select-none shrink-0 pr-3">
+        <span>/</span><span>/</span>
+      </div>
+      <span className={`flex-1 text-center ${LABEL_BASE}`}>{children}</span>
+      <div className="flex items-center shrink-0 pl-3">
+        <ArrowRight className="w-4 h-4 stroke-[2.5px]" />
+      </div>
+    </div>
   </button>
 );
 

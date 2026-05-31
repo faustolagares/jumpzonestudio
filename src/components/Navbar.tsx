@@ -3,8 +3,7 @@ import { Menu, X, Globe } from 'lucide-react';
 import { Language, TranslationSet } from '../types';
 import { translations } from '../translations';
 import { motion, AnimatePresence } from 'motion/react';
-import { JumpButton } from './JumpButton';
-import { IconButton } from './Buttons';
+import { IconButton, JumpButton, NavLinkButton } from './Buttons';
 
 interface NavbarProps {
   currentLang: Language;
@@ -98,13 +97,13 @@ export default function Navbar({ currentLang, onLanguageChange, onBookClick }: N
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
             {navItems.map((item) => (
-              <button
+              <NavLinkButton
                 key={item.label}
                 onClick={() => scrollToSection(item.id)}
-                className="text-xs font-sans font-semibold uppercase tracking-wider text-cool-gray hover:text-white transition-colors duration-150 py-1"
+                className="hover:text-white py-1"
               >
                 {item.label}
-              </button>
+              </NavLinkButton>
             ))}
           </div>
 
@@ -137,10 +136,9 @@ export default function Navbar({ currentLang, onLanguageChange, onBookClick }: N
             <JumpButton
               onClick={onBookClick}
               variant="primary"
-              showSlashes={false}
               showIcon={true}
               iconType="arrow"
-              className="!py-1.5 !px-3 sm:!px-4 !h-9 !w-auto !min-w-[145px] sm:!min-w-[160px] font-sans tracking-wider text-[10px] whitespace-nowrap select-none"
+              className="!min-w-[176px]"
             >
               {currentLang === 'pt' ? 'RESERVA JUMP' : currentLang === 'es' ? 'RESERVAR JUMP' : 'BOOK YOUR JUMP'}
             </JumpButton>

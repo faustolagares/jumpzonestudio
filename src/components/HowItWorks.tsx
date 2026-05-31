@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { Language } from '../types';
-import { JumpButton } from './JumpButton';
+import { JumpButton } from './Buttons';
 import { Flame, Activity, BarChart3, Users, Timer, Dumbbell } from 'lucide-react';
 
 const cardContainerVariants = {
@@ -348,10 +348,9 @@ export default function HowItWorks({ currentLang }: HowItWorksProps) {
               <JumpButton 
                 onClick={handleScrollToClasses}
                 variant="primary"
-                showSlashes={false}
                 showIcon={true}
                 iconType="arrow"
-                className="w-full sm:w-[220px] h-12"
+                className="w-full sm:w-[240px]"
               >
                 {t.ctaBtn}
               </JumpButton>
