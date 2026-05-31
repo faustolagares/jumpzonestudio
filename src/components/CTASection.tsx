@@ -10,21 +10,21 @@ export default function CTASection({ currentLang }: CTASectionProps) {
     en: {
       tag: "/// CRUSH YOUR LIMITS ///",
       titlePre: "READY TO JOIN THE",
-      titleHighlight: "JUMP ZONE?",
+      titleHighlight: "JUMP ZONE STUDIO",
       subtitle: "Stop waiting to experience Newark's most addictive choreographic workout. Lock in your individual rebounder space today and feel the difference from the very first beat.",
       primaryCta: "SECURE MY SPACE",
     },
     es: {
       tag: "/// SUPERA TUS LÍMITES ///",
       titlePre: "¿LISTO PARA ENTRAR A LA",
-      titleHighlight: "JUMP ZONE?",
+      titleHighlight: "JUMP ZONE STUDIO?",
       subtitle: "No esperes más para sentir la energía del entrenamiento coreografiado más adictivo de Newark. Reserva tu trampolín individual hoy y siente la diferencia desde el primer pulso.",
       primaryCta: "RESERVAR MI LUGAR",
     },
     pt: {
       tag: "/// SUPERE SEUS LIMITES ///",
       titlePre: "PRONTO PARA ENTRAR NA",
-      titleHighlight: "JUMP ZONE?",
+      titleHighlight: "JUMP ZONE STUDIO",
       subtitle: "Não espere mais para sentir a energia do treino coreografado mais viciante de Newark. Garanta seu trampolim individual hoje mesmo e sinta o impacto desde o primeiro beat.",
       primaryCta: "RESERVAR MEU ESPAÇO",
     }
@@ -51,14 +51,14 @@ export default function CTASection({ currentLang }: CTASectionProps) {
       <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         {/* Large Asymmetrical Box Container with Energy Green Background */}
         <div 
-          className="relative w-full max-w-5xl mx-auto p-[1px] bg-white/10"
+          className="relative w-full max-w-[1400px] mx-auto p-[1px] bg-white/10"
           style={{
             clipPath: "polygon(30px 0%, 100% 0%, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0% 100%, 0% 30px)"
           }}
         >
           {/* Main Inner Card using strong accent colors in the background */}
           <div 
-            className="relative bg-energy-green text-black py-16 px-6 sm:px-12 md:px-16 overflow-hidden flex flex-col items-center text-center"
+            className="relative bg-energy-green text-black py-24 sm:py-28 px-6 sm:px-12 md:px-16 overflow-hidden flex flex-col items-center text-center"
             style={{
               clipPath: "polygon(30px 0%, 100% 0%, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0% 100%, 0% 30px)"
             }}
@@ -73,7 +73,7 @@ export default function CTASection({ currentLang }: CTASectionProps) {
             <div className="absolute -bottom-24 -right-20 w-[400px] h-[400px] bg-black/10 rounded-full blur-[80px] pointer-events-none select-none" />
 
             {/* Inner Content block */}
-            <div className="relative z-10 max-w-3xl space-y-6">
+            <div className="relative z-10 max-w-5xl space-y-6">
               
               {/* Eyebrow Label */}
               <span className="font-mono text-xs sm:text-sm tracking-[0.25em] font-extrabold text-black/75 uppercase select-none block">
@@ -81,7 +81,7 @@ export default function CTASection({ currentLang }: CTASectionProps) {
               </span>
 
               {/* Big Title Display */}
-              <h2 className="text-4xl sm:text-5xl md:text-6xl font-display font-black leading-[0.95] tracking-tight text-black uppercase italic -skew-x-6">
+              <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-display font-black leading-[0.9] tracking-tight text-black uppercase italic -skew-x-6">
                 {t.titlePre}
                 <span className="text-black font-black block">
                   {t.titleHighlight}

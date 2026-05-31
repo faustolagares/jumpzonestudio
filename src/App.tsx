@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import MoreThanWorkout from './components/MoreThanWorkout';
@@ -11,19 +12,17 @@ import FAQ from './components/FAQ';
 import CTASection from './components/CTASection';
 import Footer from './components/Footer';
 import CheckoutModal from './components/CheckoutModal';
+import ButtonsPage from './pages/ButtonsPage';
 import { Language, StudioClass, PricingItem } from './types';
 import { sampleClasses } from './translations';
 
-export default function App() {
+function MainSite() {
   const [currentLang, setCurrentLang] = useState<Language>('pt');
-  
-  // Checkout context states
   const [selectedClass, setSelectedClass] = useState<StudioClass | null>(null);
   const [selectedTime, setSelectedTime] = useState<string | null>(null);
   const [selectedPlan, setSelectedPlan] = useState<PricingItem | null>(null);
   const [isCheckoutOpen, setIsCheckoutOpen] = useState(false);
 
-  // Trigger modal when an individual class hour is selected
   const handleBookClass = (cl: StudioClass, time: string) => {
     setSelectedClass(cl);
     setSelectedTime(time);
@@ -31,17 +30,15 @@ export default function App() {
     setIsCheckoutOpen(true);
   };
 
-  // Close secure checkout and clean cache variables
   const handleCloseCheckout = () => {
     setIsCheckoutOpen(false);
     setTimeout(() => {
       setSelectedClass(null);
       setSelectedTime(null);
       setSelectedPlan(null);
-    }, 200); // fade duration offset
+    }, 200);
   };
 
-  // Trigger modal for direct membership tier selection
   const handleSelectPlan = (plan: PricingItem) => {
     setSelectedClass(null);
     setSelectedTime(null);
@@ -60,59 +57,27 @@ export default function App() {
 
   return (
     <div id="app-root" className="min-h-screen bg-[#050505] text-white selection:bg-energy-green selection:text-deep-black font-sans relative antialiased">
-      
-      {/* 1. Header bar with Language switcher */}
-      <Navbar 
-        currentLang={currentLang} 
-        onLanguageChange={setCurrentLang} 
+      <Navbar
+        currentLang={currentLang}
+        onLanguageChange={setCurrentLang}
         onBookClick={() => handleBookClass(sampleClasses[0], sampleClasses[0].timeSlots[0])}
       />
-
-      {/* 2. Hero banner with Sound check beats frequency regulator */}
-      <HeroSection 
+      <HeroSection
         currentLang={currentLang}
         onBookClick={() => handleBookClass(sampleClasses[0], sampleClasses[0].timeSlots[0])}
         onClassesClick={handleClassesLearnClick}
       />
-
-      {/* 2.5 More than a workout inspirational section */}
       <MoreThanWorkout currentLang={currentLang} />
-
-      {/* 2.6 How It Works style and classes catalog highlight */}
       <HowItWorks currentLang={currentLang} />
-
-      {/* 2.7 Real benefits list section */}
       <Benefits currentLang={currentLang} />
-
-      {/* 3. Interactive Class Schedules with Spot visual trackers */}
-      <ClassSchedule 
-        currentLang={currentLang}
-        onBookClass={handleBookClass}
-      />
-
-      {/* 4. Beautiful Interactive Studio Showcase */}
+      <ClassSchedule currentLang={currentLang} onBookClass={handleBookClass} />
       <StudioOverview currentLang={currentLang} />
-
-      {/* 5. Comprehensive Responsive Membership Plans */}
-      <Membership 
-        currentLang={currentLang} 
-        onSelectPlan={handleSelectPlan} 
-      />
-
-      {/* 6. Frequently Asked Questions Section */}
+      <Membership currentLang={currentLang} onSelectPlan={handleSelectPlan} />
       <FAQ currentLang={currentLang} />
-
-      {/* 7. Call To Action High Intensity Section */}
       <CTASection currentLang={currentLang} />
-
-      {/* 8. Signature operations Footer */}
-      <Footer 
-        currentLang={currentLang}
-      />
-
-      {/* 9. Conditionally render Secure Trampoline spot allocation modal */}
+      <Footer currentLang={currentLang} />
       {isCheckoutOpen && (
-        <CheckoutModal 
+        <CheckoutModal
           currentLang={currentLang}
           selectedClass={selectedClass}
           selectedTime={selectedTime}
@@ -120,7 +85,17 @@ export default function App() {
           onClose={handleCloseCheckout}
         />
       )}
-
     </div>
+  );
+}
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<MainSite />} />
+        <Route path="/buttons" element={<ButtonsPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
