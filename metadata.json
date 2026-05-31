@@ -1,0 +1,6 @@
+{
+  "name": "Jump Zone Studio",
+  "description": "Boutique trampoline fitness studio combining high-energy rebound training, electronic music beats, and vibrant community in Newark, New Jersey.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

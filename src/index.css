@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Teko:wght@500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Teko", Arial, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --color-energy-green: #A8FF00;
+  --color-lime-accent: #C6FF33;
+  --color-neon-yellow: #F5FF00;
+  --color-deep-black: #0A0A0A;
+  --color-dark-charcoal: #121212;
+  --color-card-black: #1A1A1A;
+  --color-cool-gray: #888888;
+  --color-steel-gray: #CCCCCC;
+
+  /* Custom easing curves — stronger than CSS defaults */
+  --ease-out-strong: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out-strong: cubic-bezier(0.77, 0, 0.175, 1);
+  --ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);
+
+  /* Glow shadow tokens */
+  --shadow-glow-sm: 0 0 20px rgba(168, 255, 0, 0.08);
+  --shadow-glow-md: 0 0 40px rgba(168, 255, 0, 0.12);
+  --shadow-glow-lg: 0 0 60px rgba(168, 255, 0, 0.16);
+}
+
+/* Custom Selection Theme matching Jump Zone brand colors */
+::selection {
+  background-color: #A8FF00;
+  color: #0A0A0A;
+}
+
+body {
+  background-color: #050505;
+  color: #FFFFFF;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* High impact visual glow definitions - streamlined and subtle */
+.glow-green {
+  text-shadow: 0 0 6px rgba(168, 255, 0, 0.2);
+}
+
+.box-glow {
+  box-shadow: 0 0 10px rgba(168, 255, 0, 0.15);
+}
+
+.glow-yellow {
+  text-shadow: 0 0 6px rgba(245, 255, 0, 0.2);
+}
+
+/* Custom soundwave pulse animation */
+@keyframes wave {
+  0%, 100% {
+    transform: scaleY(0.3);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+.soundwave-bar {
+  /* linear: constant motion loops feel more natural with linear timing */
+  animation: wave 1.2s infinite linear;
+  transform-origin: bottom;
+}
+
+.wave-delay-1 { animation-delay: 0.1s; }
+.wave-delay-2 { animation-delay: 0.25s; }
+.wave-delay-3 { animation-delay: 0.4s; }
+.wave-delay-4 { animation-delay: 0.55s; }
+.wave-delay-5 { animation-delay: 0.7s; }
+
+/* Custom scrollbar to match the high end dark theme applet */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+::-webkit-scrollbar-thumb {
+  background: #222222;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #A8FF00;
+}
+
+/* Accessibility: reduced motion — keep opacity/color transitions, remove movement */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
