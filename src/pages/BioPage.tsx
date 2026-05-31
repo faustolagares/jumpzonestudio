@@ -247,6 +247,17 @@ export default function BioPage({ initialLanguage }: { initialLanguage?: Languag
           >
             {content.footer}
           </p>
+
+          <a
+            href="https://www.nexlink.ai"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ '--bio-delay': '780ms' } as CSSProperties}
+            className="bio-rise-in mt-6 flex items-center justify-center gap-1.5 font-mono text-[10px] font-bold tracking-[0.18em] text-cool-gray uppercase transition-colors duration-150 hover:text-energy-green"
+          >
+            <span>Made by</span>
+            <span className="text-energy-green">NexLink</span>
+          </a>
         </section>
       </div>
     </main>
