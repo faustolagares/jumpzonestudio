@@ -6,5 +6,8 @@
     "formats": ["image/avif", "image/webp"],
     "qualities": [75],
     "minimumCacheTTL": 2678400
-  }
+  },
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
 }
