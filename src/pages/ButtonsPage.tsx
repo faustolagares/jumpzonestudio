@@ -92,7 +92,7 @@ function RawBtn({
 }: React.ButtonHTMLAttributes<HTMLButtonElement> & { clipPath?: string }) {
   return (
     <button
-      className={`relative group flex items-center justify-center gap-2 font-sans font-black italic uppercase text-xs tracking-wider px-5 py-3 select-none transition-transform duration-[120ms] ease-out active:scale-[0.97] disabled:cursor-not-allowed disabled:opacity-40 ${className}`}
+      className={`relative group flex items-center justify-center gap-2 font-sans font-black italic uppercase text-xs tracking-wider px-7 py-4 select-none transition-transform duration-[120ms] ease-out active:scale-[0.97] disabled:cursor-not-allowed disabled:opacity-40 ${className}`}
       style={{ clipPath, ...style }}
       {...props}
     >
@@ -105,7 +105,7 @@ function RawBtn({
 function GhostBtn({ children, ...props }: React.ButtonHTMLAttributes<HTMLButtonElement>) {
   return (
     <button
-      className="group relative flex items-center gap-2 font-sans font-black italic uppercase text-xs tracking-wider px-5 py-3 text-steel-gray hover:text-white border border-white/15 hover:border-energy-green/50 transition-[color,border-color] duration-150 select-none active:scale-[0.97] disabled:opacity-40 disabled:cursor-not-allowed"
+      className="group relative flex items-center gap-2 font-sans font-black italic uppercase text-xs tracking-wider px-7 py-4 text-steel-gray hover:text-white border border-white/15 hover:border-energy-green/50 transition-[color,border-color] duration-150 select-none active:scale-[0.97] disabled:opacity-40 disabled:cursor-not-allowed"
       style={{ clipPath: SHAPES.apexAsym }}
       {...props}
     >
@@ -131,7 +131,7 @@ function TextBtn({ children, ...props }: React.ButtonHTMLAttributes<HTMLButtonEl
 function DangerBtn({ children, ...props }: React.ButtonHTMLAttributes<HTMLButtonElement>) {
   return (
     <button
-      className="group relative flex items-center gap-2 font-sans font-black italic uppercase text-xs tracking-wider px-5 py-3 text-white bg-red-600/90 hover:bg-red-500 active:bg-red-700 transition-colors duration-150 select-none active:scale-[0.97] disabled:opacity-40 disabled:cursor-not-allowed"
+      className="group relative flex items-center gap-2 font-sans font-black italic uppercase text-xs tracking-wider px-7 py-4 text-white bg-red-600/90 hover:bg-red-500 active:bg-red-700 transition-colors duration-150 select-none active:scale-[0.97] disabled:opacity-40 disabled:cursor-not-allowed"
       style={{ clipPath: SHAPES.apexAsym }}
       {...props}
     >
@@ -144,7 +144,7 @@ function DangerBtn({ children, ...props }: React.ButtonHTMLAttributes<HTMLButton
 function SuccessBtn({ children, ...props }: React.ButtonHTMLAttributes<HTMLButtonElement>) {
   return (
     <button
-      className="group relative flex items-center gap-2 font-sans font-black italic uppercase text-xs tracking-wider px-5 py-3 text-deep-black bg-emerald-400 hover:bg-emerald-300 active:bg-emerald-500 transition-colors duration-150 select-none active:scale-[0.97] disabled:opacity-40 disabled:cursor-not-allowed"
+      className="group relative flex items-center gap-2 font-sans font-black italic uppercase text-xs tracking-wider px-7 py-4 text-deep-black bg-emerald-400 hover:bg-emerald-300 active:bg-emerald-500 transition-colors duration-150 select-none active:scale-[0.97] disabled:opacity-40 disabled:cursor-not-allowed"
       style={{ clipPath: SHAPES.apexAsym }}
       {...props}
     >
@@ -158,7 +158,7 @@ function LoadingBtn({ loading, children, ...props }: React.ButtonHTMLAttributes<
   return (
     <button
       disabled={loading}
-      className="group relative flex items-center justify-center gap-2 font-sans font-black italic uppercase text-xs tracking-wider px-5 py-3 bg-energy-green text-deep-black hover:bg-[#b5ff1a] active:bg-[#92df00] transition-colors duration-150 select-none active:scale-[0.97] disabled:cursor-wait min-w-[160px]"
+      className="group relative flex items-center justify-center gap-2 font-sans font-black italic uppercase text-xs tracking-wider px-7 py-4 bg-energy-green text-deep-black hover:bg-[#b5ff1a] active:bg-[#92df00] transition-colors duration-150 select-none active:scale-[0.97] disabled:cursor-wait min-w-[160px]"
       style={{ clipPath: SHAPES.apexAsym }}
       {...props}
     >
@@ -189,7 +189,7 @@ function IconBtn({ icon, variant = 'dark', ...props }: React.ButtonHTMLAttribute
 function LightPrimaryBtn({ children, ...props }: React.ButtonHTMLAttributes<HTMLButtonElement>) {
   return (
     <button
-      className="group relative flex items-center gap-2 font-sans font-black italic uppercase text-xs tracking-wider px-5 py-3 bg-deep-black text-white hover:bg-[#111] active:bg-black transition-colors duration-150 select-none active:scale-[0.97]"
+      className="group relative flex items-center gap-2 font-sans font-black italic uppercase text-xs tracking-wider px-7 py-4 bg-deep-black text-white hover:bg-[#111] active:bg-black transition-colors duration-150 select-none active:scale-[0.97]"
       style={{ clipPath: SHAPES.apexAsym }}
       {...props}
     >
@@ -202,7 +202,7 @@ function LightPrimaryBtn({ children, ...props }: React.ButtonHTMLAttributes<HTML
 function LightSecondaryBtn({ children, ...props }: React.ButtonHTMLAttributes<HTMLButtonElement>) {
   return (
     <button
-      className="group relative flex items-center gap-2 font-sans font-black italic uppercase text-xs tracking-wider px-5 py-3 bg-transparent text-deep-black border border-black/30 hover:border-black hover:bg-black/5 transition-[border-color,background-color] duration-150 select-none active:scale-[0.97]"
+      className="group relative flex items-center gap-2 font-sans font-black italic uppercase text-xs tracking-wider px-7 py-4 bg-transparent text-deep-black border border-black/30 hover:border-black hover:bg-black/5 transition-[border-color,background-color] duration-150 select-none active:scale-[0.97]"
       style={{ clipPath: SHAPES.apexAsym }}
       {...props}
     >

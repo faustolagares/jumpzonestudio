@@ -45,10 +45,10 @@ export const JumpButton: React.FC<JumpButtonProps> = ({
         )}
         
         {/* Inner Content block */}
-        <div className="relative w-full flex items-center justify-between text-deep-black z-10 px-5">
+        <div className="relative w-full flex items-center justify-between text-deep-black z-10 px-7">
           {/* Double Slashes on the Left */}
           {showSlashes && (
-            <div className="flex space-x-[3px] text-deep-black/30 group-hover:text-deep-black/50 transition-colors duration-150 font-extrabold italic tracking-tighter text-sm sm:text-base select-none shrink-0 pr-1">
+            <div className="flex space-x-[3px] text-deep-black/30 group-hover:text-deep-black/50 transition-colors duration-150 font-extrabold italic tracking-tighter text-sm sm:text-base select-none shrink-0 pr-3">
               <span>/</span>
               <span>/</span>
             </div>
@@ -85,13 +85,13 @@ export const JumpButton: React.FC<JumpButtonProps> = ({
     >
       {/* Outer Outline Border (clipped with clip-path) */}
       <div 
-        className="absolute inset-0 bg-white/15 group-hover:bg-energy-green transition-colors duration-200"
+        className="absolute inset-0 bg-white/15 group-hover:bg-white/22 transition-colors duration-200"
         style={clipPathStyle}
       />
 
       {/* Inner Background (1px inset to reveal the border outline, also clipped) */}
       <div 
-        className="absolute inset-[1px] bg-card-black group-hover:bg-[#222226] group-active:bg-[#151517] transition-colors duration-200"
+        className="absolute inset-[1px] bg-[#111111] group-hover:bg-[#161616] group-active:bg-[#0d0d0d] transition-colors duration-200"
         style={clipPathStyle}
       />
       
@@ -101,23 +101,23 @@ export const JumpButton: React.FC<JumpButtonProps> = ({
       )}
       
       {/* Inner Content block */}
-      <div className="relative w-full flex items-center justify-between z-10 px-5">
+      <div className="relative w-full flex items-center justify-between z-10 px-7">
         {/* Slanted dividers */}
         {showSlashes && (
-          <div className="flex space-x-[3px] text-white/20 group-hover:text-energy-green/50 transition-colors duration-150 font-extrabold italic tracking-tighter text-sm sm:text-base select-none shrink-0 pr-1">
+          <div className="flex space-x-[3px] text-white/20 group-hover:text-white/35 transition-colors duration-150 font-extrabold italic tracking-tighter text-sm sm:text-base select-none shrink-0 pr-3">
             <span>/</span>
             <span>/</span>
           </div>
         )}
 
         {/* Centered label */}
-        <span className="flex-1 text-center font-sans font-black italic uppercase text-xs sm:text-[13px] tracking-wider leading-none text-white group-hover:text-energy-green transition-colors duration-150 whitespace-nowrap">
+        <span className="flex-1 text-center font-sans font-black italic uppercase text-xs sm:text-[13px] tracking-wider leading-none text-white group-hover:text-white transition-colors duration-150 whitespace-nowrap">
           {children}
         </span>
 
         {/* Arrow vector mark */}
         {showIcon && (
-          <div className="flex items-center text-white/30 group-hover:text-energy-green transition-colors duration-150 shrink-0 pl-1">
+          <div className="flex items-center text-white/30 group-hover:text-white transition-colors duration-150 shrink-0 pl-1">
             {iconType === "chevron" ? (
               <ChevronRight className="w-4 h-4 stroke-[2.5px]" />
             ) : (
