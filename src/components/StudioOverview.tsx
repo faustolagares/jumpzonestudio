@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Compass, Zap, Users, ShieldCheck, Maximize2, X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Language } from '../types';
+import { optimizedSrc, optimizedSrcSet } from '../lib/img';
 import { IconButton } from './Buttons';
 
 interface StudioOverviewProps {
@@ -299,7 +300,8 @@ export default function StudioOverview({ currentLang }: StudioOverviewProps) {
               >
                 {/* Main image */}
                 <img 
-                  src={studioImages[activeImgIndex].url}
+                  src={optimizedSrc(studioImages[activeImgIndex].url, 1080)}
+                  srcSet={optimizedSrcSet(studioImages[activeImgIndex].url, 1080)}
                   alt="Studio Physical Space View"
                   loading="lazy"
                   decoding="async"
@@ -367,7 +369,8 @@ export default function StudioOverview({ currentLang }: StudioOverviewProps) {
                     }`}
                   />
                   <img 
-                    src={img.url} 
+                    src={optimizedSrc(img.url, 384)} 
+                    srcSet={optimizedSrcSet(img.url, 384)}
                     alt={`Thumbnail view ${i + 1}`} 
                     loading="lazy"
                     decoding="async"
@@ -465,7 +468,8 @@ export default function StudioOverview({ currentLang }: StudioOverviewProps) {
               {/* The main picture */}
               <div className="relative w-full aspect-[16/9] overflow-hidden rounded-xl border border-white/10 shadow-2xl">
                 <img 
-                  src={studioImages[activeImgIndex].url} 
+                  src={optimizedSrc(studioImages[activeImgIndex].url, 1280)} 
+                  srcSet={optimizedSrcSet(studioImages[activeImgIndex].url, 1280)}
                   alt="Studio detailed high-res expanded view"
                   decoding="async"
                   className="w-full h-full object-cover"

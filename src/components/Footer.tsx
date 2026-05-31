@@ -2,6 +2,9 @@ import { Instagram, Music, Phone, Mail, MapPin, Facebook } from 'lucide-react';
 import { Language } from '../types';
 import { translations } from '../translations';
 import { NavLinkButton } from './Buttons';
+import { optimizedSrc, optimizedSrcSet } from '../lib/img';
+
+const LOGO_SRC = '/images/jump_zone_logo_1780012118773.png';
 
 interface FooterProps {
   currentLang: Language;
@@ -47,7 +50,8 @@ export default function Footer({ currentLang }: FooterProps) {
               className="cursor-pointer select-none relative h-20 w-52 sm:w-60 group block -ml-3"
             >
               <img 
-                src="/images/jump_zone_logo_1780012118773.png" 
+                src={optimizedSrc(LOGO_SRC, 256)} 
+                srcSet={optimizedSrcSet(LOGO_SRC, 256)}
                 alt="JUMP ZONE STUDIO Logo" 
                 loading="lazy"
                 decoding="async"

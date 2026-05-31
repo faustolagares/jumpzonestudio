@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { Language } from '../types';
+import { optimizedSrc, optimizedSrcSet } from '../lib/img';
 
 interface MoreThanWorkoutProps {
   currentLang: Language;
@@ -172,7 +173,8 @@ export default function MoreThanWorkout({ currentLang }: MoreThanWorkoutProps) {
                   {/* Image section */}
                   <div className="relative w-full h-72 sm:h-64 overflow-hidden bg-black shrink-0">
                     <img 
-                      src={imageUrl} 
+                      src={optimizedSrc(imageUrl, 640)} 
+                      srcSet={optimizedSrcSet(imageUrl, 640)}
                       alt={feat.title}
                       loading="lazy"
                       decoding="async"

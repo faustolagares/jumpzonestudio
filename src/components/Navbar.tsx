@@ -4,6 +4,9 @@ import { Language, TranslationSet } from '../types';
 import { translations } from '../translations';
 import { motion, AnimatePresence } from 'motion/react';
 import { HeaderButton, IconButton, JumpButton, NavLinkButton } from './Buttons';
+import { optimizedSrc, optimizedSrcSet } from '../lib/img';
+
+const LOGO_SRC = '/images/jump_zone_logo_1780012118773.png';
 
 interface NavbarProps {
   currentLang: Language;
@@ -81,7 +84,8 @@ export default function Navbar({ currentLang, onLanguageChange, onBookClick }: N
             }`}
           >
             <img 
-              src="/images/jump_zone_logo_1780012118773.png" 
+              src={optimizedSrc(LOGO_SRC, 320)} 
+              srcSet={optimizedSrcSet(LOGO_SRC, 320)}
               alt="JUMP ZONE STUDIO Logo" 
               decoding="async"
               fetchPriority="high"
@@ -190,7 +194,8 @@ export default function Navbar({ currentLang, onLanguageChange, onBookClick }: N
                 className="cursor-pointer select-none relative h-14 w-36"
               >
                 <img
-                  src="/images/jump_zone_logo_1780012118773.png"
+                  src={optimizedSrc(LOGO_SRC, 256)}
+                  srcSet={optimizedSrcSet(LOGO_SRC, 256)}
                   alt="JUMP ZONE STUDIO Logo"
                   loading="lazy"
                   decoding="async"

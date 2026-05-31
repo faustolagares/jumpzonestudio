@@ -3,6 +3,7 @@ import { motion } from 'motion/react';
 import { Language } from '../types';
 import { JumpButton } from './Buttons';
 import { Flame, Activity, BarChart3, Users, Timer, Dumbbell } from 'lucide-react';
+import { optimizedSrc, optimizedSrcSet } from '../lib/img';
 
 const cardContainerVariants = {
   hidden: {},
@@ -232,7 +233,8 @@ export default function HowItWorks({ currentLang }: HowItWorksProps) {
                   <div className="h-64 sm:h-56 relative overflow-hidden select-none">
                     {/* Underlying real image asset */}
                     <img 
-                      src={card.img} 
+                      src={optimizedSrc(card.img, 640)} 
+                      srcSet={optimizedSrcSet(card.img, 640)}
                       alt={card.title}
                       loading="lazy"
                       decoding="async"
