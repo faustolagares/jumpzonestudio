@@ -294,4 +294,18 @@ export const LightSecondaryButton: React.FC<React.ButtonHTMLAttributes<HTMLButto
   </button>
 );
 
+// ─── 10. NavLinkButton ───────────────────────────────────────────────────────
+// Inline navigation / footer links — no clip-path, no arrow, text-only
+
+export const NavLinkButton: React.FC<React.ButtonHTMLAttributes<HTMLButtonElement>> = ({ children, className = "", ...props }) => (
+  <button
+    className={`text-left font-sans font-black text-xs uppercase tracking-wider
+      text-steel-gray hover:text-energy-green transition-colors duration-150
+      select-none disabled:opacity-40 disabled:cursor-not-allowed ${className}`}
+    {...props}
+  >
+    {children}
+  </button>
+);
+
 export { JumpButton as default };

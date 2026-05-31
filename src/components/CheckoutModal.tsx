@@ -4,6 +4,7 @@ import { Language, StudioClass, PricingItem } from '../types';
 import { translations } from '../translations';
 import { motion, AnimatePresence } from 'motion/react';
 import { JumpButton } from './JumpButton';
+import { IconButton } from './Buttons';
 
 interface CheckoutModalProps {
   currentLang: Language;
@@ -90,12 +91,12 @@ export default function CheckoutModal({
               </p>
             </div>
           </div>
-          <button 
+          <IconButton
+            icon={<X className="w-4 h-4" />}
+            variant="dark"
             onClick={onClose}
-            className="p-1 rounded-md text-steel-gray hover:text-white hover:bg-white/5 transition-colors focus:outline-none cursor-pointer"
-          >
-            <X className="w-5 h-5" />
-          </button>
+            aria-label="Close"
+          />
         </div>
 
         {/* Modal Workspace content */}

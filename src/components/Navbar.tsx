@@ -4,6 +4,7 @@ import { Language, TranslationSet } from '../types';
 import { translations } from '../translations';
 import { motion, AnimatePresence } from 'motion/react';
 import { JumpButton } from './JumpButton';
+import { IconButton } from './Buttons';
 
 interface NavbarProps {
   currentLang: Language;
@@ -167,12 +168,12 @@ export default function Navbar({ currentLang, onLanguageChange, onBookClick }: N
                 ))}
               </div>
             </div>
-            <button
+            <IconButton
+              icon={<Menu className="w-5 h-5" />}
+              variant="dark"
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 text-steel-gray hover:text-white transition-colors duration-150 focus:outline-none"
-            >
-              <Menu className="w-6 h-6" />
-            </button>
+              aria-label="Open menu"
+            />
           </div>
 
         </div>
@@ -203,12 +204,12 @@ export default function Navbar({ currentLang, onLanguageChange, onBookClick }: N
                   referrerPolicy="no-referrer"
                 />
               </div>
-              <button
+              <IconButton
+                icon={<X className="w-5 h-5" />}
+                variant="dark"
                 onClick={() => setIsOpen(false)}
-                className="p-2 text-steel-gray hover:text-white transition-colors duration-150"
-              >
-                <X className="w-7 h-7" />
-              </button>
+                aria-label="Close menu"
+              />
             </div>
 
             {/* Centered nav items */}

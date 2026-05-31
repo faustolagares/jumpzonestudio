@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Compass, Zap, Users, ShieldCheck, Maximize2, X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Language } from '../types';
+import { IconButton } from './Buttons';
 
 interface StudioOverviewProps {
   currentLang: Language;
@@ -331,20 +332,22 @@ export default function StudioOverview({ currentLang }: StudioOverviewProps) {
               </div>
 
               {/* Slider Arrow Navigation Controls overlay */}
-              <button 
-                onClick={(e) => { e.stopPropagation(); handlePrevPhoto(); }}
-                className="absolute left-4 top-1/2 -translate-y-1/2 z-30 p-2 text-white bg-black/40 hover:bg-energy-green hover:text-black rounded-lg border border-white/5 hover:border-energy-green/20 backdrop-blur-md opacity-0 group-hover:opacity-100 transition-[opacity,background-color,color] duration-150 cursor-pointer"
-                aria-label="Previous view"
-              >
-                <ChevronLeft className="w-5 h-5" />
-              </button>
-              <button 
-                onClick={(e) => { e.stopPropagation(); handleNextPhoto(); }}
-                className="absolute right-4 top-1/2 -translate-y-1/2 z-30 p-2 text-white bg-black/40 hover:bg-energy-green hover:text-black rounded-lg border border-white/5 hover:border-energy-green/20 backdrop-blur-md opacity-0 group-hover:opacity-100 transition-[opacity,background-color,color] duration-150 cursor-pointer"
-                aria-label="Next view"
-              >
-                <ChevronRight className="w-5 h-5" />
-              </button>
+              <div className="absolute left-4 top-1/2 -translate-y-1/2 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-150">
+                <IconButton
+                  icon={<ChevronLeft className="w-5 h-5" />}
+                  variant="dark"
+                  onClick={(e) => { e.stopPropagation(); handlePrevPhoto(); }}
+                  aria-label="Previous view"
+                />
+              </div>
+              <div className="absolute right-4 top-1/2 -translate-y-1/2 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-150">
+                <IconButton
+                  icon={<ChevronRight className="w-5 h-5" />}
+                  variant="dark"
+                  onClick={(e) => { e.stopPropagation(); handleNextPhoto(); }}
+                  aria-label="Next view"
+                />
+              </div>
             </div>
 
             {/* INTERACTIVE THUMBNAILS ROW */}
@@ -441,13 +444,14 @@ export default function StudioOverview({ currentLang }: StudioOverviewProps) {
             onClick={() => setIsLightboxOpen(false)}
           >
             {/* Close button top right */}
-            <button 
-              onClick={() => setIsLightboxOpen(false)}
-              className="absolute top-6 right-6 p-2.5 bg-white/[0.03] hover:bg-energy-green hover:text-black rounded-full text-white border border-white/5 hover:border-energy-green/25 transition-[background-color,color] duration-150 z-20 cursor-pointer"
-              title="Close view"
-            >
-              <X className="w-5 h-5" />
-            </button>
+            <div className="absolute top-6 right-6 z-20">
+              <IconButton
+                icon={<X className="w-4 h-4" />}
+                variant="dark"
+                onClick={() => setIsLightboxOpen(false)}
+                aria-label="Close view"
+              />
+            </div>
 
             {/* Core content slide modal */}
             <motion.div 
@@ -469,20 +473,22 @@ export default function StudioOverview({ currentLang }: StudioOverviewProps) {
                 />
 
                 {/* Slider arrows in lightbox */}
-                <button 
-                  onClick={handlePrevPhoto}
-                  className="absolute left-4 top-1/2 -translate-y-1/2 p-3 text-white bg-black/60 hover:bg-energy-green hover:text-black rounded-lg border border-white/5 hover:border-energy-green/20 backdrop-blur-md transition-[background-color,color] duration-150 cursor-pointer"
-                  aria-label="Previous view"
-                >
-                  <ChevronLeft className="w-6 h-6" />
-                </button>
-                <button 
-                  onClick={handleNextPhoto}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 p-3 text-white bg-black/60 hover:bg-energy-green hover:text-black rounded-lg border border-white/5 hover:border-energy-green/20 backdrop-blur-md transition-[background-color,color] duration-150 cursor-pointer"
-                  aria-label="Next view"
-                >
-                  <ChevronRight className="w-6 h-6" />
-                </button>
+                <div className="absolute left-4 top-1/2 -translate-y-1/2">
+                  <IconButton
+                    icon={<ChevronLeft className="w-5 h-5" />}
+                    variant="dark"
+                    onClick={handlePrevPhoto}
+                    aria-label="Previous view"
+                  />
+                </div>
+                <div className="absolute right-4 top-1/2 -translate-y-1/2">
+                  <IconButton
+                    icon={<ChevronRight className="w-5 h-5" />}
+                    variant="dark"
+                    onClick={handleNextPhoto}
+                    aria-label="Next view"
+                  />
+                </div>
               </div>
 
               {/* Context details banner in lightbox */}

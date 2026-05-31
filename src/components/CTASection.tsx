@@ -1,5 +1,6 @@
 import React from 'react';
 import { Language } from '../types';
+import { LightPrimaryButton } from './Buttons';
 
 interface CTASectionProps {
   currentLang: Language;
@@ -95,22 +96,9 @@ export default function CTASection({ currentLang }: CTASectionProps) {
 
               {/* Action Button */}
               <div className="flex items-center justify-center pt-6 w-full max-w-xs mx-auto">
-                
-                {/* Primary: black button on the green CTA background */}
-                <button
-                  onClick={handlePrimaryClick}
-                  className="group relative w-full py-4 px-8 flex items-center justify-center select-none cursor-pointer
-                    bg-black hover:bg-neutral-900
-                    transition-[transform,background-color] duration-150 ease-out active:scale-[0.97]"
-                  style={{
-                    clipPath: "polygon(10px 0%, 100% 0%, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0% 100%, 0% 10px)"
-                  }}
-                >
-                  <span className="font-sans font-black italic uppercase text-xs sm:text-[13px] tracking-wider text-energy-green group-hover:text-white transition-colors duration-150">
-                    {t.primaryCta}
-                  </span>
-                </button>
-
+                <LightPrimaryButton onClick={handlePrimaryClick} className="w-full">
+                  {t.primaryCta}
+                </LightPrimaryButton>
               </div>
 
             </div>

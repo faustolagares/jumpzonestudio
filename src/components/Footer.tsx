@@ -1,6 +1,7 @@
 import { Instagram, Music, Phone, Mail, MapPin, Facebook } from 'lucide-react';
 import { Language } from '../types';
 import { translations } from '../translations';
+import { NavLinkButton } from './Buttons';
 
 interface FooterProps {
   currentLang: Language;
@@ -137,43 +138,25 @@ export default function Footer({ currentLang }: FooterProps) {
             <h5 className="text-xs font-mono font-bold tracking-[0.2em] text-white uppercase sm:border-l-2 sm:border-energy-green sm:pl-3">
               THE CLUB ZONE
             </h5>
-            <div className="flex flex-col space-y-3 text-xs font-sans font-medium">
-              <button 
-                onClick={() => scrollToEl('hero-root')} 
-                className="text-steel-gray hover:text-energy-green text-left transition-colors duration-150 uppercase tracking-wider"
-              >
+            <div className="flex flex-col space-y-3">
+              <NavLinkButton onClick={() => scrollToEl('hero-root')}>
                 {currentLang === 'pt' ? 'INÍCIO' : currentLang === 'es' ? 'INICIO' : 'HOME'}
-              </button>
-              <button 
-                onClick={() => scrollToEl('more-than-workout')} 
-                className="text-steel-gray hover:text-energy-green text-left transition-colors duration-150 uppercase tracking-wider"
-              >
+              </NavLinkButton>
+              <NavLinkButton onClick={() => scrollToEl('more-than-workout')}>
                 {currentLang === 'pt' ? 'CONCEITO' : currentLang === 'es' ? 'CONCEPTO' : 'OUR STYLE'}
-              </button>
-              <button 
-                onClick={() => scrollToEl('how-it-works-section')} 
-                className="text-steel-gray hover:text-energy-green text-left transition-colors duration-150 uppercase tracking-wider"
-              >
+              </NavLinkButton>
+              <NavLinkButton onClick={() => scrollToEl('how-it-works-section')}>
                 {currentLang === 'pt' ? 'COMO FUNCIONA' : currentLang === 'es' ? 'CÓMO FUNCIONA' : 'HOW IT WORKS'}
-              </button>
-              <button 
-                onClick={() => scrollToEl('benefits-section')} 
-                className="text-steel-gray hover:text-energy-green text-left transition-colors duration-150 uppercase tracking-wider"
-              >
+              </NavLinkButton>
+              <NavLinkButton onClick={() => scrollToEl('benefits-section')}>
                 {currentLang === 'pt' ? 'BENEFÍCIOS' : currentLang === 'es' ? 'BENEFICIOS' : 'BENEFITS'}
-              </button>
-              <button 
-                onClick={() => scrollToEl('classes')} 
-                className="text-steel-gray hover:text-energy-green text-left transition-colors duration-150 uppercase tracking-wider"
-              >
+              </NavLinkButton>
+              <NavLinkButton onClick={() => scrollToEl('classes')}>
                 {t.navClasses}
-              </button>
-              <button 
-                onClick={() => scrollToEl('pricing')} 
-                className="text-steel-gray hover:text-energy-green text-left transition-colors duration-150 uppercase tracking-wider"
-              >
+              </NavLinkButton>
+              <NavLinkButton onClick={() => scrollToEl('pricing')}>
                 {currentLang === 'pt' ? 'MENSALIDADES' : currentLang === 'es' ? 'TARIFAS' : 'PRICING'}
-              </button>
+              </NavLinkButton>
             </div>
           </div>
 
