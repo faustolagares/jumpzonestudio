@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://jumpzonestudio.com/en</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jumpzonestudio.com/en" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://jumpzonestudio.com/pt" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://jumpzonestudio.com/es" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jumpzonestudio.com/en" />
+  </url>
+  <url>
+    <loc>https://jumpzonestudio.com/pt</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jumpzonestudio.com/en" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://jumpzonestudio.com/pt" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://jumpzonestudio.com/es" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jumpzonestudio.com/en" />
+  </url>
+  <url>
+    <loc>https://jumpzonestudio.com/es</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jumpzonestudio.com/en" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://jumpzonestudio.com/pt" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://jumpzonestudio.com/es" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jumpzonestudio.com/en" />
+  </url>
+  <url>
+    <loc>https://jumpzonestudio.com/en/bio</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jumpzonestudio.com/en/bio" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://jumpzonestudio.com/pt/bio" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://jumpzonestudio.com/es/bio" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jumpzonestudio.com/en/bio" />
+  </url>
+  <url>
+    <loc>https://jumpzonestudio.com/pt/bio</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jumpzonestudio.com/en/bio" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://jumpzonestudio.com/pt/bio" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://jumpzonestudio.com/es/bio" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jumpzonestudio.com/en/bio" />
+  </url>
+  <url>
+    <loc>https://jumpzonestudio.com/es/bio</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jumpzonestudio.com/en/bio" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://jumpzonestudio.com/pt/bio" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://jumpzonestudio.com/es/bio" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jumpzonestudio.com/en/bio" />
+  </url>
+</urlset>

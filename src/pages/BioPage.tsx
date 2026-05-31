@@ -11,10 +11,13 @@ import {
   Users,
   Youtube,
 } from 'lucide-react';
+import { useState } from 'react';
 import type { CSSProperties, ReactNode } from 'react';
 import { IconButton, JumpButton } from '../components/Buttons';
+import SeoManager from '../components/SeoManager';
 import { HERO_BACKGROUND_SRC, JUMP_ZONE_LOGO_SRC } from '../lib/assets';
 import { optimizedSrc, optimizedSrcSet } from '../lib/img';
+import { getBrowserLanguage, supportedLanguages } from '../lib/language';
 import { Language } from '../types';
 
 const INSTAGRAM_URL = 'https://www.instagram.com/jumpzonestudio';
@@ -83,22 +86,8 @@ const socialLinks = [
   { label: 'YouTube', icon: <Youtube className="w-5 h-5" /> },
 ];
 
-function getBrowserLanguage(): Language {
-  const language = navigator.language.toLowerCase();
-
-  if (language.startsWith('pt')) {
-    return 'pt';
-  }
-
-  if (language.startsWith('es')) {
-    return 'es';
-  }
-
-  return 'en';
-}
-
-export default function BioPage() {
-  const currentLang = getBrowserLanguage();
+export default function BioPage({ initialLanguage }: { initialLanguage?: Language }) {
+  const [currentLang, setCurrentLang] = useState<Language>(() => initialLanguage ?? getBrowserLanguage());
   const content = bioContent[currentLang];
 
   const openUrl = (url: string) => {
@@ -107,6 +96,7 @@ export default function BioPage() {
 
   return (
     <main className="min-h-screen bg-[#050505] text-white selection:bg-energy-green selection:text-deep-black font-sans antialiased">
+      <SeoManager language={currentLang} page="bio" />
       <style>
         {`
           @keyframes bioCoverIn {
@@ -158,6 +148,28 @@ export default function BioPage() {
         >
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_85%,rgba(168,255,0,0.22),transparent_30%)]" />
           <div className="absolute left-0 right-0 bottom-0 h-28 bg-linear-to-t from-[#050505] via-[#050505]/80 to-transparent" />
+          <div className="bio-rise-in absolute right-4 top-4 z-10 flex items-center bg-black/45 p-0.5 rounded-full border border-white/8 backdrop-blur-md" style={{ '--bio-delay': '80ms' } as CSSProperties}>
+            <div className="pl-2 pr-1 text-steel-gray">
+              <Globe className="w-3.5 h-3.5" />
+            </div>
+            <div className="flex space-x-0.5">
+              {supportedLanguages.map((lang) => (
+                <button
+                  key={lang.code}
+                  type="button"
+                  onClick={() => setCurrentLang(lang.code)}
+                  className={`text-[9px] font-mono font-bold px-1.5 py-0.5 rounded-full transition-colors duration-150 ${
+                    currentLang === lang.code
+                      ? 'bg-energy-green text-deep-black'
+                      : 'text-steel-gray hover:text-white'
+                  }`}
+                  aria-pressed={currentLang === lang.code}
+                >
+                  {lang.label}
+                </button>
+              ))}
+            </div>
+          </div>
         </section>
 
         <section className="relative -mt-16 px-5 pb-8">

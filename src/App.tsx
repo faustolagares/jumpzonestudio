@@ -1,10 +1,12 @@
 import { useState, lazy, Suspense } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Navigate, Routes, Route, useParams } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import LazySection from './components/LazySection';
+import SeoManager from './components/SeoManager';
 import { Language, StudioClass, PricingItem } from './types';
 import { sampleClasses } from './translations';
+import { getBrowserLanguage, isLanguage } from './lib/language';
 
 const MoreThanWorkout = lazy(() => import('./components/MoreThanWorkout'));
 const HowItWorks = lazy(() => import('./components/HowItWorks'));
@@ -19,8 +21,8 @@ const CheckoutModal = lazy(() => import('./components/CheckoutModal'));
 const ButtonsPage = lazy(() => import('./pages/ButtonsPage'));
 const BioPage = lazy(() => import('./pages/BioPage'));
 
-function MainSite() {
-  const [currentLang, setCurrentLang] = useState<Language>('pt');
+function MainSite({ initialLanguage }: { initialLanguage?: Language }) {
+  const [currentLang, setCurrentLang] = useState<Language>(() => initialLanguage ?? getBrowserLanguage());
   const [selectedClass, setSelectedClass] = useState<StudioClass | null>(null);
   const [selectedTime, setSelectedTime] = useState<string | null>(null);
   const [selectedPlan, setSelectedPlan] = useState<PricingItem | null>(null);
@@ -60,6 +62,7 @@ function MainSite() {
 
   return (
     <div id="app-root" className="min-h-screen bg-[#050505] text-white selection:bg-energy-green selection:text-deep-black font-sans relative antialiased">
+      <SeoManager language={currentLang} page="home" />
       <Navbar
         currentLang={currentLang}
         onLanguageChange={setCurrentLang}
@@ -130,14 +133,49 @@ function MainSite() {
   );
 }
 
+function LocalizedHome() {
+  const { lang } = useParams();
+
+  if (!isLanguage(lang)) {
+    return <Navigate to="/" replace />;
+  }
+
+  return <MainSite initialLanguage={lang} />;
+}
+
+function BioRoute({ initialLanguage }: { initialLanguage?: Language }) {
+  return <BioPage initialLanguage={initialLanguage} />;
+}
+
+function LocalizedBio() {
+  const { lang } = useParams();
+
+  if (!isLanguage(lang)) {
+    return <Navigate to="/bio" replace />;
+  }
+
+  return <BioRoute initialLanguage={lang} />;
+}
+
+function ButtonsRoute() {
+  return (
+    <>
+      <SeoManager language="en" page="buttons" />
+      <ButtonsPage />
+    </>
+  );
+}
+
 export default function App() {
   return (
     <BrowserRouter>
       <Suspense fallback={<div className="min-h-screen bg-[#050505]" />}>
         <Routes>
           <Route path="/" element={<MainSite />} />
-          <Route path="/bio" element={<BioPage />} />
-          <Route path="/buttons" element={<ButtonsPage />} />
+          <Route path="/:lang" element={<LocalizedHome />} />
+          <Route path="/bio" element={<BioRoute />} />
+          <Route path="/:lang/bio" element={<LocalizedBio />} />
+          <Route path="/buttons" element={<ButtonsRoute />} />
         </Routes>
       </Suspense>
     </BrowserRouter>
