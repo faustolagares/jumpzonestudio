@@ -39,7 +39,7 @@ const bioContent: Record<Language, {
   links: BioLink[];
 }> = {
   en: {
-    subtitle: 'High-energy trampoline fitness in Newark, NJ.',
+    subtitle: 'New fitness experience in Newark, NJ.',
     footer: 'Move. Connect. Level up.',
     links: [
       { label: 'BOOK YOUR JUMP', url: INSTAGRAM_URL, variant: 'primary', icon: <CalendarDays className="w-4 h-4" /> },
@@ -52,7 +52,7 @@ const bioContent: Record<Language, {
     ],
   },
   es: {
-    subtitle: 'Fitness de trampolín de alta energía en Newark, NJ.',
+    subtitle: 'Nueva experiencia fitness en Newark, NJ.',
     footer: 'Muévete. Conecta. Sube de nivel.',
     links: [
       { label: 'RESERVA TU JUMP', url: INSTAGRAM_URL, variant: 'primary', icon: <CalendarDays className="w-4 h-4" /> },
@@ -65,7 +65,7 @@ const bioContent: Record<Language, {
     ],
   },
   pt: {
-    subtitle: 'Treino de trampolim de alta energia em Newark, NJ.',
+    subtitle: 'Nova experiência fitness em Newark, NJ.',
     footer: 'Mova. Conecte. Suba de nível.',
     links: [
       { label: 'RESERVAR JUMP', url: INSTAGRAM_URL, variant: 'primary', icon: <CalendarDays className="w-4 h-4" /> },
@@ -172,31 +172,21 @@ export default function BioPage({ initialLanguage }: { initialLanguage?: Languag
           </div>
         </section>
 
-        <section className="relative -mt-16 px-5 pb-8">
-          <div className="bio-avatar-in mx-auto mb-7 flex h-32 w-32 items-center justify-center rounded-full border border-energy-green bg-black p-2.5 shadow-[0_0_34px_rgba(168,255,0,0.36)]">
+        <section className="relative -mt-24 px-5 pb-8">
+          <div className="bio-avatar-in mx-auto -mb-12 flex justify-center">
             <img
-              src={optimizedSrc(JUMP_ZONE_LOGO_SRC, 256)}
-              srcSet={optimizedSrcSet(JUMP_ZONE_LOGO_SRC, 256)}
+              src={optimizedSrc(JUMP_ZONE_LOGO_SRC, 384)}
+              srcSet={optimizedSrcSet(JUMP_ZONE_LOGO_SRC, 384)}
               alt="Jump Zone Studio"
-              className="h-auto w-full object-contain"
+              className="h-auto w-[280px] max-w-[82vw] object-contain object-top drop-shadow-[0_0_26px_rgba(168,255,0,0.22)]"
+              style={{ clipPath: 'inset(0 0 30% 0)' }}
               decoding="async"
               referrerPolicy="no-referrer"
             />
           </div>
 
           <div className="bio-rise-in mb-7 text-center" style={{ '--bio-delay': '130ms' } as CSSProperties}>
-            <p className="mb-2 font-mono text-[10px] font-bold tracking-[0.32em] text-energy-green uppercase">
-              Newark, NJ
-            </p>
-            <div className="-space-y-1">
-              <h1 className="font-display text-6xl font-black leading-none tracking-tight text-white uppercase italic -skew-x-3">
-                Jump Zone
-              </h1>
-              <p className="font-sans text-[11px] font-black leading-none tracking-[0.48em] text-white/60 uppercase">
-                Studio
-              </p>
-            </div>
-            <p className="mt-3 text-sm font-medium leading-relaxed text-steel-gray">
+            <p className="text-sm font-medium leading-relaxed text-steel-gray">
               {content.subtitle}
             </p>
           </div>
