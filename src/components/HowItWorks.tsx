@@ -234,6 +234,8 @@ export default function HowItWorks({ currentLang }: HowItWorksProps) {
                     <img 
                       src={card.img} 
                       alt={card.title}
+                      loading="lazy"
+                      decoding="async"
                       referrerPolicy="no-referrer"
                       className="w-full h-full object-cover brightness-75 group-hover:brightness-90 group-hover:scale-105 transition-[transform,filter] duration-350 ease-out"
                     />

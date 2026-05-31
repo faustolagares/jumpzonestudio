@@ -48,6 +48,8 @@ export default function Footer({ currentLang }: FooterProps) {
               <img 
                 src="/images/jump_zone_logo_1780012118773.png" 
                 alt="JUMP ZONE STUDIO Logo" 
+                loading="lazy"
+                decoding="async"
                 className="h-24 sm:h-28 w-auto object-contain absolute left-0 top-1/2 -translate-y-1/2 transition-transform duration-200 ease-out group-hover:scale-[1.03]"
                 referrerPolicy="no-referrer"
               />

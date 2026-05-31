@@ -83,6 +83,8 @@ export default function Navbar({ currentLang, onLanguageChange, onBookClick }: N
             <img 
               src="/images/jump_zone_logo_1780012118773.png" 
               alt="JUMP ZONE STUDIO Logo" 
+              decoding="async"
+              fetchPriority="high"
               className={`transition-all duration-300 w-auto object-contain absolute left-0 origin-left max-w-none ${
                 isScrolled 
                   ? 'h-14 sm:h-18 lg:h-22 top-[58%] -translate-y-1/2' 
@@ -195,6 +197,8 @@ export default function Navbar({ currentLang, onLanguageChange, onBookClick }: N
                 <img
                   src="/images/jump_zone_logo_1780012118773.png"
                   alt="JUMP ZONE STUDIO Logo"
+                  loading="lazy"
+                  decoding="async"
                   className="h-20 w-auto object-contain absolute left-0 top-[60%] -translate-y-1/2"
                   referrerPolicy="no-referrer"
                 />

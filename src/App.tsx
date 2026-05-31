@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
@@ -11,10 +11,11 @@ import Membership from './components/Membership';
 import FAQ from './components/FAQ';
 import CTASection from './components/CTASection';
 import Footer from './components/Footer';
-import CheckoutModal from './components/CheckoutModal';
-import ButtonsPage from './pages/ButtonsPage';
 import { Language, StudioClass, PricingItem } from './types';
 import { sampleClasses } from './translations';
+
+const CheckoutModal = lazy(() => import('./components/CheckoutModal'));
+const ButtonsPage = lazy(() => import('./pages/ButtonsPage'));
 
 function MainSite() {
   const [currentLang, setCurrentLang] = useState<Language>('pt');
@@ -77,13 +78,15 @@ function MainSite() {
       <CTASection currentLang={currentLang} />
       <Footer currentLang={currentLang} />
       {isCheckoutOpen && (
-        <CheckoutModal
-          currentLang={currentLang}
-          selectedClass={selectedClass}
-          selectedTime={selectedTime}
-          selectedPlan={selectedPlan}
-          onClose={handleCloseCheckout}
-        />
+        <Suspense fallback={null}>
+          <CheckoutModal
+            currentLang={currentLang}
+            selectedClass={selectedClass}
+            selectedTime={selectedTime}
+            selectedPlan={selectedPlan}
+            onClose={handleCloseCheckout}
+          />
+        </Suspense>
       )}
     </div>
   );
@@ -92,10 +95,12 @@ function MainSite() {
 export default function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<MainSite />} />
-        <Route path="/buttons" element={<ButtonsPage />} />
-      </Routes>
+      <Suspense fallback={<div className="min-h-screen bg-[#050505]" />}>
+        <Routes>
+          <Route path="/" element={<MainSite />} />
+          <Route path="/buttons" element={<ButtonsPage />} />
+        </Routes>
+      </Suspense>
     </BrowserRouter>
   );
 }

@@ -120,15 +120,21 @@ export interface GhostButtonProps extends React.ButtonHTMLAttributes<HTMLButtonE
 export const GhostButton: React.FC<GhostButtonProps> = ({ children, icon, className = "", ...props }) => (
   <button
     style={{ clipPath: CLIP_APEX }}
-    className={`group relative inline-flex items-center gap-2 px-7 py-4 cursor-pointer select-none
+    className={`group relative inline-flex items-center justify-center gap-2 px-7 py-4 cursor-pointer select-none
       ${LABEL_BASE} text-steel-gray hover:text-white
-      border border-white/15 hover:border-white/25
-      transition-[color,border-color,transform] duration-150 active:scale-[0.97]
+      transition-[color,transform] duration-150 active:scale-[0.97]
       disabled:cursor-not-allowed disabled:opacity-40 ${className}`}
     {...props}
   >
-    {icon}
-    {children}
+    {/* Border layer — fills the clip shape including the chamfered corners */}
+    <div className="absolute inset-0 bg-white/15 group-hover:bg-white/25 transition-colors duration-150" style={{ clipPath: CLIP_APEX }} />
+    {/* Inner background — inset 1px reveals border layer as outline */}
+    <div className="absolute inset-[1px] bg-[#050505] group-hover:bg-white/[0.04] transition-colors duration-150" style={{ clipPath: CLIP_APEX }} />
+    {/* Content */}
+    <div className="relative z-10 flex items-center gap-2">
+      {icon}
+      {children}
+    </div>
   </button>
 );
 
@@ -220,18 +226,34 @@ export interface IconButtonProps extends React.ButtonHTMLAttributes<HTMLButtonEl
 }
 
 export const IconButton: React.FC<IconButtonProps> = ({ icon, variant = "dark", className = "", ...props }) => {
-  const varStyles = variant === "green"
-    ? "bg-energy-green text-deep-black hover:bg-[#b5ff1a]"
-    : "bg-white/[0.06] text-steel-gray hover:bg-white/10 hover:text-white border border-white/[0.08]";
+  if (variant === "green") {
+    return (
+      <button
+        style={{ clipPath: CLIP_MICRO }}
+        className={`relative inline-flex items-center justify-center w-10 h-10 cursor-pointer select-none
+          bg-energy-green text-deep-black hover:bg-[#b5ff1a]
+          transition-[background-color,transform] duration-150 active:scale-[0.95]
+          disabled:cursor-not-allowed disabled:opacity-40 ${className}`}
+        {...props}
+      >
+        {icon}
+      </button>
+    );
+  }
   return (
     <button
       style={{ clipPath: CLIP_MICRO }}
-      className={`inline-flex items-center justify-center w-10 h-10 cursor-pointer select-none
-        transition-[background-color,color,transform] duration-150 active:scale-[0.95]
-        disabled:cursor-not-allowed disabled:opacity-40 ${varStyles} ${className}`}
+      className={`group relative inline-flex items-center justify-center w-10 h-10 cursor-pointer select-none
+        text-steel-gray hover:text-white
+        transition-[color,transform] duration-150 active:scale-[0.95]
+        disabled:cursor-not-allowed disabled:opacity-40 ${className}`}
       {...props}
     >
-      {icon}
+      {/* Border layer — fills the micro clip shape at all corners */}
+      <div className="absolute inset-0 bg-white/[0.08]" style={{ clipPath: CLIP_MICRO }} />
+      {/* Inner background — inset 1px reveals border layer */}
+      <div className="absolute inset-[1px] bg-white/[0.06] group-hover:bg-white/10 transition-colors duration-150" style={{ clipPath: CLIP_MICRO }} />
+      <div className="relative z-10">{icon}</div>
     </button>
   );
 };
@@ -258,14 +280,17 @@ export const LightPrimaryButton: React.FC<React.ButtonHTMLAttributes<HTMLButtonE
 export const LightSecondaryButton: React.FC<React.ButtonHTMLAttributes<HTMLButtonElement>> = ({ children, className = "", ...props }) => (
   <button
     style={{ clipPath: CLIP_APEX }}
-    className={`group inline-flex items-center justify-center px-7 py-4 cursor-pointer select-none
+    className={`group relative inline-flex items-center justify-center px-7 py-4 cursor-pointer select-none
       ${LABEL_BASE} text-deep-black
-      bg-transparent border border-black/30 hover:border-black hover:bg-black/5
-      transition-[border-color,background-color,transform] duration-150 active:scale-[0.97]
+      transition-transform duration-150 active:scale-[0.97]
       disabled:cursor-not-allowed disabled:opacity-40 ${className}`}
     {...props}
   >
-    {children}
+    {/* Border layer — black/30 at all clip corners */}
+    <div className="absolute inset-0 bg-black/30 group-hover:bg-black transition-colors duration-150" style={{ clipPath: CLIP_APEX }} />
+    {/* Inner background — matches the green CTA surface */}
+    <div className="absolute inset-[1px] bg-energy-green group-hover:bg-energy-green/90 transition-colors duration-150" style={{ clipPath: CLIP_APEX }} />
+    <span className="relative z-10">{children}</span>
   </button>
 );
 

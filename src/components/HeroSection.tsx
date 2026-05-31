@@ -16,7 +16,7 @@ export default function HeroSection({ currentLang, onBookClick, onClassesClick }
       id="hero-root"
       className="relative min-h-screen bg-[#050505] pt-24 sm:pt-28 pb-16 flex flex-col justify-center overflow-hidden"
       style={{
-        backgroundImage: `linear-gradient(to right, #050505 0%, #050505 30%, rgba(5,5,5,0.5) 50%, rgba(5,5,5,0.05) 68%, rgba(5,5,5,0.85) 90%, #050505 100%), url("https://imagedelivery.net/O1Es2ZMHV0HF7g71pX5Prg/1d011d00-e9e8-4d0f-7cd3-35886e138100/4K")`,
+        backgroundImage: `linear-gradient(to right, #050505 0%, #050505 30%, rgba(5,5,5,0.5) 50%, rgba(5,5,5,0.05) 68%, rgba(5,5,5,0.85) 90%, #050505 100%), url("https://imagedelivery.net/O1Es2ZMHV0HF7g71pX5Prg/1d011d00-e9e8-4d0f-7cd3-35886e138100/public")`,
         backgroundSize: 'cover',
         backgroundPosition: '45% center'
       }}

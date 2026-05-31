@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'motion/react';
 import { Compass, Zap, Users, ShieldCheck, Maximize2, X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Language } from '../types';
 
@@ -14,7 +14,7 @@ export default function StudioOverview({ currentLang }: StudioOverviewProps) {
   // High fashion studio image set showing different aspects of the physical space
   const studioImages = [
     {
-      url: "https://imagedelivery.net/O1Es2ZMHV0HF7g71pX5Prg/1d011d00-e9e8-4d0f-7cd3-35886e138100/4K",
+      url: "https://imagedelivery.net/O1Es2ZMHV0HF7g71pX5Prg/1d011d00-e9e8-4d0f-7cd3-35886e138100/public",
       title: {
         en: "Main Arena & Stages",
         es: "Arena Principal y Escenarios",
@@ -300,6 +300,8 @@ export default function StudioOverview({ currentLang }: StudioOverviewProps) {
                 <img 
                   src={studioImages[activeImgIndex].url}
                   alt="Studio Physical Space View"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 ease-out rounded-sm"
                   referrerPolicy="no-referrer"
                 />
@@ -364,6 +366,8 @@ export default function StudioOverview({ currentLang }: StudioOverviewProps) {
                   <img 
                     src={img.url} 
                     alt={`Thumbnail view ${i + 1}`} 
+                    loading="lazy"
+                    decoding="async"
                     className={`w-full h-full object-cover transition-[filter,transform] duration-200 ${
                       activeImgIndex === i ? 'scale-105 brightness-100' : 'scale-100 brightness-[0.55] hover:brightness-[0.85]'
                     }`}
@@ -459,6 +463,7 @@ export default function StudioOverview({ currentLang }: StudioOverviewProps) {
                 <img 
                   src={studioImages[activeImgIndex].url} 
                   alt="Studio detailed high-res expanded view"
+                  decoding="async"
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
                 />

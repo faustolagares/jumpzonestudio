@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import { Language } from '../types';
 
 interface MoreThanWorkoutProps {
@@ -174,6 +174,8 @@ export default function MoreThanWorkout({ currentLang }: MoreThanWorkoutProps) {
                     <img 
                       src={imageUrl} 
                       alt={feat.title}
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 ease-out"
                       referrerPolicy="no-referrer"
                     />
