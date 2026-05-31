@@ -55,7 +55,7 @@ export const JumpButton: React.FC<JumpButtonProps> = ({
 }) => {
   const clip = { clipPath: CLIP_APEX };
   const width = fullWidth ? "w-full" : "w-auto min-w-[160px] sm:min-w-[180px]";
-  const base = `group relative ${width} py-4 flex items-center justify-center select-none
+  const base = `group relative ${width} min-h-[56px] py-4 flex items-center justify-center select-none
     transition-transform duration-[120ms] ease-out active:scale-[0.97]
     disabled:cursor-not-allowed disabled:opacity-50 cursor-pointer ${className}`;
 
@@ -263,7 +263,7 @@ export const IconButton: React.FC<IconButtonProps> = ({ icon, variant = "dark", 
 export const LightPrimaryButton: React.FC<React.ButtonHTMLAttributes<HTMLButtonElement>> = ({ children, className = "", ...props }) => (
   <button
     style={{ clipPath: CLIP_APEX }}
-    className={`group relative inline-flex items-center justify-center py-4 cursor-pointer select-none
+    className={`group relative inline-flex items-center justify-center min-h-[56px] py-4 cursor-pointer select-none
       bg-deep-black hover:bg-[#111] active:bg-black
       transition-[background-color,transform] duration-150 active:scale-[0.97]
       disabled:cursor-not-allowed disabled:opacity-40 ${className}`}
