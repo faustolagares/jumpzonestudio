@@ -1,6 +1,5 @@
 import { Language } from '../types';
 import { translations } from '../translations';
-import { motion } from 'motion/react';
 import { JumpButton } from './Buttons';
 import { Zap, Users, Flame, BarChart3, MapPin } from 'lucide-react';
 
@@ -49,12 +48,7 @@ export default function HeroSection({ currentLang, onBookClick, onClassesClick }
             </div>
 
             {/* Impressive headers - ultra clean, italic, Teko displays */}
-            <motion.div
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
-              className="space-y-1"
-            >
+            <div className="space-y-1">
               <h1 className="text-7xl sm:text-7xl md:text-8xl xl:text-9xl font-display font-black leading-[0.85] tracking-tight text-white uppercase italic -skew-x-3">
                 WE DON'T
                 <span className="block text-white">JUST JUMP.</span>
@@ -62,30 +56,20 @@ export default function HeroSection({ currentLang, onBookClick, onClassesClick }
                   WE LEVEL UP.
                 </span>
               </h1>
-            </motion.div>
+            </div>
 
             {/* Slogan brush style divider */}
             <div className="w-48 h-[3px] bg-gradient-to-r from-energy-green via-energy-green to-transparent mx-0 my-1 rounded-full" />
 
             {/* Brand slogan description */}
-            <motion.p
-              initial={{ opacity: 0, y: 8 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: 0.15, ease: [0.23, 1, 0.32, 1] }}
-              className="text-base sm:text-lg text-white/70 max-w-xl leading-relaxed font-sans font-medium pt-2"
-            >
+            <p className="text-base sm:text-lg text-white/70 max-w-xl leading-relaxed font-sans font-medium pt-2">
               High-energy trampoline workouts.<br className="hidden sm:inline" />
               Real results. Strong community.<br className="hidden sm:inline" />
               Unforgettable experience.
-            </motion.p>
+            </p>
 
             {/* CTAs - authentic high-energy chamfered buttons */}
-            <motion.div
-              initial={{ opacity: 0, y: 8 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: 0.25, ease: [0.23, 1, 0.32, 1] }}
-              className="flex flex-col sm:flex-row items-start justify-start gap-4 w-full sm:w-auto"
-            >
+            <div className="flex flex-col sm:flex-row items-start justify-start gap-4 w-full sm:w-auto">
               <JumpButton 
                 onClick={onBookClick}
                 variant="primary"
@@ -104,7 +88,7 @@ export default function HeroSection({ currentLang, onBookClick, onClassesClick }
               >
                 {currentLang === 'pt' ? 'VER MODALIDADES' : currentLang === 'es' ? 'VER CLASES' : 'VIEW CLASSES'}
               </JumpButton>
-            </motion.div>
+            </div>
           </div>
 
         </div>

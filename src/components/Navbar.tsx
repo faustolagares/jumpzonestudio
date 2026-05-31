@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, Globe } from 'lucide-react';
-import { Language, TranslationSet } from '../types';
+import { Language } from '../types';
 import { translations } from '../translations';
-import { motion, AnimatePresence } from 'motion/react';
 import { HeaderButton, IconButton, JumpButton, NavLinkButton } from './Buttons';
 import { optimizedSrc, optimizedSrcSet } from '../lib/img';
 
@@ -178,15 +177,10 @@ export default function Navbar({ currentLang, onLanguageChange, onBookClick }: N
       </div>
 
       {/* Mobile full-screen overlay menu */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.22, ease: [0.23, 1, 0.32, 1] }}
-            className="md:hidden fixed inset-0 z-[60] bg-deep-black flex flex-col"
-          >
+      {isOpen && (
+        <div
+          className="md:hidden fixed inset-0 z-[60] bg-deep-black flex flex-col"
+        >
             {/* Overlay header — logo + close button */}
             <div className="flex items-center justify-between px-5 pt-5 pb-4 shrink-0">
               <div
@@ -213,17 +207,14 @@ export default function Navbar({ currentLang, onLanguageChange, onBookClick }: N
 
             {/* Centered nav items */}
             <div className="flex-1 flex flex-col items-center justify-center gap-1 px-6">
-              {navItems.map((item, i) => (
-                <motion.button
+              {navItems.map((item) => (
+                <button
                   key={item.label}
-                  initial={{ opacity: 0, y: 16 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.3, delay: i * 0.06, ease: [0.23, 1, 0.32, 1] }}
                   onClick={() => scrollToSection(item.id)}
                   className="block w-full text-center py-3 font-display font-black text-4xl sm:text-5xl italic uppercase tracking-tight text-white hover:text-energy-green transition-colors duration-150 leading-none"
                 >
                   {item.label}
-                </motion.button>
+                </button>
               ))}
             </div>
 
@@ -246,9 +237,8 @@ export default function Navbar({ currentLang, onLanguageChange, onBookClick }: N
                 </JumpButton>
               </div>
             </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+        </div>
+      )}
     </nav>
   );
 }
