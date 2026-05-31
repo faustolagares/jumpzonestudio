@@ -14,19 +14,19 @@ export default function HeroSection({ currentLang, onBookClick, onClassesClick }
   const t = translations[currentLang];
   const featureItems = {
     en: [
-      { icon: <Zap className="w-7 h-7 text-energy-green fill-current" />, title: 'HIGH ENERGY', desc: 'Cardio, strength & music-driven workouts.' },
+      { icon: <Zap className="w-7 h-7 text-energy-green" />, title: 'HIGH ENERGY', desc: 'Cardio, strength & music-driven workouts.' },
       { icon: <Users className="w-7 h-7 text-energy-green" />, title: 'STRONG COMMUNITY', desc: 'Real people. Real support. Real connections.' },
       { icon: <Flame className="w-7 h-7 text-energy-green" />, title: 'BURN CALORIES', desc: 'Jump higher. Burn more. Feel unstoppable.' },
       { icon: <BarChart3 className="w-7 h-7 text-energy-green" />, title: 'ALL LEVELS', desc: 'Beginner to advanced. You belong here.' },
     ],
     es: [
-      { icon: <Zap className="w-7 h-7 text-energy-green fill-current" />, title: 'ALTA ENERGÍA', desc: 'Cardio, fuerza y entrenamientos con música.' },
+      { icon: <Zap className="w-7 h-7 text-energy-green" />, title: 'ALTA ENERGÍA', desc: 'Cardio, fuerza y entrenamientos con música.' },
       { icon: <Users className="w-7 h-7 text-energy-green" />, title: 'COMUNIDAD FUERTE', desc: 'Personas reales. Apoyo real. Conexiones reales.' },
       { icon: <Flame className="w-7 h-7 text-energy-green" />, title: 'QUEMA CALORÍAS', desc: 'Salta más alto. Quema más. Siéntete imparable.' },
       { icon: <BarChart3 className="w-7 h-7 text-energy-green" />, title: 'TODOS LOS NIVELES', desc: 'De principiante a avanzado. Este es tu lugar.' },
     ],
     pt: [
-      { icon: <Zap className="w-7 h-7 text-energy-green fill-current" />, title: 'ALTA ENERGIA', desc: 'Cardio, força e treinos guiados por música.' },
+      { icon: <Zap className="w-7 h-7 text-energy-green" />, title: 'ALTA ENERGIA', desc: 'Cardio, força e treinos guiados por música.' },
       { icon: <Users className="w-7 h-7 text-energy-green" />, title: 'COMUNIDADE FORTE', desc: 'Pessoas reais. Apoio real. Conexões reais.' },
       { icon: <Flame className="w-7 h-7 text-energy-green" />, title: 'QUEIMA CALORIAS', desc: 'Pule mais alto. Queime mais. Sinta-se invencível.' },
       { icon: <BarChart3 className="w-7 h-7 text-energy-green" />, title: 'TODOS OS NÍVEIS', desc: 'Do iniciante ao avançado. Seu lugar é aqui.' },
@@ -180,7 +180,7 @@ export default function HeroSection({ currentLang, onBookClick, onClassesClick }
             {/* Inner Content Area */}
             <div className="relative z-10 p-6 lg:p-8 flex items-center space-x-4">
               <div className="p-2 text-energy-green shrink-0">
-                <MapPin className="w-7 h-7 text-energy-green fill-current" />
+                <MapPin className="w-7 h-7 text-energy-green" />
               </div>
               <div>
                 <h4 className="font-display font-black text-xl leading-none tracking-wider text-energy-green uppercase italic">{t.statsLocation}</h4>
