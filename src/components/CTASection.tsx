@@ -11,7 +11,7 @@ export default function CTASection({ currentLang }: CTASectionProps) {
     en: {
       tag: "/// CRUSH YOUR LIMITS ///",
       titlePre: "READY TO JOIN THE",
-      titleHighlight: "JUMP ZONE STUDIO",
+      titleHighlight: "JUMP ZONE STUDIO?",
       subtitle: "Stop waiting to experience Newark's most addictive choreographic workout. Lock in your individual rebounder space today and feel the difference from the very first beat.",
       primaryCta: "SECURE MY SPACE",
     },
@@ -24,8 +24,8 @@ export default function CTASection({ currentLang }: CTASectionProps) {
     },
     pt: {
       tag: "/// SUPERE SEUS LIMITES ///",
-      titlePre: "PRONTO PARA ENTRAR NA",
-      titleHighlight: "JUMP ZONE STUDIO",
+      titlePre: "PRONTO PARA ENTRAR PRA",
+      titleHighlight: "JUMP ZONE STUDIO?",
       subtitle: "Não espere mais para sentir a energia do treino coreografado mais viciante de Newark. Garanta seu trampolim individual hoje mesmo e sinta a energia desde o primeiro beat.",
       primaryCta: "GARANTIR MEU ACESSO",
     }

@@ -14,7 +14,7 @@ export const translations: Record<Language, TranslationSet> = {
     heroBadge: "JUMP ZONE STUDIO",
     heroTitleFocus: "WE DON'T JUST JUMP",
     heroTitleNormal: "WE LEVEL UP.",
-    heroSubtitle: "A new fitness experience in Newark, NJ.",
+    heroSubtitle: "High-energy trampoline workouts.\nReal results. Strong community.\nUnforgettable experience.",
     heroCtaBook: "BOOK YOUR JUMP",
     heroCtaLearn: "VIEW CLASSES",
     
@@ -105,12 +105,12 @@ export const translations: Record<Language, TranslationSet> = {
     navBeatSimulator: "Simulador BPM",
     navAbout: "El Estudio",
     navContact: "Contacto",
-    navBookNow: "RESERVA YA",
+    navBookNow: "RESERVAR JUMP",
     
     heroBadge: "JUMP ZONE STUDIO",
     heroTitleFocus: "NO SOLO SALTAMOS",
     heroTitleNormal: "SUBIMOS DE NIVEL.",
-    heroSubtitle: "Una nueva experiencia fitness en Newark, NJ.",
+    heroSubtitle: "Entrenamientos de trampolín llenos de energía.\nResultados reales. Comunidad fuerte.\nUna experiencia inolvidable.",
     heroCtaBook: "RESERVAR MI ACCESO",
     heroCtaLearn: "VER CLASES",
     
@@ -201,12 +201,12 @@ export const translations: Record<Language, TranslationSet> = {
     navBeatSimulator: "Simulador BPM",
     navAbout: "O Estúdio",
     navContact: "Contato",
-    navBookNow: "RESERVAR JÁ",
+    navBookNow: "AGENDAR JUMP",
     
     heroBadge: "JUMP ZONE STUDIO",
     heroTitleFocus: "NÃO É SÓ PULAR",
     heroTitleNormal: "NÓS SUBIMOS DE NÍVEL.",
-    heroSubtitle: "Uma nova experiência fitness em Newark, NJ.",
+    heroSubtitle: "Treinos de trampolim com muita energia.\nResultados reais. Comunidade forte.\nUma experiência inesquecível.",
     heroCtaBook: "GARANTIR MEU ACESSO",
     heroCtaLearn: "VER AULAS",
     

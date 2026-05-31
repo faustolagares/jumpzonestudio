@@ -84,7 +84,7 @@ export default function HeroSection({ currentLang, onBookClick, onClassesClick }
             <div className="w-48 h-[3px] bg-gradient-to-r from-energy-green via-energy-green to-transparent mx-0 my-1 rounded-full" />
 
             {/* Brand slogan description */}
-            <p className="text-base sm:text-lg text-white/70 max-w-xl leading-relaxed font-sans font-medium pt-2">
+            <p className="text-base sm:text-lg text-white/70 max-w-xl leading-relaxed font-sans font-medium pt-2 whitespace-pre-line">
               {t.heroSubtitle}
             </p>
 
