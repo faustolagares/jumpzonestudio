@@ -41,6 +41,59 @@ export default function CheckoutModal({
   const [ticketId, setTicketId] = useState('');
 
   const t = translations[currentLang];
+  const chrome = {
+    en: {
+      subheader: 'Newark Boutique Studio Checkout',
+      orderSummary: 'ORDER SUMMARY',
+      session: 'SESSION',
+      mapHint: 'All rebounders face the instructor mirrors.',
+      selectedSpot: 'SELECTED SPOT',
+      stage: 'INSTRUCTOR STAGE',
+      ssl: 'SSL ENCRYPTED',
+      athlete: 'REBEL ATHLETE',
+      ticket: 'TICKET ACCESS PASS',
+      reboundClass: 'REBOUND CLASS',
+      coordinates: 'COORDINATES',
+      row: 'ROW',
+      timeSlot: 'TIME SLOT',
+      purchasePlan: 'PURCHASE PLAN',
+      close: 'Close',
+    },
+    es: {
+      subheader: 'Checkout — Jump Zone Newark',
+      orderSummary: 'RESUMEN',
+      session: 'SESIÓN',
+      mapHint: 'Todos los trampolines miran hacia el escenario.',
+      selectedSpot: 'SPOT ELEGIDO',
+      stage: 'ESCENARIO',
+      ssl: 'SSL SEGURO',
+      athlete: 'ATLETA JUMP ZONE',
+      ticket: 'PASE DE ACCESO',
+      reboundClass: 'CLASE REBOUND',
+      coordinates: 'UBICACIÓN',
+      row: 'FILA',
+      timeSlot: 'HORARIO',
+      purchasePlan: 'PLAN ELEGIDO',
+      close: 'Cerrar',
+    },
+    pt: {
+      subheader: 'Checkout — Jump Zone Newark',
+      orderSummary: 'RESUMO',
+      session: 'SESSÃO',
+      mapHint: 'Todos os trampolins ficam de frente para o palco.',
+      selectedSpot: 'SPOT ESCOLHIDO',
+      stage: 'PALCO DO INSTRUTOR',
+      ssl: 'SSL SEGURO',
+      athlete: 'ATLETA JUMP ZONE',
+      ticket: 'PASSE DE ACESSO',
+      reboundClass: 'AULA REBOUND',
+      coordinates: 'LOCALIZAÇÃO',
+      row: 'FILA',
+      timeSlot: 'HORÁRIO',
+      purchasePlan: 'PLANO ESCOLHIDO',
+      close: 'Fechar',
+    },
+  }[currentLang];
 
   const handleSeatSelect = (coordinate: string, occupied: boolean) => {
     if (occupied) return;
@@ -86,7 +139,7 @@ export default function CheckoutModal({
                 JUMP ZONE SECURE PASS
               </h3>
               <p className="text-[9px] font-mono tracking-widest text-steel-gray uppercase mt-0.5">
-                Newark Boutique Studio Checkout
+                {chrome.subheader}
               </p>
             </div>
           </div>
@@ -94,7 +147,7 @@ export default function CheckoutModal({
             icon={<X className="w-4 h-4" />}
             variant="dark"
             onClick={onClose}
-            aria-label="Close"
+            aria-label={chrome.close}
           />
         </div>
 
@@ -113,7 +166,7 @@ export default function CheckoutModal({
               >
                 {/* Visual order summary summary banner depending on what's active */}
                 <div className="bg-black/30 p-4 rounded-xl border border-white/[0.03] space-y-2">
-                  <span className="text-[9px] font-mono text-[#555] uppercase tracking-widest block">ORDER SUMMARY</span>
+                  <span className="text-[9px] font-mono text-[#555] uppercase tracking-widest block">{chrome.orderSummary}</span>
                   {selectedClass ? (
                     <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
                       <div>
@@ -122,7 +175,7 @@ export default function CheckoutModal({
                         </h4>
                         <p className="text-[10px] text-energy-green font-mono uppercase mt-1 flex items-center gap-1.5">
                           <Clock className="w-3.5 h-3.5" />
-                          <span>{selectedTime} • {selectedClass.duration}m SESSION</span>
+                          <span>{selectedTime} • {selectedClass.duration}m {chrome.session}</span>
                         </p>
                       </div>
                       <span className="text-base font-mono font-bold text-white">$19.00</span>
@@ -189,13 +242,13 @@ export default function CheckoutModal({
                           {t.checkoutSelectTrampoline}
                         </label>
                         <span className="text-[9px] text-cool-gray font-sans">
-                          All rebounders face the instructor mirrors.
+                          {chrome.mapHint}
                         </span>
                       </div>
                       
                       {selectedSeat && (
                         <div className="bg-energy-green/15 text-energy-green font-mono text-[10px] font-bold px-2.5 py-0.5 rounded border border-energy-green/10 uppercase">
-                          SELECTED SPOT: {selectedSeat}
+                          {chrome.selectedSpot}: {selectedSeat}
                         </div>
                       )}
                     </div>
@@ -205,7 +258,7 @@ export default function CheckoutModal({
                       <div className="w-full max-w-sm mx-auto text-center border-b border-energy-green/10 pb-1.5 mb-4">
                         <span className="flex items-center justify-center gap-1.5 text-[9px] font-mono font-bold tracking-[0.15em] text-cool-gray uppercase">
                           <Zap className="w-3 h-3 shrink-0" />
-                          INSTRUCTOR STAGE
+                          {chrome.stage}
                         </span>
                       </div>
 
@@ -258,7 +311,7 @@ export default function CheckoutModal({
                 <div className="flex items-center justify-between gap-4 pt-4 border-t border-white/[0.04]">
                   <div className="hidden sm:flex items-center space-x-1.5 text-[10px] font-mono text-[#555]">
                     <Lock className="w-3.5 h-3.5 text-energy-green" />
-                    <span>SSL ENCRYPTED</span>
+                    <span>{chrome.ssl}</span>
                   </div>
 
                    <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-3 w-full sm:w-auto">
@@ -314,36 +367,36 @@ export default function CheckoutModal({
                   {/* Details matrix row list */}
                   <div className="grid grid-cols-2 gap-y-3 gap-x-2 pt-2 text-xs font-mono">
                     <div>
-                      <span className="text-[#555] block uppercase text-[9px]">REBEL ATHLETE</span>
+                      <span className="text-[#555] block uppercase text-[9px]">{chrome.athlete}</span>
                       <span className="text-white font-bold uppercase">{name}</span>
                     </div>
                     <div>
-                      <span className="text-[#555] block uppercase text-[9px]">TICKET ACCESS PASS</span>
+                      <span className="text-[#555] block uppercase text-[9px]">{chrome.ticket}</span>
                       <span className="text-energy-green font-bold uppercase">{ticketId}</span>
                     </div>
                     
                     {selectedClass ? (
                       <>
                         <div>
-                          <span className="text-[#555] block uppercase text-[9px]">REBOUND CLASS</span>
+                          <span className="text-[#555] block uppercase text-[9px]">{chrome.reboundClass}</span>
                           <span className="text-white font-bold uppercase truncate block max-w-[170px]">
                             {selectedClass.name[currentLang]}
                           </span>
                         </div>
                         <div>
-                          <span className="text-[#555] block uppercase text-[9px]">COORDINATES</span>
+                          <span className="text-[#555] block uppercase text-[9px]">{chrome.coordinates}</span>
                           <span className="text-energy-green font-bold block uppercase">
-                            ROW {selectedSeat?.substring(0, 1)} • {selectedSeat}
+                            {chrome.row} {selectedSeat?.substring(0, 1)} • {selectedSeat}
                           </span>
                         </div>
                         <div className="col-span-2 flex items-center gap-1.5 pt-2 border-t border-white/5">
                           <Calendar className="w-3.5 h-3.5 text-white/40" />
-                          <span className="text-[#666] text-[9px] uppercase tracking-wider">TIME SLOT: <strong className="text-white font-bold">{selectedTime}</strong></span>
+                          <span className="text-[#666] text-[9px] uppercase tracking-wider">{chrome.timeSlot}: <strong className="text-white font-bold">{selectedTime}</strong></span>
                         </div>
                       </>
                     ) : selectedPlan ? (
                       <div className="col-span-2">
-                        <span className="text-[#555] block uppercase text-[9px]">PURCHASE PLAN</span>
+                        <span className="text-[#555] block uppercase text-[9px]">{chrome.purchasePlan}</span>
                         <span className="text-energy-green font-black text-xs uppercase">
                           {selectedPlan.name[currentLang]} ({selectedPlan.quantityDesc})
                         </span>

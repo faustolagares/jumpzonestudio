@@ -13,7 +13,7 @@ export default function Membership({ currentLang, onSelectPlan }: MembershipProp
   const sectionContent = {
     en: {
       tag: "MEMBERSHIPS",
-      titlePre: "CHOOSE YOUR JUMP.",
+      titlePre: "CHOOSE YOUR PLAN.",
       titleHighlight: "COMMIT TO YOU.",
       subtitleLine1: "Simple memberships. Big results.",
       subtitleLine2: "Find the plan that fits your lifestyle.",
@@ -22,10 +22,12 @@ export default function Membership({ currentLang, onSelectPlan }: MembershipProp
       guaranteeTitle: "NO CONTRACTS, SECURE BOOKING",
       guaranteeDesc: "Cancel or adjust your recurring subscription tier anytime. Seamless online spot reservation for every workout.",
       badgePopular: "MOST POPULAR",
+      secureLabel: "SECURE SSL",
+      flexibleLabel: "FLEXIBLE",
     },
     es: {
       tag: "MEMBRESÍAS",
-      titlePre: "ELIGE TU SALTO.",
+      titlePre: "ELIGE TU PLAN.",
       titleHighlight: "COMPROMÉTETE CONTIGO.",
       subtitleLine1: "Membresías simples. Grandes resultados.",
       subtitleLine2: "Encuentra el plan para tu estilo de vida.",
@@ -34,18 +36,22 @@ export default function Membership({ currentLang, onSelectPlan }: MembershipProp
       guaranteeTitle: "SIN CONTRATOS, RESERVA SEGURA",
       guaranteeDesc: "Cancela o ajusta tu suscripción recurrente en cualquier momento. Reserva inmediata de tu trampolín individual.",
       badgePopular: "MÁS POPULAR",
+      secureLabel: "SSL SEGURO",
+      flexibleLabel: "FLEXIBLE",
     },
     pt: {
-      tag: "MEMBRESIA",
-      titlePre: "ESCOLHA SEU SALTO.",
-      titleHighlight: "FOCADO EM VOCÊ.",
+      tag: "PLANOS",
+      titlePre: "ESCOLHA SEU PLANO.",
+      titleHighlight: "COMPROMISSO COM VOCÊ.",
       subtitleLine1: "Planos simples. Resultados gigantescos.",
       subtitleLine2: "Encontre o plano ideal para seu estilo de vida.",
       perMonth: "/MÊS",
       limitedSpots: "DESCONTOS DE FUNDADOR ATIVOS POR TEMPO LIMITADO",
       guaranteeTitle: "SEM FIDELIDADE, AGENDAMENTO SEGURO",
-      guaranteeDesc: "Cancele ou gerencie seu plano recorrente quando quiser. Reserva em tempo real do seu próprio espaço de lona.",
+      guaranteeDesc: "Cancele ou gerencie seu plano quando quiser. Reserve seu trampolim online para cada aula.",
       badgePopular: "MAIS POPULAR",
+      secureLabel: "SSL SEGURO",
+      flexibleLabel: "FLEXÍVEL",
     }
   };
 
@@ -79,8 +85,8 @@ export default function Membership({ currentLang, onSelectPlan }: MembershipProp
       id: "price-unlimited",
       name: {
         en: "UNLIMITED",
-        es: "ILIMITADO",
-        pt: "ILIMITADO"
+        es: "UNLIMITED",
+        pt: "UNLIMITED"
       },
       price: 129,
       subtitle: {
@@ -107,8 +113,8 @@ export default function Membership({ currentLang, onSelectPlan }: MembershipProp
       price: 159,
       subtitle: {
         en: "UNLIMITED + MORE",
-        es: "ILIMITADO + MÁS",
-        pt: "ILIMITADO + MAIS"
+        es: "UNLIMITED + MÁS",
+        pt: "UNLIMITED + MAIS"
       },
       features: {
         en: ["Unlimited classes", "Priority booking", "Bring a friend (4x / month)", "Merch discount (20%)", "Exclusive events"],
@@ -314,11 +320,11 @@ export default function Membership({ currentLang, onSelectPlan }: MembershipProp
             <div className="lg:col-span-4 flex justify-start lg:justify-end text-xs font-mono font-semibold text-cool-gray space-x-4">
               <div className="flex items-center space-x-1.5">
                 <span className="w-1.5 h-1.5 bg-energy-green rounded-full animate-pulse" />
-                <span>SECURE SSL</span>
+                <span>{t.secureLabel}</span>
               </div>
               <div className="flex items-center space-x-1.5">
                 <span className="w-1.5 h-1.5 bg-energy-green rounded-full animate-pulse" />
-                <span>FLEXIBLE</span>
+                <span>{t.flexibleLabel}</span>
               </div>
             </div>
           </div>

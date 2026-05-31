@@ -34,7 +34,7 @@ export default function ClassSchedule({ currentLang, onBookClass }: ClassSchedul
       swipeIndicator: "← SWIPE TO VIEW ENTIRE WEEK →",
       allDaysLabel: "ALL DAYS",
       
-      bottomTitleLeft: "50 MINUTE CLASSE",
+      bottomTitleLeft: "50 MINUTE CLASSES",
       bottomTitleRight: "Schedules change. Check the full schedule for the latest updates.",
       bottomSubLeft: "Each class is 50 minutes of high-energy, low-impact exercise.",
       bookSessionTooltip: "Click class to book",
@@ -43,7 +43,7 @@ export default function ClassSchedule({ currentLang, onBookClass }: ClassSchedul
     es: {
       scheduleLabel: "/// HORARIOS ///",
       titlePre: "ENCUENTRA TU ",
-      titleHighlight: "MOMENTO DE SALTAR.",
+      titleHighlight: "HORARIO.",
       subText: "Clases toda la semana. Sesiones matutinas, de mediodía y nocturnas para tu rutina.",
       
       highlight1Title: "7 DÍAS A LA SEMANA",
@@ -66,9 +66,9 @@ export default function ClassSchedule({ currentLang, onBookClass }: ClassSchedul
       spotsLeftText: "¡Lugares disponibles! Haz clic para reservar un trampolín."
     },
     pt: {
-      scheduleLabel: "/// QUADRO HORÁRIO ///",
+      scheduleLabel: "/// HORÁRIOS ///",
       titlePre: "ENCONTRE SEU ",
-      titleHighlight: "MOMENTO DE SALTAR.",
+      titleHighlight: "HORÁRIO.",
       subText: "Aulas a semana inteira. Opções de manhã, tarde e noite para se ajustar à sua rotina.",
       
       highlight1Title: "7 DIAS POR SEMANA",
@@ -81,7 +81,7 @@ export default function ClassSchedule({ currentLang, onBookClass }: ClassSchedul
       highlight3Desc: "Iniciante ao avançado. Seu lugar é com a gente.",
       
       viewScheduleBtn: "VER GRADE COMPLETA",
-      swipeIndicator: "← ARRASTE LADO PARA VER A SEMANA TODA →",
+      swipeIndicator: "← DESLIZE PARA VER A SEMANA →",
       allDaysLabel: "TODOS",
       
       bottomTitleLeft: "AULAS DE 50 MINUTOS",
@@ -299,7 +299,9 @@ export default function ClassSchedule({ currentLang, onBookClass }: ClassSchedul
             {/* Visual assist swiping label indicator */}
             <div className="xl:hidden flex items-center justify-between text-[10px] font-mono text-steel-gray mb-2">
               <span>{t.swipeIndicator}</span>
-              <span className="text-energy-green animate-pulse">● LIVE</span>
+              <span className="text-energy-green animate-pulse">
+                {currentLang === 'pt' ? '● AO VIVO' : currentLang === 'es' ? '● EN VIVO' : '● LIVE'}
+              </span>
             </div>
 
             {/* Main Weekly Scheduler Console Card with custom polygonal cut corners */}
@@ -327,7 +329,7 @@ export default function ClassSchedule({ currentLang, onBookClass }: ClassSchedul
                   <thead>
                     <tr className="border-b border-white/10 bg-white/[0.02]">
                       <th className="py-4 px-6 font-mono text-xs text-steel-gray tracking-widest uppercase border-r border-white/[0.06] select-none text-center">
-                        TIME / DAY
+                        {currentLang === 'pt' ? 'HORÁRIO / DIA' : currentLang === 'es' ? 'HORA / DÍA' : 'TIME / DAY'}
                       </th>
                       {daysArray.map((day) => {
                         const isDayFilteredOutOnMobile = mobileActiveDay !== 'ALL' && mobileActiveDay !== day.key;

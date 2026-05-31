@@ -28,7 +28,7 @@ export default function HeroSection({ currentLang, onBookClick, onClassesClick }
     pt: [
       { icon: <Zap className="w-7 h-7 text-energy-green fill-current" />, title: 'ALTA ENERGIA', desc: 'Cardio, força e treinos guiados por música.' },
       { icon: <Users className="w-7 h-7 text-energy-green" />, title: 'COMUNIDADE FORTE', desc: 'Pessoas reais. Apoio real. Conexões reais.' },
-      { icon: <Flame className="w-7 h-7 text-energy-green" />, title: 'QUEIME CALORIAS', desc: 'Pule mais alto. Queime mais. Sinta-se imparável.' },
+      { icon: <Flame className="w-7 h-7 text-energy-green" />, title: 'QUEIMA CALORIAS', desc: 'Pule mais alto. Queime mais. Sinta-se invencível.' },
       { icon: <BarChart3 className="w-7 h-7 text-energy-green" />, title: 'TODOS OS NÍVEIS', desc: 'Do iniciante ao avançado. Seu lugar é aqui.' },
     ],
   };

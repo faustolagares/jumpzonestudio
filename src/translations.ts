@@ -14,7 +14,7 @@ export const translations: Record<Language, TranslationSet> = {
     heroBadge: "JUMP ZONE STUDIO",
     heroTitleFocus: "WE DON'T JUST JUMP",
     heroTitleNormal: "WE LEVEL UP.",
-    heroSubtitle: "New fitness experience in Newark, NJ.",
+    heroSubtitle: "A new fitness experience in Newark, NJ.",
     heroCtaBook: "BOOK YOUR JUMP",
     heroCtaLearn: "VIEW CLASSES",
     
@@ -110,8 +110,8 @@ export const translations: Record<Language, TranslationSet> = {
     heroBadge: "JUMP ZONE STUDIO",
     heroTitleFocus: "NO SOLO SALTAMOS",
     heroTitleNormal: "SUBIMOS DE NIVEL.",
-    heroSubtitle: "Nueva experiencia fitness en Newark, NJ.",
-    heroCtaBook: "RESERVA TU SALTO",
+    heroSubtitle: "Una nueva experiencia fitness en Newark, NJ.",
+    heroCtaBook: "RESERVAR MI ACCESO",
     heroCtaLearn: "VER CLASES",
     
     statsBpm: "135-155 BPM",
@@ -119,7 +119,7 @@ export const translations: Record<Language, TranslationSet> = {
     statsImpact: "80% Menos Impacto",
     statsImpactSub: "Alta intensidad, acción de rebote suave",
     statsLocation: "Newark, NJ",
-    statsLocationSub: "Templo fitness boutique estilo concierto",
+    statsLocationSub: "Studio boutique con vibra de concierto",
     
     classesTitle: "ELIGE TU RITMO",
     classesSubtitle: "Cada trampolín individual es tu pista de baile. Encuentra la sesión que desafía tus límites y despierta tu máxima energía.",
@@ -135,7 +135,7 @@ export const translations: Record<Language, TranslationSet> = {
     
     intensityLevel: "Intensidad",
     levelBeginner: "Apto para Principiantes",
-    levelIntermediate: "Fuerza Intermedia",
+    levelIntermediate: "Nivel Intermedio",
     levelAdvanced: "Atleta Avanzado",
     
     simulatorTitle: "SIMULADOR DE RITMO Y VELOCIDAD",
@@ -144,35 +144,35 @@ export const translations: Record<Language, TranslationSet> = {
     targetBpm: "Ritmo Objetivo (BPM)",
     workoutGoal: "Meta de la Sesión",
     goalFatBurn: "Quema de Calorías",
-    goalCardio: "Motor Aeróbico",
+    goalCardio: "Cardio al Máximo",
     goalStressRelief: "Subidón de Endorfinas",
-    goalEndurance: "Resistencia Extrema",
+    goalEndurance: "Más Resistencia",
     calcResult: "REPORTE DE SIMULACIÓN",
     estCalories: "Calorías Est. Quemadas",
     suggestedChoreography: "Flujo de Coreografía Planificada",
     tempoName: "Sensación de Ritmo",
     generateBtn: "CALCULAR IMPACTO METABÓLICO",
     
-    pricingTitle: "ZONA DE TARIFAS",
+    pricingTitle: "PRECIOS",
     pricingSubtitle: "Elige tu pase de entrada. Sin contratos a largo plazo, flexibilidad absoluta y máxima recompensa.",
     pricingDropIn: "Clase Suelta",
     pricingPack: "Packs de Clases",
     pricingMonthly: "Membresías Mensuales",
     tabSingleClass: "Pases Únicos",
     tabClassPacks: "Packs Multisesión",
-    tabMemberships: "Ilimitados Mensuales",
+    tabMemberships: "Membresías Ilimitadas",
     perMonth: "/mes",
     perClass: "/sesión",
     buyNow: "ÚNETE A LA ZONA AHORA",
     popularBadge: "MÁS POPULAR",
     limitedSpots: "DESCUENTOS FUNDADORES LIMITADOS DISPONIBLES",
     
-    studioTitle: "LA INSTALACIÓN DE CONCIERTO",
+    studioTitle: "EL CLUB-CONCIERTO",
     studioSubtitle: "Sin luces blancas aburridas. Sin caminadoras. Diseñamos un club deportivo oscuro e inmersivo con sonido de alta fidelidad y luces de neón reactivas.",
     facilityInside: "Interiores Oscuros Premium",
     facilitySound: "Configuración de Audio de Alta Fidelidad",
     facilityStage: "Escenario de Instructor Elevado",
-    facilityMerch: "Rincón de Ropa Colección Limitada",
+    facilityMerch: "Rincón de merch edición limitada",
     
     faqTitle: "PREGUNTAS FRECUENTES",
     faqSubtitle: "Apto para todos los niveles, suave con articulaciones, estamos aquí para aclarar tus dudas.",
@@ -184,12 +184,12 @@ export const translations: Record<Language, TranslationSet> = {
     checkoutPhone: "Número de Teléfono",
     checkoutSelectTrampoline: "Selecciona la posición de tu trampolín en el mapa:",
     checkoutTrampolineOccupied: "Ocupado",
-    checkoutTrampolineSelected: "Tu Sitio",
+    checkoutTrampolineSelected: "Tu Spot",
     checkoutTrampolineAvailable: "Libre",
-    checkoutConfirmBtn: "CONFIRMAR RESERVACIÓN Y PASEO RAPIDO",
+    checkoutConfirmBtn: "CONFIRMAR RESERVA Y MI ACCESO",
     checkoutCancel: "Cancelar",
     checkoutSuccessTitle: "¡ESTÁS DENTRO!",
-    checkoutSuccessText: "Tu registro ha sido validado con éxito. Se ha enviado un billete digital seguro a tu correo y móvil.",
+    checkoutSuccessText: "Tu reserva fue confirmada. Enviaremos tu ticket digital por correo y SMS.",
     checkoutSuccessTicket: "TICKET TRAMPOLÍN #",
     checkoutClose: "Cerrar Ticket"
   },
@@ -204,10 +204,10 @@ export const translations: Record<Language, TranslationSet> = {
     navBookNow: "RESERVAR JÁ",
     
     heroBadge: "JUMP ZONE STUDIO",
-    heroTitleFocus: "NÓS NÃO APENAS PULAMOS",
+    heroTitleFocus: "NÃO É SÓ PULAR",
     heroTitleNormal: "NÓS SUBIMOS DE NÍVEL.",
-    heroSubtitle: "Nova experiência fitness em Newark, NJ.",
-    heroCtaBook: "GARANTA SEU SALTO",
+    heroSubtitle: "Uma nova experiência fitness em Newark, NJ.",
+    heroCtaBook: "GARANTIR MEU ACESSO",
     heroCtaLearn: "VER AULAS",
     
     statsBpm: "135-155 BPM",
@@ -215,11 +215,11 @@ export const translations: Record<Language, TranslationSet> = {
     statsImpact: "80% Menos Impacto",
     statsImpactSub: "Alta intensidade, ação de rebote super suave",
     statsLocation: "Newark, NJ",
-    statsLocationSub: "Estúdio boutique conceito live event",
+    statsLocationSub: "Studio boutique estilo show, em Newark",
     
     classesTitle: "ESCOLHA SEU RITMO",
-    classesSubtitle: "Cada trampolim individual é sua pista de dança. Encontre a sessão que desafia seus limites e eleva seu estado de espírito.",
-    filterAll: "Qualquer Sessão",
+    classesSubtitle: "Cada trampolim individual é sua pista de dança. Encontre a aula que desafia seus limites e dispara sua energia.",
+    filterAll: "Todas as aulas",
     filterCardio: "Foco Cardio",
     filterStrength: "Força e Core",
     filterCombo: "Combo Total",
@@ -231,62 +231,62 @@ export const translations: Record<Language, TranslationSet> = {
     
     intensityLevel: "Intensidade",
     levelBeginner: "Ideal para Iniciantes",
-    levelIntermediate: "Força Intermediária",
+    levelIntermediate: "Nível Intermediário",
     levelAdvanced: "Atleta Avançado",
     
-    simulatorTitle: "SIMULADOR DE BATIDAS E VELOCIDADE",
-    simulatorSubtitle: "Simule uma fração da aula combinando o gênero musical eletrônico preferido com a velocidade (BPM). Veja sua playlist personalizada, os passos de coreografia sugeridos e a queima ideal.",
+    simulatorTitle: "SIMULADOR DE RITMO E BPM",
+    simulatorSubtitle: "Sincronize o gênero e o BPM e veja a coreografia e o impacto do treino.",
     selectGenre: "Selecione o Gênero Musical",
     targetBpm: "Tempo Desejado (BPM)",
     workoutGoal: "Objetivo Principal",
-    goalFatBurn: "Detona Caloria",
-    goalCardio: "Combustão Aeróbica",
-    goalStressRelief: "Subida de Endorfina",
-    goalEndurance: "Treino de Stamina",
+    goalFatBurn: "Queima Máxima",
+    goalCardio: "Cardio Intenso",
+    goalStressRelief: "Rush de Endorfina",
+    goalEndurance: "Resistência",
     calcResult: "RELATÓRIO DE SIMULAÇÃO",
     estCalories: "Calorias Est. Queimadas",
-    suggestedChoreography: "Estrutura do Flow de Coreografia",
+    suggestedChoreography: "Sequência de Coreografia",
     tempoName: "Sensação do Tempo",
-    generateBtn: "CALCULAR AGORA IMPACTO DO TREINO",
+    generateBtn: "CALCULAR IMPACTO DO TREINO",
     
-    pricingTitle: "O PRICING JUMP ZONE",
-    pricingSubtitle: "Escolha seu plano. Sem contratos de longo prazo, flexibilidade total, benefícios insanos.",
-    pricingDropIn: "Aula Single",
+    pricingTitle: "PLANOS JUMP ZONE",
+    pricingSubtitle: "Escolha seu plano. Sem contratos longos, flexibilidade total e resultados reais.",
+    pricingDropIn: "Aula avulsa",
     pricingPack: "Pacotes de Aulas",
     pricingMonthly: "Planos Mensais",
     tabSingleClass: "Passe Unitário",
-    tabClassPacks: "Packs Multisesseão",
+    tabClassPacks: "Packs Multissessão",
     tabMemberships: "Planos Ilimitados",
     perMonth: "/mês",
     perClass: "/aula",
-    buyNow: "ENTRAR NO CLUBE HOJE",
-    popularBadge: "RECOMENDADO",
+    buyNow: "ENTRAR NA ZONA",
+    popularBadge: "MAIS POPULAR",
     limitedSpots: "VAGAS LIMITADAS COM DESCONTO DE FUNDADOR DISPONÍVEIS",
     
-    studioTitle: "O FITNESS CLUB CONCEITO",
-    studioSubtitle: "Sem luz de escritório. Sem esteiras chatas. Criamos um clube atlético noturno, escuro, inmersivo com sistemas de áudio pesado e LEDs reativos de alto impacto.",
+    studioTitle: "O STUDIO CONCEITO",
+    studioSubtitle: "Sem luz de escritório. Sem esteiras chatas. Criamos um clube fitness escuro e imersivo com som premium e LEDs reativos.",
     facilityInside: "Interiores Escuros Premium",
-    facilitySound: "Sistema de Som Hi-Fidelity Extra Grave",
+    facilitySound: "Som hi-fi com graves profundos",
     facilityStage: "Palco de Instrutor Elevado",
-    facilityMerch: "Espaço com Edições Limitadas de Roupa do Estúdio",
+    facilityMerch: "Cantinho de merch limitado",
     
     faqTitle: "PERGUNTAS FREQUENTES",
-    faqSubtitle: "Ideal para iniciantes, joint-friendly e focado no seu progresso. Esclareça suas dúvidas.",
+    faqSubtitle: "Ideal para iniciantes, gentil com as articulações e focado no seu progresso. Esclareça suas dúvidas.",
     
-    checkoutTitle: "GARANTIR SEU TRAMPOLIM INDIVIDUAL",
-    checkoutSubtitle: "Selecione seu spot de rebote estrategicamente colocado de frente para os espelhos do palco principal.",
+    checkoutTitle: "GARANTA SEU SPOT NO TRAMPOLIM",
+    checkoutSubtitle: "Escolha seu trampolim de frente para o palco.",
     checkoutName: "Nome Completo",
     checkoutEmail: "E-mail de Cadastro",
     checkoutPhone: "Celular/Móvel",
-    checkoutSelectTrampoline: "Selecione a numeração de trampolim desejado do seu setor:",
+    checkoutSelectTrampoline: "Selecione seu trampolim no mapa:",
     checkoutTrampolineOccupied: "Reservado",
     checkoutTrampolineSelected: "Seu Lugar",
     checkoutTrampolineAvailable: "Livre",
-    checkoutConfirmBtn: "CONFIRMAR RESERVA E GERAR ACESSO",
+    checkoutConfirmBtn: "CONFIRMAR RESERVA E MEU ACESSO",
     checkoutCancel: "Cancelar",
     checkoutSuccessTitle: "SUA RESERVA ESTÁ CONFIRMADA!",
-    checkoutSuccessText: "Sua inscrição foi confirmada e processada no sistema. O ingresso digital seguro com QR Code fictício foi enviado para seu contato.",
-    checkoutSuccessTicket: "CUPOM TRAMPOLIM #",
+    checkoutSuccessText: "Sua reserva foi confirmada. Enviaremos seu ingresso digital por e-mail e SMS.",
+    checkoutSuccessTicket: "INGRESSO TRAMPOLIM #",
     checkoutClose: "Fechar Ingresso"
   }
 };
@@ -301,8 +301,8 @@ export const sampleClasses: StudioClass[] = [
     },
     description: {
       en: "The signature concert experience. Non-stop choreographed rebound combinations matching heavy electronic music loops. Excellent for full body burn and speed coordinate shifts.",
-      es: "La experiencia de concierto definitiva. Combinaciones de rebote coreografiadas sin detenerse al ritmo de música electrónica densa. Excelente para quema total y agilidad.",
-      pt: "A experiência assinatura estilo show. Combinações sem pausa de rebotes rápidos coreografados ao ritmo de música eletrônica pesada. Fantástico para queima calórica e agilidade."
+      es: "La experiencia insignia estilo show. Combinaciones de rebote sin pausa al ritmo de música electrónica intensa. Excelente para quemar calorías y ganar agilidad.",
+      pt: "A experiência flagship estilo show. Coreografia non-stop ao ritmo de música eletrônica intensa. Excelente para queima calórica e agilidade."
     },
     category: "cardio",
     duration: 50,
@@ -322,7 +322,7 @@ export const sampleClasses: StudioClass[] = [
     description: {
       en: "Fuses interval cardio bounces with heavy specialized resistance bands, lightweight dumbbell workouts on the tramp, and isolated abdominal sets. Hardcore core conditioning.",
       es: "Fusiona saltos de cardio a intervalos con bandas de resistencia especializadas, pesas ligeras sobre el trampolín e intervalos abdominales. Condicionamiento extremo de core.",
-      pt: "Combina saltos de cardio intervalado com faixas de resistência, halteres leves sobre o trampolim e focos abdominais. Condicionamento extremo de core nos Beats."
+      pt: "Combina cardio intervalado com elásticos de resistência, halteres leves sobre o trampolim e foco abdominal. Condicionamento forte de core."
     },
     category: "strength",
     duration: 45,
@@ -341,8 +341,8 @@ export const sampleClasses: StudioClass[] = [
     },
     description: {
       en: "Specifically constructed for first-time jumpers. Master basic trampoline safety, proper gravity absorption postures, and learn to groove to the musical accents. High fun, zero pressure.",
-      es: "Especialmente construida para quienes saltan por primera vez. Domina la seguridad en el trampolín, posturas de absorción de gravedad y sigue acentos musicales. Cero presión.",
-      pt: "Especialmente desenhada para iniciantes absolutos. Domine a postura correta de absorção de impacto, equilíbrio e sinta o groove ritmado. Diversão garantida, zero pressão."
+      es: "Pensada para tu primera vez. Aprende seguridad en el trampolín, postura correcta y ritmo básico. Cero presión.",
+      pt: "Pensada para sua primeira aula. Aprenda postura correta, absorção de impacto, equilíbrio e ritmo básico. Diversão garantida, zero pressão."
     },
     category: "combo",
     duration: 40,
@@ -362,7 +362,7 @@ export const sampleClasses: StudioClass[] = [
     description: {
       en: "Lights out, fluorescent club neon and heavy Techno beats taking center stage. Includes endurance aerobic challenges, triple tempo bounces, and team high-fives. Absolute adrenaline high.",
       es: "Apagón de luces, luces de neón fluorescentes y ritmos Techno pesados toman el protagonismo. Incluye desafíos aeróbicos de resistencia y rebotes triples. Adrenalina total.",
-      pt: "Luzes apagadas, neon fluorescente de clube noturno e Techno acelerado assumem a cena. Inclui tiros de resistência e aceleração tripla. Uma verdadeira descarga de adrenalina."
+      pt: "Luzes apagadas, neon de clube noturno e Techno acelerado assumem a cena. Inclui blocos de resistência e aceleração tripla. Uma verdadeira descarga de adrenalina."
     },
     category: "cardio",
     duration: 60,
@@ -401,8 +401,8 @@ export const samplePricing: PricingItem[] = [
     id: "price-pack-10",
     name: {
       en: "10 Class Pack Beat",
-      es: "Pack 10 Clases Rhythm",
-      pt: "Mojo Pack 10 Aulas"
+      es: "Pack 10 Clases",
+      pt: "Pack 10 Aulas"
     },
     price: 180,
     subtitle: {
@@ -413,7 +413,7 @@ export const samplePricing: PricingItem[] = [
     features: {
       en: ["10 Sessions (Valid 6 months)", "Bring a friend twice a month", "High-priority booking window", "10% off merchandise apparel"],
       es: ["10 Sesiones (Vence en 6 meses)", "Trae un amigo gratis dos veces al mes", "Reserva de alta prioridad", "10% dto en ropa oficial"],
-      pt: ["10 Aulas (Validade 6 meses)", "Traga um amigo(a) grátis 2x por mês", "Prioridade média para agendamentos", "10% de desconto na linha de roupas"]
+      pt: ["10 Aulas (Validade 6 meses)", "Traga um amigo(a) grátis 2x por mês", "Prioridade alta para agendamentos", "10% de desconto na linha de merch"]
     },
     popular: true,
     tag: "POPULAR PACK",
@@ -436,7 +436,7 @@ export const samplePricing: PricingItem[] = [
     features: {
       en: ["Unlimited monthly sessions", "Complimentary premium water refill", "15% discount on all apparel", "First-priority booking (7-days ahead)", "Access to themed special weekend sets"],
       es: ["Sesiones ilimitadas al mes", "Botella reutilizable y agua premium ilimitada", "15% de descuento en ropa oficial", "Acceso de primera prioridad (7 días antes)", "Eventos temáticos de fin de semana incluidos"],
-      pt: ["Sessões ilimitadas por mês", "Água premium grátis em todas as aulas", "15% de desconto no stúdio apparel", "Agendamento prioritário (7 dias de antecedência)", "Inclusão garantida em todos os shows e eventos de DJs"]
+      pt: ["Sessões ilimitadas por mês", "Água premium grátis em todas as aulas", "15% de desconto em merch", "Agendamento prioritário (7 dias de antecedência)", "Acesso a eventos temáticos de fim de semana"]
     },
     tag: "BEST VALUE",
     type: "membership",
@@ -447,7 +447,7 @@ export const samplePricing: PricingItem[] = [
 export const sampleChoreographies: ChoreographyMove[] = [
   {
     id: "chore-1",
-    name: { en: "High-Knee Rebound", es: "Rebote Rodillas Altas", pt: "Elevação de Joelhos Beats" },
+    name: { en: "High-Knee Rebound", es: "Rebote Rodillas Altas", pt: "Rebote com Joelhos Altos" },
     difficulty: { en: "Intermediate", es: "Intermedio", pt: "Intermediário" },
     repCount: "2 intervals x 60 sec",
     gifPlaceholderEmoji: "🏃‍♀️",
@@ -467,7 +467,7 @@ export const sampleChoreographies: ChoreographyMove[] = [
     difficulty: { en: "Advanced", es: "Avanzado", pt: "Avançado" },
     repCount: "2 intervals x 30 sec",
     gifPlaceholderEmoji: "🔥",
-    benefit: { en: "Max speed cardio ignition & calorie-shredding", es: "Ignición de cardio a máxima velocidad y quema calórica", pt: "Queima extrema de glicogênio e pico aeróbico" }
+    benefit: { en: "Max speed cardio ignition & calorie-shredding", es: "Cardio a máxima velocidad y quema intensa", pt: "Queima intensa e pico de cardio" }
   },
   {
     id: "chore-4",
@@ -484,7 +484,7 @@ export const faqs = [
     question: {
       en: "Is trampoline fitness suitable for beginners?",
       es: "¿El fitness en trampolín es apto para principiantes?",
-      pt: "O fitness com cama elástica/trampolim é indicado para iniciantes?"
+      pt: "O fitness no trampolim é indicado para iniciantes?"
     },
     answer: {
       en: "Absolutely! Rebound fitness is highly adjustable. You control the height of your bounce and the speed of your movements. Our 'Intro to Rebound Method' session is explicitly configured to introduce newcomers safely to the basics.",
@@ -500,7 +500,7 @@ export const faqs = [
     },
     answer: {
       en: "Standard running exerts hard impact shocks directly to your ankles, knees, and lumbar spine. The premium bungee-cord suspensions on our individualized trampolines absorb over 80% of gravitational impact while returning energy, protecting joints while boosting lymph flow.",
-      es: "Correr en asfalto ejerce impactos duros sobre tobillos, rodillas y columna. Las suspensiones de cuerdas elásticas premium de nuestros trampolines absorben más del 80% del impacto por gravedad, protegiendo tus articulações y estimulando el sistema linfático.",
+      es: "Correr en asfalto ejerce impactos duros sobre tobillos, rodillas y columna. Las suspensiones de cuerdas elásticas premium de nuestros trampolines absorben más del 80% del impacto por gravedad, protegiendo tus articulaciones y estimulando el sistema linfático.",
       pt: "A corrida comum de rua descarrega todo o impacto na coluna, joelhos e tornozelos. As cordas elásticas importadas de alta elasticidade dos nossos trampolins profissionais absorvem mais de 80% do choque gravitacional, devolvendo a energia na subida. Você treina pesado sem machucar os joelhos!"
     }
   },

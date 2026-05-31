@@ -86,7 +86,7 @@ export default function Benefits({ currentLang }: BenefitsProps) {
         {
           id: "strengthen",
           title: "TONIFICAR Y FORTALECER",
-          desc: "Establece músculo magro y mejora la fuerza general con movimientos de bajo impacto."
+          desc: "Desarrolla músculo magro y mejora tu fuerza con movimientos de bajo impacto."
         },
         {
           id: "balance",
@@ -101,7 +101,7 @@ export default function Benefits({ currentLang }: BenefitsProps) {
         {
           id: "community",
           title: "COMUNIDAD FUERTE",
-          desc: "Gente real. Soporte real. Una comunidad que te impulsa hacia arriba."
+          desc: "Gente real. Apoyo real. Una comunidad que te motiva."
         }
       ]
     },
@@ -127,7 +127,7 @@ export default function Benefits({ currentLang }: BenefitsProps) {
         {
           id: "strengthen",
           title: "TONIFICAR & FORTALECER",
-          desc: "Construa músculos magros e melhore a força geral com exercícios de baixo impacto."
+          desc: "Construa massa magra e melhore sua força com exercícios de baixo impacto."
         },
         {
           id: "balance",
@@ -142,7 +142,7 @@ export default function Benefits({ currentLang }: BenefitsProps) {
         {
           id: "community",
           title: "COMUNIDADE FORTE",
-          desc: "Pessoas reais. Apoio real. Uma comunidade que te coloca para cima."
+          desc: "Pessoas reais. Apoio real. Uma comunidade que te impulsiona."
         }
       ]
     }
@@ -282,7 +282,7 @@ export default function Benefits({ currentLang }: BenefitsProps) {
               </div>
               <div>
                 <h3 className="font-display font-black text-lg sm:text-xl text-white uppercase italic -skew-x-3 tracking-wider">
-                  ONE JUMP. <span className="text-energy-green">{t.footerHeader.split('ONE JUMP. ')[1]}</span>
+                  {t.footerHeader}
                 </h3>
               </div>
             </div>

@@ -22,12 +22,12 @@ export const seoContent: Record<Exclude<SeoPage, 'buttons'>, Record<Language, Se
     pt: {
       title: 'Jump Zone Studio | Nova Experiência Fitness em Newark, NJ',
       description:
-        'Conheça o Jump Zone Studio, uma nova experiência fitness de trampolim de alta energia em Newark, NJ. Reserve seu jump, veja horários, planos e fale com o estúdio.',
+        'Conheça o Jump Zone Studio, uma nova experiência fitness no trampolim em Newark, NJ. Garanta seu acesso, veja horários, planos e fale com o studio.',
     },
     es: {
       title: 'Jump Zone Studio | Nueva Experiencia Fitness en Newark, NJ',
       description:
-        'Conoce Jump Zone Studio, una nueva experiencia fitness de trampolín de alta energía en Newark, NJ. Reserva tu jump, consulta horarios, membresías y contacta al estudio.',
+        'Conoce Jump Zone Studio, una nueva experiencia fitness en trampolín en Newark, NJ. Reserva tu acceso, consulta horarios, membresías y contacta al studio.',
     },
   },
   bio: {

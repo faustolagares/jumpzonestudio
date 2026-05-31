@@ -39,7 +39,7 @@ const bioContent: Record<Language, {
   links: BioLink[];
 }> = {
   en: {
-    subtitle: 'New fitness experience in Newark, NJ.',
+    subtitle: 'A new fitness experience in Newark, NJ.',
     footer: 'Move. Connect. Level up.',
     links: [
       { label: 'BOOK YOUR JUMP', url: INSTAGRAM_URL, variant: 'primary', icon: <CalendarDays className="w-4 h-4" /> },
@@ -52,10 +52,10 @@ const bioContent: Record<Language, {
     ],
   },
   es: {
-    subtitle: 'Nueva experiencia fitness en Newark, NJ.',
+    subtitle: 'Una nueva experiencia fitness en Newark, NJ.',
     footer: 'Muévete. Conecta. Sube de nivel.',
     links: [
-      { label: 'RESERVA TU JUMP', url: INSTAGRAM_URL, variant: 'primary', icon: <CalendarDays className="w-4 h-4" /> },
+      { label: 'RESERVAR MI ACCESO', url: INSTAGRAM_URL, variant: 'primary', icon: <CalendarDays className="w-4 h-4" /> },
       { label: 'VER HORARIOS', url: INSTAGRAM_URL, variant: 'secondary', icon: <Clock3 className="w-4 h-4" /> },
       { label: 'MEMBRESÍAS', url: INSTAGRAM_URL, variant: 'secondary', icon: <Users className="w-4 h-4" /> },
       { label: 'WEBSITE', url: WEBSITE_URL, variant: 'secondary', icon: <Globe className="w-4 h-4" /> },
@@ -65,13 +65,13 @@ const bioContent: Record<Language, {
     ],
   },
   pt: {
-    subtitle: 'Nova experiência fitness em Newark, NJ.',
-    footer: 'Mova. Conecte. Suba de nível.',
+    subtitle: 'Uma nova experiência fitness em Newark, NJ.',
+    footer: 'Mexa-se. Conecte. Suba de nível.',
     links: [
-      { label: 'RESERVAR JUMP', url: INSTAGRAM_URL, variant: 'primary', icon: <CalendarDays className="w-4 h-4" /> },
+      { label: 'GARANTIR MEU ACESSO', url: INSTAGRAM_URL, variant: 'primary', icon: <CalendarDays className="w-4 h-4" /> },
       { label: 'VER HORÁRIOS', url: INSTAGRAM_URL, variant: 'secondary', icon: <Clock3 className="w-4 h-4" /> },
       { label: 'PLANOS', url: INSTAGRAM_URL, variant: 'secondary', icon: <Users className="w-4 h-4" /> },
-      { label: 'WEBSITE', url: WEBSITE_URL, variant: 'secondary', icon: <Globe className="w-4 h-4" /> },
+      { label: 'SITE', url: WEBSITE_URL, variant: 'secondary', icon: <Globe className="w-4 h-4" /> },
       { label: 'WHATSAPP', url: WHATSAPP_URL, variant: 'secondary', icon: <MessageCircle className="w-4 h-4" /> },
       { label: 'LIGAR AGORA', url: PHONE_URL, variant: 'secondary', icon: <Phone className="w-4 h-4" /> },
       { label: 'COMO CHEGAR', url: DIRECTIONS_URL, variant: 'secondary', icon: <MapPin className="w-4 h-4" /> },

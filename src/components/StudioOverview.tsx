@@ -38,7 +38,7 @@ export default function StudioOverview({ currentLang }: StudioOverviewProps) {
       desc: {
         en: "A dark, immersive athletic club equipped with glowing neon linear grids to focus your movement.",
         es: "Un club deportivo oscuro e inmersivo con guías de neón lineales para enfocar tus saltos.",
-        pt: "Um clube esportivo escuro e inmersivo com guias de neon lineares que ajudam a focar nos movimentos."
+        pt: "Um clube esportivo escuro e imersivo com guias de neon lineares que ajudam a focar nos movimentos."
       }
     },
     {
@@ -58,7 +58,7 @@ export default function StudioOverview({ currentLang }: StudioOverviewProps) {
       url: "/images/jump_dance_beat_1780015235229.png",
       title: {
         en: "Sound & Deep Bass Integration",
-        es: "Sinfonía de Graves Extremos",
+        es: "Sonido y Graves Envolventes",
         pt: "Batidas e Graves Envolventes"
       },
       desc: {
@@ -129,7 +129,7 @@ export default function StudioOverview({ currentLang }: StudioOverviewProps) {
           desc: "Equipos de calidad profesional garantizada en los que puedes confiar."
         }
       ],
-      slogan: "ENTRA. SIENTELO. SE PARTE DE NUESTRO CLUB.",
+      slogan: "ENTRA. SIÉNTELO. SÉ PARTE DEL CLUB.",
       galleryHint: "HAZ CLIC PARA EXPANDIR EN RESOLUCIÓN 4K"
     },
     pt: {
@@ -145,7 +145,7 @@ export default function StudioOverview({ currentLang }: StudioOverviewProps) {
         },
         {
           title: "ENERGIA VIBRANTE",
-          desc: "Leds especiais, músicas pesadas de estúdio que impulsionam o pulso."
+          desc: "Luzes, música e clima que te mantêm em movimento."
         },
         {
           title: "CONEXÃO REAL",
@@ -157,7 +157,7 @@ export default function StudioOverview({ currentLang }: StudioOverviewProps) {
         }
       ],
       slogan: "ENTRE. SINTA A VIBE. FAÇA PARTE DISSO.",
-      galleryHint: "CLIQUE NA FOTO PARA AMPLIAR EM ALTÍSSIMA DEFINIÇÃO"
+      galleryHint: "CLIQUE PARA VER EM TELA CHEIA"
     }
   };
 
@@ -250,12 +250,16 @@ export default function StudioOverview({ currentLang }: StudioOverviewProps) {
                 }}
               >
                 <div className="flex justify-between items-center text-[10px] font-mono tracking-widest text-cool-gray border-b border-white/[0.04] pb-2">
-                  <span>NEWARK SPACE OVERVIEW</span>
-                  <span className="text-energy-green font-bold">24 REBOUND SPOTS</span>
+                  <span>
+                    {currentLang === 'pt' ? 'VISÃO DO STUDIO EM NEWARK' : currentLang === 'es' ? 'VISTA DEL STUDIO EN NEWARK' : 'NEWARK SPACE OVERVIEW'}
+                  </span>
+                  <span className="text-energy-green font-bold">
+                    {currentLang === 'pt' ? '24 SPOTS DE REBOUND' : currentLang === 'es' ? '24 SPOTS DE REBOUND' : '24 REBOUND SPOTS'}
+                  </span>
                 </div>
                 <p className="text-xs text-steel-gray font-sans font-medium leading-relaxed">
                   {currentLang === 'pt' 
-                    ? "Sua zona exclusiva é equipada com espelhos frontais de estúdio, barras de segurança e amortecimento individual focado em proteger suas articulações."
+                    ? "Seu spot tem espelhos frontais, barras de segurança e amortecimento individual para proteger suas articulações."
                     : currentLang === 'es'
                     ? "Tu zona exclusiva cuenta con espejos frontales de estudio, barra opcional y un sistema de elásticos especializado para proteger tus rodillas."
                     : "Your exclusive jumping placement faces high-contrast mirror setups and elevated staging tailored for unmatched trainer line of sight."}
@@ -270,7 +274,7 @@ export default function StudioOverview({ currentLang }: StudioOverviewProps) {
             <div className="flex items-center justify-between text-xs font-mono text-steel-gray px-1">
               <span className="flex items-center space-x-1.5 font-semibold text-energy-green/80">
                 <span className="inline-block w-1.5 h-1.5 bg-energy-green rounded-full animate-pulse" />
-                <span>INTERACTIVE SHOWCASE</span>
+                <span>{currentLang === 'pt' ? 'GALERIA INTERATIVA' : currentLang === 'es' ? 'GALERÍA INTERACTIVA' : 'INTERACTIVE SHOWCASE'}</span>
               </span>
               <span className="hidden sm:inline-block text-[10px] tracking-wider text-white/30">
                 {t.galleryHint}
@@ -281,7 +285,7 @@ export default function StudioOverview({ currentLang }: StudioOverviewProps) {
             <div 
               className="relative aspect-[16/9] w-full group overflow-hidden bg-black flex items-center justify-center cursor-pointer select-none"
               onClick={() => setIsLightboxOpen(true)}
-              title="Click to zoom in"
+              title={currentLang === 'pt' ? 'Clique para ampliar' : currentLang === 'es' ? 'Haz clic para ampliar' : 'Click to zoom in'}
             >
               {/* Bevel outline border */}
               <div 
@@ -339,7 +343,7 @@ export default function StudioOverview({ currentLang }: StudioOverviewProps) {
                   icon={<ChevronLeft className="w-5 h-5" />}
                   variant="dark"
                   onClick={(e) => { e.stopPropagation(); handlePrevPhoto(); }}
-                  aria-label="Previous view"
+                  aria-label={currentLang === 'pt' ? 'Imagem anterior' : currentLang === 'es' ? 'Vista anterior' : 'Previous view'}
                 />
               </div>
               <div className="absolute right-4 top-1/2 -translate-y-1/2 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-150">
@@ -347,7 +351,7 @@ export default function StudioOverview({ currentLang }: StudioOverviewProps) {
                   icon={<ChevronRight className="w-5 h-5" />}
                   variant="dark"
                   onClick={(e) => { e.stopPropagation(); handleNextPhoto(); }}
-                  aria-label="Next view"
+                  aria-label={currentLang === 'pt' ? 'Próxima imagem' : currentLang === 'es' ? 'Vista siguiente' : 'Next view'}
                 />
               </div>
             </div>
@@ -371,7 +375,7 @@ export default function StudioOverview({ currentLang }: StudioOverviewProps) {
                   <img 
                     src={optimizedSrc(img.url, 384)} 
                     srcSet={optimizedSrcSet(img.url, 384)}
-                    alt={`Thumbnail view ${i + 1}`} 
+                    alt={currentLang === 'pt' ? `Miniatura ${i + 1}` : currentLang === 'es' ? `Miniatura ${i + 1}` : `Thumbnail view ${i + 1}`}
                     loading="lazy"
                     decoding="async"
                     className={`w-full h-full object-cover transition-[filter,transform] duration-200 ${
@@ -452,7 +456,7 @@ export default function StudioOverview({ currentLang }: StudioOverviewProps) {
                 icon={<X className="w-4 h-4" />}
                 variant="dark"
                 onClick={() => setIsLightboxOpen(false)}
-                aria-label="Close view"
+                aria-label={currentLang === 'pt' ? 'Fechar imagem' : currentLang === 'es' ? 'Cerrar vista' : 'Close view'}
               />
             </div>
 
@@ -470,7 +474,7 @@ export default function StudioOverview({ currentLang }: StudioOverviewProps) {
                 <img 
                   src={optimizedSrc(studioImages[activeImgIndex].url, 1280)} 
                   srcSet={optimizedSrcSet(studioImages[activeImgIndex].url, 1280)}
-                  alt="Studio detailed high-res expanded view"
+                  alt={currentLang === 'pt' ? 'Vista ampliada do studio' : currentLang === 'es' ? 'Vista ampliada del studio' : 'Studio detailed high-res expanded view'}
                   decoding="async"
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
@@ -482,7 +486,7 @@ export default function StudioOverview({ currentLang }: StudioOverviewProps) {
                     icon={<ChevronLeft className="w-5 h-5" />}
                     variant="dark"
                     onClick={handlePrevPhoto}
-                    aria-label="Previous view"
+                    aria-label={currentLang === 'pt' ? 'Imagem anterior' : currentLang === 'es' ? 'Vista anterior' : 'Previous view'}
                   />
                 </div>
                 <div className="absolute right-4 top-1/2 -translate-y-1/2">
@@ -490,7 +494,7 @@ export default function StudioOverview({ currentLang }: StudioOverviewProps) {
                     icon={<ChevronRight className="w-5 h-5" />}
                     variant="dark"
                     onClick={handleNextPhoto}
-                    aria-label="Next view"
+                    aria-label={currentLang === 'pt' ? 'Próxima imagem' : currentLang === 'es' ? 'Vista siguiente' : 'Next view'}
                   />
                 </div>
               </div>
@@ -498,7 +502,11 @@ export default function StudioOverview({ currentLang }: StudioOverviewProps) {
               {/* Context details banner in lightbox */}
               <div className="text-center space-y-1 px-4 max-w-2xl">
                 <span className="text-[10px] font-mono font-black text-energy-green tracking-widest uppercase block">
-                  HQ COMPREHENSIVE REBOUND VIEW — {(activeImgIndex + 1)} OF {studioImages.length}
+                  {currentLang === 'pt'
+                    ? `VISTA REBOUND EM TELA CHEIA — ${activeImgIndex + 1} DE ${studioImages.length}`
+                    : currentLang === 'es'
+                    ? `VISTA REBOUND EN PANTALLA COMPLETA — ${activeImgIndex + 1} DE ${studioImages.length}`
+                    : `HQ COMPREHENSIVE REBOUND VIEW — ${activeImgIndex + 1} OF ${studioImages.length}`}
                 </span>
                 <h3 className="font-display font-black text-white text-xl sm:text-2xl uppercase italic tracking-wide">
                   {studioImages[activeImgIndex].title[currentLang]}

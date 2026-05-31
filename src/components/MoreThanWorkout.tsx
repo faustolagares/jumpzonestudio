@@ -53,8 +53,8 @@ export default function MoreThanWorkout({ currentLang }: MoreThanWorkoutProps) {
         {
           id: "energy",
           title: "ENERGÍA QUE SIENTES",
-          desc: "Subwoofers reactivos y luces de estroboscópicas que convierten tu cardio en un concierto inmersivo.",
-          tag: "INYECCIÓN ADRENAL"
+          desc: "Subwoofers reactivos y luces estroboscópicas que convierten tu cardio en un concierto inmersivo.",
+          tag: "SHOT DE ADRENALINA"
         }
       ]
     },
@@ -78,7 +78,7 @@ export default function MoreThanWorkout({ currentLang }: MoreThanWorkoutProps) {
           id: "energy",
           title: "ENERGIA QUE SE SENTE",
           desc: "Subwoofers potentes com luzes dinâmicas de estúdio que transformam o exercício aeróbico em um verdadeiro show.",
-          tag: "PULSO CRIATIVO"
+          tag: "ENERGIA TOTAL"
         }
       ]
     }

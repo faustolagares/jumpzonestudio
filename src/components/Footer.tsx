@@ -51,8 +51,8 @@ export default function Footer({ currentLang }: FooterProps) {
       howItWorks: "CÓMO FUNCIONA",
       benefits: "BENEFICIOS",
       pricing: "TARIFAS",
-      copyright: "TODAS LAS SIMULACIONES MÉTRICAS Y COREOGRÁFICAS RESERVADAS.",
-      tagline: "DISEÑADO PARA EL MOVIMIENTO, CREADO PARA LA ENERGÍA.",
+      copyright: "TODOS LOS DERECHOS RESERVADOS.",
+      tagline: "DISEÑADO PARA MOVERTE, HECHO PARA EL SHOW.",
       madeBy: "HECHO POR",
     },
     pt: {
@@ -72,8 +72,8 @@ export default function Footer({ currentLang }: FooterProps) {
       howItWorks: "COMO FUNCIONA",
       benefits: "BENEFÍCIOS",
       pricing: "PLANOS",
-      copyright: "TODAS AS SIMULAÇÕES MÉTRICAS E COREOGRÁFICAS RESERVADAS.",
-      tagline: "CRIADO PARA MOVIMENTO, FEITO PARA ENERGIA.",
+      copyright: "TODOS OS DIREITOS RESERVADOS.",
+      tagline: "CRIADO PARA MOVIMENTO, FEITO PARA O SHOW.",
       madeBy: "FEITO PELA",
     },
   };

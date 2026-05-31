@@ -63,7 +63,7 @@ export default function HowItWorks({ currentLang }: HowItWorksProps) {
         { title: "50 MINUTOS", label: "DE PURA ENERGIA" },
         { title: "TODOS OS NÍVEIS", label: "BEM-VINDOS" },
         { title: "PESSOAS REAIS", label: "COMUNIDADE REAL" },
-        { title: "BAIXO IMPACTO", label: "ALTO RESULTADOS" }
+        { title: "BAIXO IMPACTO", label: "RESULTADOS REAIS" }
       ]
     }
   };
@@ -83,7 +83,7 @@ export default function HowItWorks({ currentLang }: HowItWorksProps) {
       desc: {
         en: "High-energy cardio workout that burns calories and gets your heart pumping.",
         es: "Entrenamiento cardiovascular de alta energía que quema calorías y hace latir tu corazón.",
-        pt: "Treino de cardio de alta energia que queima calorias e faz seu coração pulsar."
+        pt: "Treino de cardio de alta energia que acelera o coração e queima calorias."
       }
     },
     {
@@ -100,7 +100,7 @@ export default function HowItWorks({ currentLang }: HowItWorksProps) {
       desc: {
         en: "Short bursts. Big impact. HIIT-style intervals for maximum calorie burn.",
         es: "Ráfagas cortas. Gran impacto. Intervalos de estilo HIIT para una máxima quema de calorías.",
-        pt: "Estouros curtos. Grande impacto. Intervalos tipo HIIT para queima máxima de calorias."
+        pt: "Rajadas curtas. Grande impacto. Intervalos tipo HIIT para queima máxima de calorias."
       }
     },
     {
