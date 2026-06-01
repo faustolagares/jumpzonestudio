@@ -5,7 +5,6 @@ import { Language } from './types';
 import { isLanguage } from './lib/language';
 
 const MainSite = lazy(() => import('./pages/MainSite'));
-const FastHomePage = lazy(() => import('./pages/FastHomePage'));
 const ButtonsPage = lazy(() => import('./pages/ButtonsPage'));
 const BioPage = lazy(() => import('./pages/BioPage'));
 
@@ -48,7 +47,6 @@ export default function App() {
       <Suspense fallback={<div className="min-h-screen bg-[#050505]" />}>
         <Routes>
           <Route path="/" element={<MainSite />} />
-          <Route path="/home" element={<FastHomePage />} />
           <Route path="/:lang" element={<LocalizedHome />} />
           <Route path="/bio" element={<BioRoute />} />
           <Route path="/:lang/bio" element={<LocalizedBio />} />

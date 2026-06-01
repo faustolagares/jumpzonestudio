@@ -8,6 +8,8 @@
     "minimumCacheTTL": 2678400
   },
   "rewrites": [
+    { "source": "/astro", "destination": "/astro/index.html" },
+    { "source": "/astro/", "destination": "/astro/index.html" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }

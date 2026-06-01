@@ -5,15 +5,17 @@
   "type": "module",
   "scripts": {
     "dev": "vite --port=3000 --host=0.0.0.0",
-    "build": "vite build",
+    "build": "astro build && rm -rf public/astro && mkdir -p public/astro && cp -R .astro-dist/* public/astro/ && vite build",
     "preview": "vite preview",
-    "clean": "rm -rf dist server.js",
+    "clean": "rm -rf dist public/astro server.js",
     "lint": "tsc --noEmit"
   },
   "dependencies": {
+    "@astrojs/react": "^4.4.2",
     "@google/genai": "^2.4.0",
     "@tailwindcss/vite": "^4.1.14",
     "@vitejs/plugin-react": "^5.0.4",
+    "astro": "^5.18.2",
     "dotenv": "^17.2.3",
     "express": "^4.21.2",
     "lucide-react": "^0.546.0",
