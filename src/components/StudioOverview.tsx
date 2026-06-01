@@ -309,6 +309,7 @@ export default function StudioOverview({ currentLang }: StudioOverviewProps) {
                   alt="Studio Physical Space View"
                   loading="lazy"
                   decoding="async"
+                  fetchPriority="low"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 ease-out rounded-sm"
                   referrerPolicy="no-referrer"
                 />
@@ -378,6 +379,7 @@ export default function StudioOverview({ currentLang }: StudioOverviewProps) {
                     alt={currentLang === 'pt' ? `Miniatura ${i + 1}` : currentLang === 'es' ? `Miniatura ${i + 1}` : `Thumbnail view ${i + 1}`}
                     loading="lazy"
                     decoding="async"
+                    fetchPriority="low"
                     className={`w-full h-full object-cover transition-[filter,transform] duration-200 ${
                       activeImgIndex === i ? 'scale-105 brightness-100' : 'scale-100 brightness-[0.55] hover:brightness-[0.85]'
                     }`}
@@ -476,6 +478,7 @@ export default function StudioOverview({ currentLang }: StudioOverviewProps) {
                   srcSet={optimizedSrcSet(studioImages[activeImgIndex].url, 1280)}
                   alt={currentLang === 'pt' ? 'Vista ampliada do studio' : currentLang === 'es' ? 'Vista ampliada del studio' : 'Studio detailed high-res expanded view'}
                   decoding="async"
+                  fetchPriority="low"
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
                 />

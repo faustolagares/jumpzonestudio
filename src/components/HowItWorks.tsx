@@ -238,6 +238,7 @@ export default function HowItWorks({ currentLang }: HowItWorksProps) {
                       alt={card.title}
                       loading="lazy"
                       decoding="async"
+                      fetchPriority="low"
                       referrerPolicy="no-referrer"
                       className="w-full h-full object-cover brightness-75 group-hover:brightness-90 group-hover:scale-105 transition-[transform,filter] duration-350 ease-out"
                     />

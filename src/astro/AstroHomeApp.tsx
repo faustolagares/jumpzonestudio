@@ -14,6 +14,12 @@ import StudioOverview from '../components/StudioOverview';
 import { saveLanguage } from '../lib/language';
 import { sampleClasses } from '../translations';
 import { Language, PricingItem, StudioClass } from '../types';
+import type { CSSProperties } from 'react';
+
+const belowFoldSectionStyle = {
+  contentVisibility: 'auto',
+  containIntrinsicSize: '900px',
+} satisfies CSSProperties;
 
 export default function AstroHomeApp({ initialLanguage = 'en' }: { initialLanguage?: Language }) {
   const [currentLang, setCurrentLang] = useState<Language>(initialLanguage);
@@ -71,15 +77,33 @@ export default function AstroHomeApp({ initialLanguage = 'en' }: { initialLangua
         onBookClick={() => handleBookClass(sampleClasses[0], sampleClasses[0].timeSlots[0])}
         onClassesClick={handleClassesLearnClick}
       />
-      <MoreThanWorkout currentLang={currentLang} />
-      <HowItWorks currentLang={currentLang} />
-      <Benefits currentLang={currentLang} />
-      <ClassSchedule currentLang={currentLang} onBookClass={handleBookClass} />
-      <StudioOverview currentLang={currentLang} />
-      <Membership currentLang={currentLang} onSelectPlan={handleSelectPlan} />
-      <FAQ currentLang={currentLang} />
-      <CTASection currentLang={currentLang} />
-      <Footer currentLang={currentLang} />
+      <div style={belowFoldSectionStyle}>
+        <MoreThanWorkout currentLang={currentLang} />
+      </div>
+      <div style={belowFoldSectionStyle}>
+        <HowItWorks currentLang={currentLang} />
+      </div>
+      <div style={belowFoldSectionStyle}>
+        <Benefits currentLang={currentLang} />
+      </div>
+      <div style={belowFoldSectionStyle}>
+        <ClassSchedule currentLang={currentLang} onBookClass={handleBookClass} />
+      </div>
+      <div style={belowFoldSectionStyle}>
+        <StudioOverview currentLang={currentLang} />
+      </div>
+      <div style={belowFoldSectionStyle}>
+        <Membership currentLang={currentLang} onSelectPlan={handleSelectPlan} />
+      </div>
+      <div style={belowFoldSectionStyle}>
+        <FAQ currentLang={currentLang} />
+      </div>
+      <div style={belowFoldSectionStyle}>
+        <CTASection currentLang={currentLang} />
+      </div>
+      <div style={belowFoldSectionStyle}>
+        <Footer currentLang={currentLang} />
+      </div>
       {isCheckoutOpen && (
         <CheckoutModal
           currentLang={currentLang}

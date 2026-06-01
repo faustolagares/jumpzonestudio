@@ -178,6 +178,7 @@ export default function MoreThanWorkout({ currentLang }: MoreThanWorkoutProps) {
                       alt={feat.title}
                       loading="lazy"
                       decoding="async"
+                      fetchPriority="low"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 ease-out"
                       referrerPolicy="no-referrer"
                     />
