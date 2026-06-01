@@ -6,6 +6,9 @@ export default defineConfig({
   base: '/astro',
   srcDir: './src/astro',
   outDir: './.astro-dist',
+  build: {
+    inlineStylesheets: 'always',
+  },
   integrations: [react()],
   vite: {
     plugins: [tailwindcss()],
